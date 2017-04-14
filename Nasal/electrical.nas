@@ -370,7 +370,7 @@ var avionics_bus = func(bus_volts) {
 var update_electrical = func {
     var time = getprop("/sim/time/elapsed-sec");
     var dt = time - last_time;
-    var last_time = time;
+    last_time = time;
     update_virtual_bus(dt);
     settimer(update_electrical, 0);
 }

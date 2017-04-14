@@ -212,6 +212,9 @@
   </input>
 
   <limits>
+    <mass-and-balance>
+      <maximum-takeoff-mass-lbs>2204</maximum-takeoff-mass-lbs>
+    </mass-and-balance>
     <max-flap-extension-speed>
       <flaps type="double">0.2</flaps>
       <speed type="double">92</speed>

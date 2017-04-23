@@ -26,11 +26,16 @@
     </rating>
 
     <tags>
-      <tag>ga</tag>
-      <tag>robin</tag>
-      <tag>piston</tag>
-      <tag>single-engine</tag>
+      <tag>1-engine</tag>
+      <tag>1970s</tag> <!-- first flight in 1972 -->
+      <tag>1980s</tag>
+      <tag>1990s</tag>
+      <tag>2000s</tag>
+      <tag>2010s</tag> <!-- still in production -->
       <tag>fixed-gear</tag>
+      <tag>ga</tag>
+      <tag>piston</tag>
+      <tag>robin</tag>
     </tags>
 
     <fuel-fraction>1.0</fuel-fraction>

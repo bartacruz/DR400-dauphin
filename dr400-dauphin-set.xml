@@ -38,6 +38,19 @@
       <tag>robin</tag>
     </tags>
 
+    <previews>
+      <preview>
+        <type>panel</type>
+        <splash type="bool">true</splash>
+        <path>Pics/dauphin-interior.jpg</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Pics/dauphin-exterior.jpg</path>
+      </preview>
+    </previews>
+
     <fuel-fraction>1.0</fuel-fraction>
 
     <instrumentation>

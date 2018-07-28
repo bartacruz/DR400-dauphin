@@ -104,6 +104,7 @@
 
     <multiplay>
       <chat_display>1</chat_display>
+      <fallback-model-index type="int">7</fallback-model-index>
       <generic>
         <int type="int" n="0">0</int>
         <int type="int" n="1">0</int>

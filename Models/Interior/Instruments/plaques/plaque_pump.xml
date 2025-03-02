@@ -11,5 +11,8 @@
 <PropertyList>
 
   <path>plaque_pump.ac</path>
-
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>Plane</object-name>
+  </effect>
 </PropertyList>

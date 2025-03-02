@@ -184,13 +184,21 @@
       <shadows>
         <filtering type="int">1</filtering>
       </shadows>
+    <als-secondary-lights>
+        <landing-light1-offset-deg type="float">0.0</landing-light1-offset-deg>
+        <landing-light2-offset-deg type="float">-3.0</landing-light2-offset-deg>
+    </als-secondary-lights>
     </rendering>
 
     <systems>
+      <property-rule n="101">
+        <path>Systems/als-lights.xml</path>
+      </property-rule>
       <electrical>
         <path></path>
       </electrical>
     </systems>
+
   </sim>
 
   <input>
@@ -209,6 +217,14 @@
         <binding>
           <command>nasal</command>
           <script>dr400.canopy.toggle();</script>
+        </binding>
+      </key>
+      <key n="103">
+        <name>g</name>
+        <desc>Toggle Glass Cockpit</desc>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/model/config/glass-cockpit</property>
         </binding>
       </key>
       <key n="115">
@@ -417,6 +433,8 @@
       <file>Aircraft/DR400-dauphin/Nasal/electrical.nas</file>
       <file>Aircraft/DR400-dauphin/Nasal/interpolate.nas</file>
       <file>Aircraft/Generic/limits.nas</file>
+      <file>Aircraft/DR400-dauphin/Nasal/rain.nas</file>
+      <file>Aircraft/DR400-dauphin/Nasal/automixture.nas</file>
     </dr400>
     <garmin196>
       <file>Aircraft/Instruments-3d/garmin196/garmin196.nas</file>

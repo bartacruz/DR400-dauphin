@@ -40,6 +40,21 @@
     <object-name>Light-OFF</object-name>
   </animation>
 
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>Base</object-name>
+    <object-name>BaseSwitch</object-name>
+    <object-name>Switch</object-name>
+    <object-name>SwitchUp</object-name>
+    <object-name>SwitchDown</object-name>
+    <object-name>vis</object-name>
+    <object-name>vis001</object-name>
+    <object-name>vis.003</object-name>
+    <object-name>Light-ON</object-name>
+    <object-name>Light-OFF</object-name>
+  </effect>
+
+
   <animation>
     <type>pick</type>
     <object-name>SwitchUp</object-name>

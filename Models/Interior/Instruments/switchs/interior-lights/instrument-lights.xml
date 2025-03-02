@@ -16,6 +16,12 @@
     <object-name>knob</object-name>
   </animation>
 
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>knob</object-name>
+  </effect>
+
+
   <animation>
     <type>rotate</type>
     <object-name>knob</object-name>

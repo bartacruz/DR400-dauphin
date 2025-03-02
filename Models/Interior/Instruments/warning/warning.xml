@@ -43,6 +43,35 @@
     <!-- Objets transparents -->
   </animation>
 
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>box01</object-name>
+    <object-name>box02</object-name>
+    <object-name>box03</object-name>
+    <object-name>box04</object-name>
+    <object-name>box05</object-name>
+    <object-name>box06</object-name>
+    <object-name>box07</object-name>
+    <object-name>box08</object-name>
+    <object-name>warning01</object-name>
+    <object-name>warning02</object-name>
+    <object-name>warning03</object-name>
+    <object-name>warning04</object-name>
+    <object-name>warning05</object-name>
+    <object-name>warning06</object-name>
+    <object-name>warning07</object-name>
+    <object-name>warning08</object-name>
+    <object-name>warning01.on</object-name>
+    <object-name>warning02.on</object-name>
+    <object-name>warning03.on</object-name>
+    <object-name>warning04.on</object-name>
+    <object-name>warning05.on</object-name>
+    <object-name>warning06.on</object-name>
+    <object-name>warning07.on</object-name>
+    <object-name>warning08.on</object-name>
+  </effect>
+
+
   <!--<effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>warning01</object-name>

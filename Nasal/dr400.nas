@@ -27,7 +27,7 @@ var config_dlg = gui.Dialog.new("/sim/gui/dialogs/config/dialog", getprop("/sim/
 #####################################
 
 var canopy = aircraft.door.new("canopy", 3);
-
+  setprop("canopy/position-norm",0);
 ###############################################
 #Fuel Management (+ Daniel Dubreuil, March 2013)
 ###############################################
@@ -320,11 +320,15 @@ var Startup = func{
   setprop("/controls/engines/engine[0]/magnetos",3);
   setprop("controls/engines/engine[0]/mixture",1);
   setprop("/controls/gear/brake-parking",0);
-  setprop("/controls/lighting/instruments-norm",1);
+  setprop("/controls/lighting/instruments-norm",0.8);
+  setprop("/controls/lighting/instruments-norm[1]",0.8);
+  setprop("/controls/lighting/instruments-norm[2]",0.8);
+  setprop("/controls/lighting/nav-lights",1);
+  setprop("/controls/lighting/strobe-lights",1);
   setprop("/instrumentation/comm[0]/power-btn",1);
   setprop("/instrumentation/comm[0]/volume",1);
   setprop("/instrumentation/nav[0]/power-btn",1);  
-  setprop("/instrumentation/nav[0]/volume",1);
+  setprop("/instrumentation/nav[0]/volume",0); 
   setprop("/instrumentation/adf[0]/power-btn",1);
   setprop("/instrumentation/adf[0]/volume",1);
   setprop("/instrumentation/adf[0]/volume-norm",1);
@@ -344,6 +348,10 @@ var Shutdown = func{
   setprop("/engines/engine[0]/running",0);
   setprop("/controls/gear/brake-parking",1);
   setprop("/controls/lighting/instruments-norm",0);
+  setprop("/controls/lighting/instruments-norm[1]",0);
+  setprop("/controls/lighting/instruments-norm[2]",0);
+  setprop("/controls/lighting/nav-lights",0);
+  setprop("/controls/lighting/strobe-lights",0);
   setprop("/instrumentation/comm[0]/power-btn",0);
   setprop("/instrumentation/comm[0]/volume",0);
   setprop("/instrumentation/nav[0]/power-btn",0);
@@ -523,3 +531,64 @@ var nasalInit = setlistener("/sim/signals/fdm-initialized", func{
   settimer(upsideDown_system, 2);
   removelistener(nasalInit);
 });
+
+var nasal_dir = nil;
+var interfaceController = nil;
+var fg1000system = nil;
+
+var initFG1000 = func() {
+	if (fg1000system == nil and getprop("sim/model/config/glass-cockpit")) {
+		nasal_dir = getprop("/sim/fg-root") ~ "/Aircraft/Instruments-3d/FG1000/Nasal/";
+		io.load_nasal(nasal_dir ~ 'FG1000.nas', "fg1000");
+		io.load_nasal(nasal_dir ~ 'Interfaces/GenericInterfaceController.nas', "fg1000");
+		
+		interfaceController = fg1000.GenericInterfaceController.getOrCreateInstance();
+		interfaceController.start();
+		
+		# Create the FG1000
+		fg1000system = fg1000.FG1000.getOrCreateInstance();
+		
+		# Create a PFD as device 1, MFD as device 2
+		fg1000system.addPFD(1);
+		fg1000system.addMFD(2);
+		
+		# Display the devices
+		fg1000system.display(1);
+		fg1000system.display(2);
+		
+		#  Display a GUI version of device 1 at 50% scale.
+		#fg1000system.displayGUI(1, 0.5);
+
+		if (getprop("controls/switches/master-avionics") and getprop("controls/electric/battery-switch") ) {
+		      fg1000system.show();
+		}
+
+		setlistener("controls/switches/master-avionics", func(n) {
+		    if (n.getValue() > 0 and getprop("controls/electric/battery-switch") ) {
+		      fg1000system.show();
+		    } else {
+		      fg1000system.hide();
+		    }
+		}, 0, 0);
+		
+		setlistener("controls/electric/battery-switch", func(n) {
+		    if (n.getValue() > 0 and getprop("controls/switches/master-avionics") ) {
+		      fg1000system.show();
+		    } else {
+		      fg1000system.hide();
+		    }
+		}, 0, 0);
+	}
+}
+
+setprop("sim/model/config/glass-cockpit",0);
+initFG1000();
+
+setlistener("sim/model/config/glass-cockpit", func() {
+      initFG1000();
+}, 0, 0);
+
+
+
+
+

@@ -25,6 +25,16 @@
   </emission>
  </animation>
 
+  <effect>
+  <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+  <object-name>key</object-name>
+  <object-name>start</object-name>
+  <object-name>magsw</object-name>
+  <object-name>click-R</object-name>
+  <object-name>click-L</object-name>
+  </effect>
+
+
  <animation>
    <type>knob</type>
    <object-name>click-R</object-name>

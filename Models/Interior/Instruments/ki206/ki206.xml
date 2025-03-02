@@ -31,6 +31,14 @@ Syd Adams
     <object-name>vitre</object-name>
   </animation>
 
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>KI206.knob</object-name>
+    <object-name>KI206.crsdn</object-name>
+    <object-name>KI206.crsup</object-name>
+  </effect>
+
+
   <animation>
     <type>noshadow</type>
     <object-name>vitre</object-name>

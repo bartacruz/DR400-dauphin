@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <name>effects-glasses-rain-outside</name>
+  <inherits-from>Effects/glass</inherits-from>
+  <parameters>
+	<texture n="3">
+		<type>cubemap</type>
+		<images>
+			<positive-x>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_px.png</positive-x>
+			<negative-x>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_nx.png</negative-x>
+			<positive-y>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_py.png</positive-y>
+			<negative-y>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_ny.png</negative-y>
+			<positive-z>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_pz.png</positive-z>
+			<negative-z>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_nz.png</negative-z>
+		</images>
+		</texture>
+	<glass-tint type="vec4d" n="0"> 0.82 0.82 0.85 1.0</glass-tint>
+	<overlay-color type="vec3d" n="0"> 1.0 1.0 1.0</overlay-color>
+	<splash-x><use>/environment/aircraft-effects/splash-vector-x</use></splash-x>
+	<splash-y><use>/environment/aircraft-effects/splash-vector-y</use></splash-y>
+	<splash-z><use>/environment/aircraft-effects/splash-vector-z</use></splash-z>
+	<rnorm><use>/environment/rain-norm</use></rnorm>
+	<gsnorm><use>/environment/aircraft-effects/ground-splash-norm</use></gsnorm>
+	<frost-level><use>/environment/aircraft-effects/frost-level</use></frost-level>
+	<surface-mapping-scheme type="int">0</surface-mapping-scheme>
+	<fog-level><use>/environment/aircraft-effects/fog-level</use></fog-level>
+	<use-wipers><use>/environment/aircraft-effects/use-wipers</use></use-wipers>
+	<use-overlay><use>/environment/aircraft-effects/use-overlay</use></use-overlay>
+	<overlay-alpha><use>/environment/aircraft-effects/overlay-alpha</use></overlay-alpha>
+	<overlay-glare type="float">0.5</overlay-glare>
+	<reflection-fresnel type="float">0.55</reflection-fresnel>
+	<reflection-rainbow type="float">0.3</reflection-rainbow>
+	<reflection-correction type="float">0.25</reflection-correction>
+	<reflection-dynamic type="int">1</reflection-dynamic>
+	<ambient-correction type="float">0.25</ambient-correction>
+	<use-reflection type="int">1</use-reflection>
+        <reflection-strength type="float">0.5</reflection-strength>
+        <surface-mapping-scheme type="int">0</surface-mapping-scheme>
+	<use-mask type="int">0</use-mask>
+  </parameters>
+</PropertyList>

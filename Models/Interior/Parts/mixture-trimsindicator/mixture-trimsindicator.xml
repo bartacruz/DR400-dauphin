@@ -26,6 +26,19 @@
     <!-- Objets transparents -->
   </animation>
 
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>mixture</object-name>
+    <object-name>mixturetrims</object-name>
+    <object-name>mixtureplus</object-name>
+    <object-name>mixturemoins</object-name>
+    <object-name>trimsplus</object-name>
+    <object-name>trimsmoins</object-name>
+    <object-name>trimindicator</object-name>
+    <object-name>labels</object-name>
+  </effect>
+
+
   <animation>
     <type>material</type>
     <object-name>mixture</object-name>

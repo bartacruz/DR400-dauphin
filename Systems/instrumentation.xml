@@ -145,4 +145,7 @@ file, these values will be used (they are hardcoded).
    <number>0</number>
   </mk-viii>
 
+    <garmin196>
+		<texture-file>coque.png</texture-file>
+	</garmin196>
 </PropertyList>

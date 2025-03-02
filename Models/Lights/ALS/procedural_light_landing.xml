@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>procedural_light.ac</path>
+    <nopreview/>
+
+    <effect>
+        <inherits-from>procedural-light-landing</inherits-from>
+        <object-name>procedural_light</object-name>
+    </effect>
+    
+    <animation>
+    <type>scale</type>
+    <object-name>procedural_light</object-name>
+    <x-offset>1.6</x-offset>
+    <y-offset>1.6</y-offset>
+    <z-offset>1.6</z-offset>
+    </animation>
+    
+    <animation>
+		<name>On/off</name>
+		<type>select</type>
+		<object-name>procedural_light</object-name>
+    <condition>
+      <and>
+        <property>sim/multiplay/generic/int[11]</property>
+        <greater-than>
+          <property>sim/multiplay/generic/float[8]</property>
+          <value>8</value>
+        </greater-than>
+        <greater-than>
+          <property>sim/multiplay/generic/float[5]</property>
+          <value>0</value>
+        </greater-than>
+      </and>
+    </condition>
+	</animation>
+    
+    <animation>
+        <type>flash</type>
+        <object-name>procedural_light</object-name>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <power>9</power>
+        <factor>4</factor>
+        <offset>0</offset>
+        <two-sides type="bool">false</two-sides>
+        <min>0.6</min>
+        <max>90</max>
+    </animation>
+
+</PropertyList>

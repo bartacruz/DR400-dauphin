@@ -32,7 +32,7 @@
     <object-name>warning-lights0</object-name>
   </animation>
 
-   <animation>
+  <animation>
     <type>material</type>
     <texture>interior.png</texture>
     <texture-prop>interior-texture</texture-prop>
@@ -55,6 +55,47 @@
     <object-name>trim-wheel</object-name>
     <object-name>warning-lights0</object-name>
   </animation>
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+
+    <object-name>aux-tank</object-name>
+    <object-name>canopy-int</object-name>
+    <object-name>carb-heat</object-name>
+    <object-name>flaps-command</object-name>
+    <object-name>fuel-selector</object-name>
+    <object-name>interior</object-name>
+    <object-name>left-pedals</object-name>
+    <object-name>light-knob1</object-name>
+    <object-name>light-knob2</object-name>
+    <object-name>manche</object-name>
+    <object-name>parking-brake</object-name>
+    <object-name>poignee-int</object-name>
+    <object-name>radio-knob</object-name>
+    <object-name>right-pedals</object-name>
+    <object-name>throttle</object-name>
+    <object-name>trim-wheel</object-name>
+    <object-name>warning-lights0</object-name>
+
+    <object-name>Ball</object-name>
+    <object-name>flapsDown</object-name>
+    <object-name>flapsUp</object-name>
+    <object-name>fuel-pump-bg</object-name>
+    <object-name>left-audio-plug</object-name>
+    <object-name>master-bg</object-name>
+    <object-name>right-audio-plug</object-name>
+    <object-name>throttleDown</object-name>
+    <object-name>throttleUp</object-name>
+  </effect>
+
+  <!-- All screws -->
+  <model>
+    <path>Aircraft/DR400-dauphin/Models/Interior/Parts/screws/screws.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
 
   <animation>
     <type>material</type>
@@ -76,7 +117,9 @@
     <object-name>trim-wheel</object-name>
     <object-name>warning-lights0</object-name>
     <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
+      <not>
+        <property>sim/rendering/rembrandt/enabled</property>
+      </not>
     </condition>
     <emission>
       <red>   0.002 </red>
@@ -128,9 +171,18 @@
     <object-name>poignee-int</object-name>
     <property>canopy/position-norm</property>
     <interpolation>
-      <entry><ind> 0.00 </ind><dep> 0.00 </dep></entry>
-      <entry><ind> 0.12 </ind><dep> 0.00 </dep></entry>
-      <entry><ind> 1.00 </ind><dep> 0.80 </dep></entry>
+      <entry>
+        <ind> 0.00 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind> 0.12 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind> 1.00 </ind>
+        <dep> 0.80 </dep>
+      </entry>
     </interpolation>
     <axis>
       <x> -1 </x>
@@ -138,15 +190,24 @@
       <z>  0 </z>
     </axis>
   </animation>
- 
+
   <animation>
     <type>rotate</type>
     <object-name>poignee-int</object-name>
     <property>canopy/position-norm</property>
     <interpolation>
-      <entry><ind>  0.00 </ind><dep>  0.00 </dep></entry>
-      <entry><ind>  0.12 </ind><dep> 45.00 </dep></entry>
-      <entry><ind>  1.00 </ind><dep> 45.00 </dep></entry>
+      <entry>
+        <ind>  0.00 </ind>
+        <dep>  0.00 </dep>
+      </entry>
+      <entry>
+        <ind>  0.12 </ind>
+        <dep> 45.00 </dep>
+      </entry>
+      <entry>
+        <ind>  1.00 </ind>
+        <dep> 45.00 </dep>
+      </entry>
     </interpolation>
     <axis>
       <x>  0 </x>
@@ -178,10 +239,12 @@
     </axis>
     <interpolation>
       <entry>
-        <ind>-1.0000</ind><dep>13.3930</dep>
+        <ind>-1.0000</ind>
+        <dep>13.3930</dep>
       </entry>
       <entry>
-        <ind>1.0000</ind><dep>-13.3930</dep>
+        <ind>1.0000</ind>
+        <dep>-13.3930</dep>
       </entry>
     </interpolation>
   </animation>
@@ -203,10 +266,12 @@
     </axis>
     <interpolation>
       <entry>
-        <ind>1.0000</ind><dep>-19.5869</dep>
+        <ind>1.0000</ind>
+        <dep>-19.5869</dep>
       </entry>
       <entry>
-        <ind>-1.0000</ind><dep>19.7054</dep>
+        <ind>-1.0000</ind>
+        <dep>19.7054</dep>
       </entry>
     </interpolation>
   </animation>
@@ -312,12 +377,12 @@
     <property>controls/gear/brake-parking-pos</property>
     <factor> -0.015 </factor>
     <axis>
-     <x1-m> -0.003508 </x1-m>
-     <y1-m>  0.000000 </y1-m>
-     <z1-m> -0.001518 </z1-m>
-     <x2-m> -0.035240 </x2-m>
-     <y2-m>  0.000000 </y2-m>
-     <z2-m> -0.012840 </z2-m>
+      <x1-m> -0.003508 </x1-m>
+      <y1-m>  0.000000 </y1-m>
+      <z1-m> -0.001518 </z1-m>
+      <x2-m> -0.035240 </x2-m>
+      <y2-m>  0.000000 </y2-m>
+      <z2-m> -0.012840 </z2-m>
     </axis>
   </animation>
 
@@ -354,12 +419,12 @@
     <property>controls/anti-ice/engine/carb-heat-pos</property>
     <factor> -0.015 </factor>
     <axis>
-     <x1-m> -1.89851 </x1-m>
-     <y1-m>  0.00000 </y1-m>
-     <z1-m>  0.11888 </z1-m>
-     <x2-m> -1.95096 </x2-m>
-     <y2-m>  0.00000 </y2-m>
-     <z2-m>  0.10998 </z2-m>
+      <x1-m> -1.89851 </x1-m>
+      <y1-m>  0.00000 </y1-m>
+      <z1-m>  0.11888 </z1-m>
+      <x2-m> -1.95096 </x2-m>
+      <y2-m>  0.00000 </y2-m>
+      <z2-m>  0.10998 </z2-m>
     </axis>
   </animation>
 
@@ -461,12 +526,26 @@
       <x-m> -1.7988 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.5676 </z-m>
-    </center> 
+    </center>
     <axis>
-     <x> 0.0 </x>
-     <y> 0.0 </y>
-     <z> 1.0 </z>
+      <x> 0.0 </x>
+      <y> 0.0 </y>
+      <z> 1.0 </z>
     </axis>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>Ball</object-name>
+    <visible>true</visible>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>Heading-deg</tooltip-id>
+        <label>Magnetic heading-deg: %3d deg</label>
+        <mapping>heading</mapping>
+        <property>instrumentation/magnetic-compass/indicated-heading-deg</property>
+      </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -481,19 +560,19 @@
     </action>
   </animation>
 
-  <!-- Manette des gazs -->
+  <!-- Manette des gaz -->
   <animation>
     <type>translate</type>
     <object-name>throttle</object-name>
     <property>controls/engines/engine[0]/throttle</property>
     <factor> 0.097 </factor>
     <axis>
-     <x1-m> 0.20770 </x1-m>
-     <y1-m> 0.00000 </y1-m>
-     <z1-m> 0.01000 </z1-m>
-     <x2-m> 0.09690 </x2-m>
-     <y2-m> 0.00000 </y2-m>
-     <z2-m> 0.00560 </z2-m>
+      <x1-m> 0.20770 </x1-m>
+      <y1-m> 0.00000 </y1-m>
+      <z1-m> 0.01000 </z1-m>
+      <x2-m> 0.09690 </x2-m>
+      <y2-m> 0.00000 </y2-m>
+      <z2-m> 0.00560 </z2-m>
     </axis>
   </animation>
 
@@ -585,7 +664,7 @@
         <command>property-adjust</command>
         <property>/controls/engines/engine[0]/throttle</property>
         <step type="double">-0.05</step>
-      </binding>          
+      </binding>
     </action>
     <hovered>
       <binding>

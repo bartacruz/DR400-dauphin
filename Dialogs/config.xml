@@ -60,6 +60,16 @@
 
       <checkbox>
         <halign>left</halign>
+        <label>Glass Cockpit</label>
+        <property>sim/model/config/glass-cockpit</property>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/model/config/glass-cockpit</property>
+        </binding>
+      </checkbox>
+
+      <checkbox>
+        <halign>left</halign>
         <label>Show Yokes</label>
         <property>sim/model/config/show-yokes</property>
         <binding>

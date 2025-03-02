@@ -15,4 +15,9 @@
     <name>Garmin 196</name>
     <path>Aircraft/Instruments-3d/garmin196/garmin196.xml</path>
   </model>
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>coque-capot.002</object-name>
+  </effect>
+
 </PropertyList>

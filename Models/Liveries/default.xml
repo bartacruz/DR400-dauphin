@@ -7,7 +7,8 @@
         <name type="string">Default</name>
         <fuselage-texture>fuselage.png</fuselage-texture>
         <wings-texture>wings.png</wings-texture>
-        <interior-texture>interior.png</interior-texture>
+        <interior-texture>../Liveries/interior-brown.png</interior-texture>
+        <panel-cover>../../../Liveries/panel-cover-brown.png</panel-cover>
       </livery>
     </model>
   </sim>

@@ -75,6 +75,17 @@
       <heading-deg> 0.0 </heading-deg>
     </offsets>
   </model>
+  
+  <model>
+      <name>GNS530</name>
+      <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/GNS530/GNS530.xml</path>
+      <offsets>
+        <x-m> -0.008</x-m>
+        <z-m> 0.11 </z-m>
+        <y-m> 0.147 </y-m>
+        <pitch-deg>  -5.3 </pitch-deg>
+      </offsets>
+  </model>
 
   <model>
     <name>PFD</name>
@@ -844,17 +855,17 @@
     <object-name>panel-cover</object-name>
     <object-name>ALTBackup</object-name>
     <condition>
-      <property>sim/model/config/glass-cockpit</property>
+      <equals>
+        <property>sim/model/config/panel</property>
+        <value>fg1000</value>
+      </equals>
     </condition>
   </animation>
-
   <animation>
     <type>select</type>
-    <object-name>GarminGPS</object-name>
     <object-name>KI206</object-name>
     <object-name>ADF</object-name>
     <object-name>KR87</object-name>
-    <object-name>KX165</object-name>
     <object-name>KT76A</object-name>
     <object-name>Chrono</object-name>
     <object-name>ALT</object-name>
@@ -863,9 +874,40 @@
     <object-name>HI</object-name>
     <object-name>CarbTemp</object-name>
     <condition>
-      <not><property>sim/model/config/glass-cockpit</property></not>
+      <or>
+        <equals>
+          <property>sim/model/config/panel</property>
+          <value>GNS530</value>
+        </equals>
+        <equals>
+          <property>sim/model/config/panel</property>
+          <value>traditional</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>GNS530</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/panel</property>
+        <value>GNS530</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>GarminGPS</object-name>
+    <object-name>KX165</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/panel</property>
+        <value>traditional</value>
+      </equals>
     </condition>
   </animation>
 
 </PropertyList>
-

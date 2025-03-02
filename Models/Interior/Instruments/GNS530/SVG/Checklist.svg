@@ -1,0 +1,1420 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="Checklist.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="SVGRoot"
+   version="1.1"
+   viewBox="0 0 1024 768"
+   height="768px"
+   width="1024px">
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     showguides="false"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-page="true"
+     inkscape:snap-nodes="true"
+     inkscape:bbox-paths="false"
+     inkscape:snap-to-guides="true"
+     inkscape:snap-others="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-grids="true"
+     inkscape:snap-global="true"
+     inkscape:window-maximized="1"
+     inkscape:window-y="36"
+     inkscape:window-x="1680"
+     inkscape:window-height="985"
+     inkscape:window-width="1680"
+     showgrid="true"
+     inkscape:current-layer="ChecklistGroup"
+     inkscape:document-units="px"
+     inkscape:cy="289.22449"
+     inkscape:cx="527.38738"
+     inkscape:zoom="1.251634"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="0"
+     bordercolor="#ffffff"
+     pagecolor="#ffffff"
+     id="base">
+    <inkscape:grid
+       id="grid4269"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <defs
+     id="defs7962" />
+  <metadata
+     id="metadata7965">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="#g5934"
+     id="ChecklistGroup">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:Sans;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="743.23895"
+       y="249.65851"
+       id="text4355"
+       transform="scale(0.96767669,1.033403)"><tspan
+         style="font-size:19.3544px;line-height:1.25;font-family:sans-serif"
+         sodipodi:role="line"
+         id="tspan4357"
+         x="743.23895"
+         y="249.65851"> </tspan></text>
+    <g
+       id="ChecklistMainPane"
+       inkscape:label="#g4962">
+      <g
+         style="display:inline"
+         id="g4338"
+         inkscape:label="#g4298"
+         transform="matrix(1.935484,0,0,0.99855072,-963.54845,-2.915942)">
+        <rect
+           inkscape:label="#rect4293"
+           y="58"
+           x="565"
+           height="690"
+           width="465"
+           id="rect4340"
+           style="opacity:1;fill:#73cdd8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
+      <rect
+         ry="0.5160141"
+         rx="0.5160141"
+         style="opacity:1;fill:#334da1;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect9743"
+         width="830"
+         height="645"
+         x="190"
+         y="78" />
+      <path
+         inkscape:label="#path7241"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemDots0"
+         d="m 245,167 730,0"
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path11892"
+         d="m 810,699.5 -611.37607,0"
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <rect
+         ry="0"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#fffcfa;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect9753"
+         width="209"
+         height="24"
+         x="809.70001"
+         y="697.90002" />
+      <rect
+         inkscape:label="#rect4231"
+         y="148"
+         x="1010"
+         height="525"
+         width="5"
+         id="ChecklistScrollTrough"
+         style="opacity:1;fill:#c0c0c0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99568439;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.46575949;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ChecklistScrollThumb"
+         width="5"
+         height="180"
+         x="1010"
+         y="148"
+         inkscape:label="#rect4231" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistGroupName"
+         y="99.393906"
+         x="283.58826"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:20px;line-height:1"
+           y="99.393906"
+           x="283.58826"
+           id="tspan11878"
+           sodipodi:role="line">GROUP NAME</tspan></text>
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemName0"
+         y="162.24765"
+         x="252.08582"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           y="162.24765"
+           x="252.08582"
+           id="tspan12537"
+           sodipodi:role="line">ChecklistItemName0</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="206.31989"
+         y="99.400078"
+         id="text7221"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:15px;line-height:1"
+           sodipodi:role="line"
+           id="tspan7223"
+           x="206.31989"
+           y="99.400078">GROUP</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="284.08948"
+         y="123.56605"
+         id="ChecklistName"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:20px;line-height:1"
+           sodipodi:role="line"
+           id="tspan7227"
+           x="284.08948"
+           y="123.56605">CHECKLIST NAME</tspan></text>
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="text7229"
+         y="123.57222"
+         x="206.82111"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:15px;line-height:1"
+           y="123.57222"
+           x="206.82111"
+           id="tspan7231"
+           sodipodi:role="line">CHECKLIST</tspan></text>
+      <rect
+         inkscape:label="#rect7233"
+         ry="0.51601398"
+         rx="0.51601398"
+         y="153"
+         x="205"
+         height="15"
+         width="15"
+         id="ChecklistItemBox0"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1019.3778"
+         y="162.24765"
+         id="ChecklistItemValue0"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7237"
+           x="1019.3778"
+           y="162.24765">ChecklistItemValue0</tspan></text>
+      <path
+         inkscape:label="#path7239"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemTick0"
+         d="m 205.29289,158.70712 5,5 15,-15"
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 245,199 730,0"
+         id="ChecklistItemDots1"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7241" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="252.08582"
+         y="193.18799"
+         id="ChecklistItemName1"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7415"
+           x="252.08582"
+           y="193.18799">ChecklistItemName0</tspan></text>
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ChecklistItemBox1"
+         width="15"
+         height="15"
+         x="205"
+         y="185"
+         rx="0.51601398"
+         ry="0.51601398"
+         inkscape:label="#rect7233" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemValue1"
+         y="193.18799"
+         x="1019.3778"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           y="193.18799"
+           x="1019.3778"
+           id="tspan7421"
+           sodipodi:role="line">ChecklistItemValue0</tspan></text>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 205.29289,190.70712 5,5 15,-15"
+         id="ChecklistItemTick1"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7239" />
+      <path
+         inkscape:label="#path7241"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemDots2"
+         d="m 245,231 730,0"
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemName2"
+         y="224.12833"
+         x="252.08582"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           y="224.12833"
+           x="252.08582"
+           id="tspan7429"
+           sodipodi:role="line">ChecklistItemName0</tspan></text>
+      <rect
+         inkscape:label="#rect7233"
+         ry="0.51601398"
+         rx="0.51601398"
+         y="217"
+         x="205"
+         height="15"
+         width="15"
+         id="ChecklistItemBox2"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1019.3778"
+         y="224.12833"
+         id="ChecklistItemValue2"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7435"
+           x="1019.3778"
+           y="224.12833">ChecklistItemValue0</tspan></text>
+      <path
+         inkscape:label="#path7239"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemTick2"
+         d="m 205.29289,222.70712 5,5 15,-15"
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 245,262.99999 730,0"
+         id="ChecklistItemDots3"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7241" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="252.08582"
+         y="255.06868"
+         id="ChecklistItemName3"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7443"
+           x="252.08582"
+           y="255.06868">ChecklistItemName0</tspan></text>
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ChecklistItemBox3"
+         width="15"
+         height="15"
+         x="205"
+         y="248.99998"
+         rx="0.51601398"
+         ry="0.51601398"
+         inkscape:label="#rect7233" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemValue3"
+         y="255.06868"
+         x="1019.3778"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           y="255.06868"
+           x="1019.3778"
+           id="tspan7449"
+           sodipodi:role="line">ChecklistItemValue0</tspan></text>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 205.29289,254.70709 5,5 15,-15"
+         id="ChecklistItemTick3"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7239" />
+      <path
+         inkscape:label="#path7241"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemDots4"
+         d="m 245,295.00001 730,0"
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemName4"
+         y="286.009"
+         x="252.08582"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           y="286.009"
+           x="252.08582"
+           id="tspan7457"
+           sodipodi:role="line">ChecklistItemName0</tspan></text>
+      <rect
+         inkscape:label="#rect7233"
+         ry="0.51601398"
+         rx="0.51601398"
+         y="281"
+         x="205"
+         height="15"
+         width="15"
+         id="ChecklistItemBox4"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1019.3778"
+         y="286.00903"
+         id="ChecklistItemValue4"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7463"
+           x="1019.3778"
+           y="286.00903">ChecklistItemValue0</tspan></text>
+      <path
+         inkscape:label="#path7239"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemTick4"
+         d="m 205.29289,286.70712 5,5 15,-15"
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 245,327 730,0"
+         id="ChecklistItemDots5"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7241" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="252.08582"
+         y="316.94934"
+         id="ChecklistItemName5"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7471"
+           x="252.08582"
+           y="316.94934">ChecklistItemName0</tspan></text>
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ChecklistItemBox5"
+         width="15"
+         height="15"
+         x="205"
+         y="313"
+         rx="0.51601398"
+         ry="0.51601398"
+         inkscape:label="#rect7233" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemValue5"
+         y="316.94937"
+         x="1019.3778"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           y="316.94937"
+           x="1019.3778"
+           id="tspan7477"
+           sodipodi:role="line">ChecklistItemValue0</tspan></text>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 205.29289,318.70712 5,5 15,-15"
+         id="ChecklistItemTick5"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7239" />
+      <path
+         inkscape:label="#path7241"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemDots6"
+         d="m 245,358.99999 730,0"
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemName6"
+         y="347.88968"
+         x="252.08582"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           y="347.88968"
+           x="252.08582"
+           id="tspan7485"
+           sodipodi:role="line">ChecklistItemName0</tspan></text>
+      <rect
+         inkscape:label="#rect7233"
+         ry="0.51601398"
+         rx="0.51601398"
+         y="345"
+         x="205"
+         height="15"
+         width="15"
+         id="ChecklistItemBox6"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1019.3778"
+         y="347.88971"
+         id="ChecklistItemValue6"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7491"
+           x="1019.3778"
+           y="347.88971">ChecklistItemValue0</tspan></text>
+      <path
+         inkscape:label="#path7239"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemTick6"
+         d="m 205.29289,350.70712 5,5 15,-15"
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 245,390.99996 730,0"
+         id="ChecklistItemDots7"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7241" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="252.08582"
+         y="378.83002"
+         id="ChecklistItemName7"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7499"
+           x="252.08582"
+           y="378.83002">ChecklistItemName0</tspan></text>
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ChecklistItemBox7"
+         width="15"
+         height="15"
+         x="205"
+         y="377"
+         rx="0.51601398"
+         ry="0.51601398"
+         inkscape:label="#rect7233" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemValue7"
+         y="378.83005"
+         x="1019.3778"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           y="378.83005"
+           x="1019.3778"
+           id="tspan7505"
+           sodipodi:role="line">ChecklistItemValue0</tspan></text>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 205.29289,382.70712 5,5 15,-15"
+         id="ChecklistItemTick7"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7239" />
+      <path
+         inkscape:label="#path7241"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemDots8"
+         d="m 245,422.99998 730,0"
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemName8"
+         y="409.77039"
+         x="252.08582"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           y="409.77039"
+           x="252.08582"
+           id="tspan7513"
+           sodipodi:role="line">ChecklistItemName0</tspan></text>
+      <rect
+         inkscape:label="#rect7233"
+         ry="0.51601398"
+         rx="0.51601398"
+         y="409"
+         x="205"
+         height="15"
+         width="15"
+         id="ChecklistItemBox8"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1019.3778"
+         y="409.77039"
+         id="ChecklistItemValue8"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7519"
+           x="1019.3778"
+           y="409.77039">ChecklistItemValue0</tspan></text>
+      <path
+         inkscape:label="#path7239"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemTick8"
+         d="m 205.29289,414.70712 5,5 15,-15"
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 245,454.99998 730,0"
+         id="ChecklistItemDots9"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7241" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="252.08582"
+         y="440.71072"
+         id="ChecklistItemName9"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7527"
+           x="252.08582"
+           y="440.71072">ChecklistItemName0</tspan></text>
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ChecklistItemBox9"
+         width="15"
+         height="15"
+         x="205"
+         y="441"
+         rx="0.51601398"
+         ry="0.51601398"
+         inkscape:label="#rect7233" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemValue9"
+         y="440.71072"
+         x="1019.3778"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           y="440.71072"
+           x="1019.3778"
+           id="tspan7533"
+           sodipodi:role="line">ChecklistItemValue0</tspan></text>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 205.29289,446.70712 5,5 15,-15"
+         id="ChecklistItemTick9"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7239" />
+      <path
+         inkscape:label="#path7241"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemDots10"
+         d="m 245,486.99998 730,0"
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemName10"
+         y="471.65106"
+         x="252.08582"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           y="471.65106"
+           x="252.08582"
+           id="tspan7541"
+           sodipodi:role="line">ChecklistItemName0</tspan></text>
+      <rect
+         inkscape:label="#rect7233"
+         ry="0.51601398"
+         rx="0.51601398"
+         y="473"
+         x="205"
+         height="15"
+         width="15"
+         id="ChecklistItemBox10"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1019.3778"
+         y="471.65103"
+         id="ChecklistItemValue10"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7547"
+           x="1019.3778"
+           y="471.65103">ChecklistItemValue0</tspan></text>
+      <path
+         inkscape:label="#path7239"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemTick10"
+         d="m 205.29289,478.70712 5,5 15,-15"
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 245,518.99998 730,0"
+         id="ChecklistItemDots11"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7241" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="252.08582"
+         y="502.59137"
+         id="ChecklistItemName11"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7555"
+           x="252.08582"
+           y="502.59137">ChecklistItemName0</tspan></text>
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ChecklistItemBox11"
+         width="15"
+         height="15"
+         x="205"
+         y="505"
+         rx="0.51601398"
+         ry="0.51601398"
+         inkscape:label="#rect7233" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemValue11"
+         y="502.59137"
+         x="1019.3778"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           y="502.59137"
+           x="1019.3778"
+           id="tspan7561"
+           sodipodi:role="line">ChecklistItemValue0</tspan></text>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 205.29289,510.70711 5,5 15,-15"
+         id="ChecklistItemTick11"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7239" />
+      <path
+         inkscape:label="#path7241"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemDots12"
+         d="m 245,550.99997 730,0"
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemName12"
+         y="533.53168"
+         x="252.08582"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           y="533.53168"
+           x="252.08582"
+           id="tspan7569"
+           sodipodi:role="line">ChecklistItemName0</tspan></text>
+      <rect
+         inkscape:label="#rect7233"
+         ry="0.51601398"
+         rx="0.51601398"
+         y="537"
+         x="205"
+         height="15"
+         width="15"
+         id="ChecklistItemBox12"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1019.3778"
+         y="533.53174"
+         id="ChecklistItemValue12"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7575"
+           x="1019.3778"
+           y="533.53174">ChecklistItemValue0</tspan></text>
+      <path
+         inkscape:label="#path7239"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemTick12"
+         d="m 205.29289,542.70711 5,5 15,-15"
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 245,582.99996 730,0"
+         id="ChecklistItemDots13"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7241" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="252.08582"
+         y="564.47205"
+         id="ChecklistItemName13"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7583"
+           x="252.08582"
+           y="564.47205">ChecklistItemName0</tspan></text>
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ChecklistItemBox13"
+         width="15"
+         height="15"
+         x="205"
+         y="569"
+         rx="0.51601398"
+         ry="0.51601398"
+         inkscape:label="#rect7233" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemValue13"
+         y="564.47205"
+         x="1019.3778"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           y="564.47205"
+           x="1019.3778"
+           id="tspan7589"
+           sodipodi:role="line">ChecklistItemValue0</tspan></text>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 205.29289,574.70711 5,5 15,-15"
+         id="ChecklistItemTick13"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7239" />
+      <path
+         inkscape:label="#path7241"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemDots14"
+         d="m 245,614.99996 730,0"
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistItemName14"
+         y="595.41235"
+         x="252.08582"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           y="595.41235"
+           x="252.08582"
+           id="tspan7597"
+           sodipodi:role="line">ChecklistItemName0</tspan></text>
+      <rect
+         inkscape:label="#rect7233"
+         ry="0.51601398"
+         rx="0.51601398"
+         y="601"
+         x="205"
+         height="15"
+         width="15"
+         id="ChecklistItemBox14"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1019.3778"
+         y="595.41235"
+         id="ChecklistItemValue14"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7603"
+           x="1019.3778"
+           y="595.41235">ChecklistItemValue0</tspan></text>
+      <path
+         inkscape:label="#path7239"
+         inkscape:connector-curvature="0"
+         id="ChecklistItemTick14"
+         d="m 205.29289,606.70711 5,5 15,-15"
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 12;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 245,646.99996 730,0"
+         id="ChecklistItemDots15"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7241" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="252.08582"
+         y="626.35272"
+         id="ChecklistItemName15"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.368px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7611"
+           x="252.08582"
+           y="626.35272">ChecklistItemName0</tspan></text>
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ChecklistItemBox15"
+         width="15"
+         height="15"
+         x="205"
+         y="633"
+         rx="0.51601398"
+         ry="0.51601398"
+         inkscape:label="#rect7233" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 205.29289,638.70711 5,5 15,-15"
+         id="ChecklistItemTick15"
+         inkscape:connector-curvature="0"
+         inkscape:label="#path7239" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1019.3778"
+         y="626.35272"
+         id="ChecklistItemValue15"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan7631"
+           x="1019.3778"
+           y="626.35272">ChecklistItemValue0</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="946.75195"
+         y="694.34045"
+         id="ChecklistNext"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:20px;line-height:1"
+           y="694.34045"
+           x="946.75195"
+           id="tspan4745"
+           sodipodi:role="line">GO TO NEXT CHECKLIST?</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="206.58603"
+         y="694.34045"
+         id="ChecklistNotFinished"
+         transform="scale(0.96688562,1.0342485)"><tspan
+           style="font-size:20px;line-height:1"
+           y="694.34045"
+           x="206.58603"
+           id="tspan4340"
+           sodipodi:role="line">* CHECKLIST NOT FINISHED *</tspan></text>
+      <text
+         transform="scale(0.96688562,1.0342485)"
+         id="ChecklistFinished"
+         y="694.34045"
+         x="206.58603"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-size:20px;line-height:1"
+           sodipodi:role="line"
+           id="tspan4334"
+           x="206.58603"
+           y="694.34045">* CHECKLIST FINISHED *</tspan></text>
+    </g>
+    <rect
+       inkscape:label="#rect6113"
+       ry="0.51600373"
+       rx="0.5212329"
+       y="145.20503"
+       x="196.00504"
+       height="29.975838"
+       width="797.98993"
+       id="ChecklistItemSelect0"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ChecklistItemSelect1"
+       width="797.98993"
+       height="29.975838"
+       x="196.00504"
+       y="177.11263"
+       rx="0.5212329"
+       ry="0.51600373"
+       inkscape:label="#rect6113" />
+    <rect
+       inkscape:label="#rect6113"
+       ry="0.51600373"
+       rx="0.5212329"
+       y="209.02028"
+       x="196.00504"
+       height="29.975838"
+       width="797.98993"
+       id="ChecklistItemSelect2"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ChecklistItemSelect3"
+       width="797.98993"
+       height="29.975838"
+       x="196.00504"
+       y="240.92792"
+       rx="0.5212329"
+       ry="0.51600373"
+       inkscape:label="#rect6113" />
+    <rect
+       inkscape:label="#rect6113"
+       ry="0.51600373"
+       rx="0.5212329"
+       y="272.83554"
+       x="196.00504"
+       height="29.975838"
+       width="797.98993"
+       id="ChecklistItemSelect4"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ChecklistItemSelect5"
+       width="797.98993"
+       height="29.975838"
+       x="196.00504"
+       y="304.74319"
+       rx="0.5212329"
+       ry="0.51600373"
+       inkscape:label="#rect6113" />
+    <rect
+       inkscape:label="#rect6113"
+       ry="0.51600373"
+       rx="0.5212329"
+       y="336.65076"
+       x="196.00504"
+       height="29.975838"
+       width="797.98993"
+       id="ChecklistItemSelect6"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <g
+       style="display:inline"
+       transform="translate(-439.00001,-34.999975)"
+       inkscape:label="#g4271"
+       id="ChecklistGroupSelect">
+      <rect
+         style="opacity:1;fill:#4b4b4b;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.77672273;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4232"
+         width="269.61163"
+         height="214.61163"
+         x="709.38837"
+         y="143.38834" />
+      <rect
+         y="148.09761"
+         x="714.24298"
+         height="204.90236"
+         width="259.9024"
+         id="rect4239"
+         style="opacity:1;fill:#334da1;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.19523048;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         ry="0" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="724.70312"
+         y="196.96481"
+         id="ChecklistGroupItem0"
+         inkscape:label="#text4198"><tspan
+           style="font-size:20px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan4253"
+           x="724.70312"
+           y="196.96481">CHECKLIST GROUP 0</tspan></text>
+      <rect
+         style="opacity:1;fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ChecklistGroupSelectScrollTrough"
+         width="5"
+         height="165"
+         x="959"
+         y="177.99997"
+         inkscape:label="#rect4267" />
+      <rect
+         y="177.99998"
+         x="959"
+         height="119.99999"
+         width="5"
+         id="ChecklistGroupSelectScrollThumb"
+         style="opacity:1;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:label="#rect4269" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="768.42639"
+         y="172.81084"
+         id="text5093"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan5095"
+           x="768.42639"
+           y="172.81084">CHECKLIST GROUP</tspan></text>
+      <text
+         inkscape:label="#text4198"
+         id="ChecklistGroupItem1"
+         y="220.43814"
+         x="724.70312"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;line-height:1.25"
+           y="220.43814"
+           x="724.70312"
+           id="tspan5099"
+           sodipodi:role="line">CHECKLIST GROUP 0</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="724.70312"
+         y="243.91141"
+         id="ChecklistGroupItem2"
+         inkscape:label="#text4198"><tspan
+           style="font-size:20px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan5103"
+           x="724.70312"
+           y="243.91141">CHECKLIST GROUP 0</tspan></text>
+      <text
+         inkscape:label="#text4198"
+         id="ChecklistGroupItem3"
+         y="267.38474"
+         x="724.70312"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;line-height:1.25"
+           y="267.38474"
+           x="724.70312"
+           id="tspan5107"
+           sodipodi:role="line">CHECKLIST GROUP 0</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="724.70312"
+         y="290.85806"
+         id="ChecklistGroupItem4"
+         inkscape:label="#text4198"><tspan
+           style="font-size:20px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan5111"
+           x="724.70312"
+           y="290.85806">CHECKLIST GROUP 0</tspan></text>
+      <text
+         inkscape:label="#text4198"
+         id="ChecklistGroupItem5"
+         y="314.33136"
+         x="724.70312"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;line-height:1.25"
+           y="314.33136"
+           x="724.70312"
+           id="tspan5115"
+           sodipodi:role="line">CHECKLIST GROUP 0</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="724.70312"
+         y="337.80466"
+         id="ChecklistGroupItem6"
+         inkscape:label="#text4198"><tspan
+           style="font-size:20px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan5119"
+           x="724.70312"
+           y="337.80466">CHECKLIST GROUP 0</tspan></text>
+    </g>
+    <g
+       id="ChecklistSelect"
+       inkscape:label="#g4271"
+       transform="translate(-439.00001,-9.9999748)"
+       style="display:inline">
+      <rect
+         y="143.38834"
+         x="709.38837"
+         height="214.61163"
+         width="389.61163"
+         id="rect5123"
+         style="opacity:1;fill:#4b4b4b;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.77672273;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="0"
+         style="opacity:1;fill:#334da1;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.19523048;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect5125"
+         width="379.75702"
+         height="204.90236"
+         x="714.24298"
+         y="148.09761" />
+      <text
+         inkscape:label="#text4198"
+         id="ChecklistChecklistItem0"
+         y="196.96481"
+         x="724.70312"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;line-height:1.25"
+           y="196.96481"
+           x="724.70312"
+           id="tspan5129"
+           sodipodi:role="line">CHECKLIST 0</tspan></text>
+      <rect
+         inkscape:label="#rect4267"
+         y="177.99997"
+         x="1079"
+         height="165"
+         width="5"
+         id="ChecklistSelectScrollTrough"
+         style="opacity:1;fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         inkscape:label="#rect4269"
+         style="opacity:1;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ChecklistSelectScrollThumb"
+         width="5"
+         height="119.99999"
+         x="1079"
+         y="177.99998" />
+      <text
+         id="text5135"
+         y="172.81084"
+         x="899.80847"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:19.3675px;line-height:1.25"
+           y="172.81084"
+           x="899.80847"
+           id="tspan5137"
+           sodipodi:role="line">CHECKLIST</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="724.70312"
+         y="220.43814"
+         id="ChecklistChecklistItem1"
+         inkscape:label="#text4198"><tspan
+           style="font-size:20px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan5141"
+           x="724.70312"
+           y="220.43814">CHECKLIST 1</tspan></text>
+      <text
+         inkscape:label="#text4198"
+         id="ChecklistChecklistItem2"
+         y="243.91141"
+         x="724.70312"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;line-height:1.25"
+           y="243.91141"
+           x="724.70312"
+           id="tspan5145"
+           sodipodi:role="line">CHECKLIST 2</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="724.70312"
+         y="267.38474"
+         id="ChecklistChecklistItem3"
+         inkscape:label="#text4198"><tspan
+           style="font-size:20px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan5149"
+           x="724.70312"
+           y="267.38474">CHECKLIST 3</tspan></text>
+      <text
+         inkscape:label="#text4198"
+         id="ChecklistChecklistItem4"
+         y="290.85806"
+         x="724.70312"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;line-height:1.25"
+           y="290.85806"
+           x="724.70312"
+           id="tspan5153"
+           sodipodi:role="line">CHECKLIST 4</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="724.70312"
+         y="314.33136"
+         id="ChecklistChecklistItem5"
+         inkscape:label="#text4198"><tspan
+           style="font-size:20px;line-height:1.25"
+           sodipodi:role="line"
+           id="tspan5157"
+           x="724.70312"
+           y="314.33136">CHECKLIST 5</tspan></text>
+      <text
+         inkscape:label="#text4198"
+         id="ChecklistChecklistItem6"
+         y="337.80466"
+         x="724.70312"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;line-height:1.25"
+           y="337.80466"
+           x="724.70312"
+           id="tspan5161"
+           sodipodi:role="line">CHECKLIST 6</tspan></text>
+    </g>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ChecklistItemSelect7"
+       width="797.98993"
+       height="29.975838"
+       x="196.00504"
+       y="368.55832"
+       rx="0.5212329"
+       ry="0.51600373"
+       inkscape:label="#rect6113" />
+    <rect
+       inkscape:label="#rect6113"
+       ry="0.51600373"
+       rx="0.5212329"
+       y="400.466"
+       x="196.00504"
+       height="29.975838"
+       width="797.98993"
+       id="ChecklistItemSelect8"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ChecklistItemSelect9"
+       width="797.98993"
+       height="29.975838"
+       x="196.00504"
+       y="432.37357"
+       rx="0.5212329"
+       ry="0.51600373"
+       inkscape:label="#rect6113" />
+    <rect
+       inkscape:label="#rect6113"
+       ry="0.51600373"
+       rx="0.5212329"
+       y="464.28116"
+       x="196.00504"
+       height="29.975838"
+       width="797.98993"
+       id="ChecklistItemSelect10"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ChecklistItemSelect11"
+       width="797.98993"
+       height="29.975838"
+       x="196.00504"
+       y="496.18881"
+       rx="0.5212329"
+       ry="0.51600373"
+       inkscape:label="#rect6113" />
+    <rect
+       inkscape:label="#rect6113"
+       ry="0.51600373"
+       rx="0.5212329"
+       y="528.09631"
+       x="196.00504"
+       height="29.975838"
+       width="797.98993"
+       id="ChecklistItemSelect12"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ChecklistItemSelect13"
+       width="797.98993"
+       height="29.975838"
+       x="196.00504"
+       y="560.00385"
+       rx="0.5212329"
+       ry="0.51600373"
+       inkscape:label="#rect6113" />
+    <rect
+       inkscape:label="#rect6113"
+       ry="0.51600373"
+       rx="0.5212329"
+       y="591.91144"
+       x="196.00504"
+       height="29.975838"
+       width="797.98993"
+       id="ChecklistItemSelect14"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c0c0c0;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ChecklistItemSelect15"
+       width="797.98993"
+       height="29.975838"
+       x="196.00504"
+       y="623.81921"
+       rx="0.5212329"
+       ry="0.51600373"
+       inkscape:label="#rect6113" />
+  </g>
+</svg>

@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024px"
+   height="768px"
+   viewBox="0 0 1024 768"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="AirportInfo.svg">
+  <sodipodi:namedview
+     inkscape:guide-bbox="true"
+     showguides="true"
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#ffffff"
+     borderopacity="0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35295858"
+     inkscape:cx="862.16227"
+     inkscape:cy="556.84264"
+     inkscape:document-units="px"
+     inkscape:current-layer="AirportInfoGroup"
+     showgrid="true"
+     inkscape:window-width="1680"
+     inkscape:window-height="985"
+     inkscape:window-x="1680"
+     inkscape:window-y="36"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false"
+     inkscape:snap-grids="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-others="true"
+     inkscape:snap-to-guides="true"
+     inkscape:bbox-paths="false"
+     inkscape:snap-nodes="true"
+     inkscape:snap-page="true"
+     inkscape:bbox-nodes="true"
+     inkscape:document-rotation="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4269" />
+    <sodipodi:guide
+       id="guide96"
+       orientation="0,-1"
+       position="563.09723,52.264468" />
+  </sodipodi:namedview>
+  <defs
+     id="defs7962" />
+  <metadata
+     id="metadata7965">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="AirportInfoGroup">
+    <g
+       id="AirportInfoGroup"
+       inkscape:label="#g9755">
+      <rect
+         inkscape:label="#rect8921"
+         y="30.697296"
+         x="699.99799"
+         height="684.50397"
+         width="325.004"
+         id="Background"
+         style="opacity:1;fill:#1a3030;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.996016;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="50.350754"
+         x="705.15149"
+         height="220.90404"
+         width="314.69708"
+         id="rect9743"
+         style="opacity:1;fill:#334da1;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.30293;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:#334da1;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.08465;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect9745"
+         width="314.91534"
+         height="152.9805"
+         x="705.0423"
+         y="300.40613" />
+      <rect
+         y="479.48892"
+         x="705.16626"
+         height="231.06595"
+         width="314.66751"
+         id="rect9747"
+         style="opacity:1;fill:#334da1;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.3325;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="35.133926"
+         x="720.32434"
+         height="32.645874"
+         width="133.19807"
+         id="rect9753"
+         style="opacity:1;fill:#1a3030;fill-opacity:1;fill-rule:nonzero;stroke:#fffcfa;stroke-width:1.64856;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text9749"
+         y="60.636566"
+         x="728.17981"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#fffcfa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="60.636566"
+           x="728.17981"
+           id="tspan9751"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">AIRPORT</tspan></text>
+      <rect
+         style="opacity:1;fill:#1a3030;fill-opacity:1;fill-rule:nonzero;stroke:#fffcfa;stroke-width:1.51535;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4150"
+         width="130.6422"
+         height="28.123026"
+         x="720.25769"
+         y="286.17212" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#fffcfa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="730.51361"
+         y="309.41333"
+         id="text4152"><tspan
+           sodipodi:role="line"
+           id="tspan4154"
+           x="730.51361"
+           y="309.41333"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">RUNWAYS</tspan></text>
+      <rect
+         y="463.86475"
+         x="720.40527"
+         height="30.114548"
+         width="174.14827"
+         id="rect4156"
+         style="opacity:1;fill:#1a3030;fill-opacity:1;fill-rule:nonzero;stroke:#fffcfa;stroke-width:1.81046;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text4158"
+         y="486.7287"
+         x="728.63196"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#fffcfa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="486.7287"
+           x="728.63196"
+           sodipodi:role="line"
+           id="tspan4162"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">FREQUENCIES</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:40px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="721.1507"
+         y="105.28425"
+         id="AirportInfoID"
+         inkscape:label="#text4166"><tspan
+           sodipodi:role="line"
+           id="tspan4168"
+           x="721.1507"
+           y="105.28425"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:40px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">KSFO</tspan></text>
+      <text
+         id="AirportInfoName"
+         y="139.19934"
+         x="721.49182"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4170"><tspan
+           y="139.19934"
+           x="721.49182"
+           id="tspan4172"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">SAN FRANCISCO INTERNATIONAL</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="721.88275"
+         y="170.02617"
+         id="AirportInfoCity"
+         inkscape:label="#text4174"><tspan
+           sodipodi:role="line"
+           id="tspan4176"
+           x="721.88275"
+           y="170.02617"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">CITY</tspan></text>
+      <text
+         id="AirportInfoUsage"
+         y="100.69442"
+         x="889.49768"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4182"><tspan
+           y="100.69442"
+           x="889.49768"
+           id="tspan4184"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">PUBLIC</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="721.19263"
+         y="200.853"
+         id="AirportInfoRegion"
+         inkscape:label="#text4198"><tspan
+           sodipodi:role="line"
+           id="tspan4200"
+           x="721.19263"
+           y="200.853"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">REGION</tspan></text>
+      <text
+         id="AirportInfoLat"
+         y="231.67982"
+         x="721.19263"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4202"><tspan
+           y="231.67982"
+           x="721.19263"
+           id="tspan4204"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">N 39002</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="722.89838"
+         y="262.50662"
+         id="AirportInfoLon"
+         inkscape:label="#text4216"><tspan
+           sodipodi:role="line"
+           id="tspan4218"
+           x="722.89838"
+           y="262.50662"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">W 994499</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="939.38782"
+         y="200.853"
+         id="AirportInfoAlt"
+         inkscape:label="#text4224"><tspan
+           sodipodi:role="line"
+           id="tspan4226"
+           x="939.38782"
+           y="200.853"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">2000ft</tspan></text>
+      <text
+         id="AirportInfoFuel"
+         y="234.51302"
+         x="872.04419"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4228"><tspan
+           y="234.51302"
+           x="872.04419"
+           id="tspan4230"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">AVGAS</tspan></text>
+      <text
+         id="AirportInfoTZ"
+         y="262.50662"
+         x="936.64044"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           y="262.50662"
+           x="936.64044"
+           id="tspan4234"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">UTC-6</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="778.0719"
+         y="346.30695"
+         id="AirportInfoRunway"><tspan
+           sodipodi:role="line"
+           id="tspan4238"
+           x="778.0719"
+           y="346.30695"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">17-35</tspan></text>
+      <text
+         id="AirportInfoRwyDimensions"
+         y="378.12955"
+         x="728.33008"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           y="378.12955"
+           x="728.33008"
+           id="tspan4242"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">5000FT x 75FT</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="727.63672"
+         y="409.95218"
+         id="AirportInfoRwySurface"><tspan
+           sodipodi:role="line"
+           id="tspan4246"
+           x="727.63672"
+           y="409.95218"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">HARD SURFACE</tspan></text>
+      <text
+         id="AirportInfoRwyLighting"
+         y="441.77481"
+         x="727.63672"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           y="441.77481"
+           x="727.63672"
+           id="tspan4250"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">PCL FREQUENCY - 122.90</tspan></text>
+      <text
+         id="AirportInfoFreqLabel1"
+         y="552.60651"
+         x="709.77191"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           y="552.60651"
+           x="709.77191"
+           id="tspan4254"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">TOWER</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1005.3602"
+         y="551.59021"
+         id="AirportInfoFreq1"><tspan
+           sodipodi:role="line"
+           id="tspan4258"
+           x="1005.3602"
+           y="551.59021"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">119.875</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="709.77191"
+         y="581.9906"
+         id="AirportInfoFreqLabel2"><tspan
+           sodipodi:role="line"
+           id="tspan4262"
+           x="709.77191"
+           y="581.9906"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">TOWER</tspan></text>
+      <text
+         id="AirportInfoFreq2"
+         y="580.9743"
+         x="1005.3602"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           y="580.9743"
+           x="1005.3602"
+           id="tspan4266"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">119.875</tspan></text>
+      <text
+         id="AirportInfoFreqLabel3"
+         y="611.37469"
+         x="709.77191"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           y="611.37469"
+           x="709.77191"
+           id="tspan4270"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">TOWER</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1005.3602"
+         y="610.3584"
+         id="AirportInfoFreq3"><tspan
+           sodipodi:role="line"
+           id="tspan4274"
+           x="1005.3602"
+           y="610.3584"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">119.875</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="709.77191"
+         y="640.75879"
+         id="AirportInfoFreqLabel4"><tspan
+           sodipodi:role="line"
+           id="tspan4278"
+           x="709.77191"
+           y="640.75879"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">TOWER</tspan></text>
+      <text
+         id="AirportInfoFreq4"
+         y="639.74249"
+         x="1005.3602"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           y="639.74249"
+           x="1005.3602"
+           id="tspan4282"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">119.875</tspan></text>
+      <text
+         id="AirportInfoFreqLabel6"
+         y="699.52698"
+         x="709.77191"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           y="699.52698"
+           x="709.77191"
+           id="tspan4286"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">TOWER</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="1005.3602"
+         y="698.51068"
+         id="AirportInfoFreq6"><tspan
+           sodipodi:role="line"
+           id="tspan4290"
+           x="1005.3602"
+           y="698.51068"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">119.875</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="709.77191"
+         y="670.14288"
+         id="AirportInfoFreqLabel5"><tspan
+           sodipodi:role="line"
+           id="tspan4294"
+           x="709.77191"
+           y="670.14288"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">TOWER</tspan></text>
+      <text
+         id="AirportInfoFreq5"
+         y="669.12659"
+         x="1005.3602"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           y="669.12659"
+           x="1005.3602"
+           id="tspan4298"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">119.875</tspan></text>
+      <rect
+         style="opacity:1;fill:#1a3030;fill-opacity:1;fill-rule:nonzero;stroke:#fffcfa;stroke-width:1.76592;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4216"
+         width="150.07503"
+         height="33.247131"
+         x="549.35016"
+         y="31.555885" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#fffcfa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="557.26813"
+         y="56.952187"
+         id="text4218"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+           sodipodi:role="line"
+           id="tspan4220"
+           x="557.26813"
+           y="56.952187">NORTH UP</tspan></text>
+      <path
+         style="fill:#404040;fill-opacity:1;fill-rule:evenodd;stroke:#404040;stroke-width:1.54235px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 738.84125,329.82053 v 14.64163 l -8.32662,-7.22931 z"
+         id="AirportInfoRunwayLeft"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc"
+         inkscape:label="#path4222" />
+      <path
+         inkscape:label="#path4222"
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="AirportInfoRunwayRight"
+         d="m 818.04473,329.82053 v 14.64163 l 8.32664,-7.22931 z"
+         style="fill:#404040;fill-opacity:1;fill-rule:evenodd;stroke:#404040;stroke-width:1.54235px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <rect
+         y="685.01428"
+         x="603.92462"
+         height="29.375669"
+         width="95.72065"
+         id="rect4226"
+         style="opacity:1;fill:#1a3030;fill-opacity:1;fill-rule:nonzero;stroke:#fffcfa;stroke-width:1.32567;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="AirportInfoZoom"
+         y="709.69928"
+         x="694.60254"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#fffcfa;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4228"><tspan
+           y="709.69928"
+           x="694.60254"
+           id="tspan4231"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end">2nm</tspan></text>
+      <text
+         inkscape:label="#text4166"
+         id="AirportInfoID0"
+         y="105.27448"
+         x="721.1507"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:40px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="105.27448"
+           x="721.1507"
+           id="tspan4227"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:40px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">K</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:40px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="742.97595"
+         y="105.28425"
+         id="AirportInfoID1"
+         inkscape:label="#text4166"><tspan
+           sodipodi:role="line"
+           id="tspan4232"
+           x="742.97595"
+           y="105.28425"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:40px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">S</tspan></text>
+      <text
+         inkscape:label="#text4166"
+         id="AirportInfoID2"
+         y="105.27448"
+         x="765.05402"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:40px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="105.27448"
+           x="765.05402"
+           id="tspan4236"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:40px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">F</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:40px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="784.81964"
+         y="105.28425"
+         id="AirportInfoID3"
+         inkscape:label="#text4166"><tspan
+           sodipodi:role="line"
+           id="tspan4240"
+           x="784.81964"
+           y="105.28425"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:40px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">O</tspan></text>
+      <rect
+         inkscape:label="#rect4231"
+         y="493.24518"
+         x="1010.1356"
+         height="213.45865"
+         width="5.9427676"
+         id="AirportInfoFreqScrollBar"
+         style="opacity:1;fill:#c0c0c0;fill-opacity:1;fill-rule:nonzero;stroke:#c0c0c0;stroke-width:1.42467;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:#808080;stroke-width:0.572297;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="AirportInfoFreqScroll"
+         width="6.7950988"
+         height="30.125319"
+         x="1009.6773"
+         y="492.81903"
+         inkscape:label="#rect4231" />
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="709.77191"
+         y="523.22241"
+         id="AirportInfoFreqLabel0"><tspan
+           sodipodi:role="line"
+           id="tspan8284"
+           x="709.77191"
+           y="523.22241"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">TOWER</tspan></text>
+      <text
+         id="AirportInfoFreq0"
+         y="522.20612"
+         x="1005.3602"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:0%;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           y="522.20612"
+           x="1005.3602"
+           id="tspan8288"
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.6667px;line-height:1.25;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">119.875</tspan></text>
+    </g>
+  </g>
+</svg>

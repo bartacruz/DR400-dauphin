@@ -22,13 +22,6 @@
         </binding>
       </item>
       <item>
-        <label>Toggle Glass Cockpit</label>
-        <binding>
-          <command>property-toggle</command>
-          <property>sim/model/config/glass-cockpit</property>
-        </binding>
-      </item>
-      <item>
         <label>Autostart</label>
         <binding>
           <command>property-toggle</command>
@@ -39,4 +32,3 @@
   </default>
 
 </PropertyList>
-

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ########################################
+
+ # DR400-dauphin by PAF team
+ # April 2012 : Modified by PAF team
+ # http://equipe-flightgear.forumactif.com
+
+##########################################-->
+
+<PropertyList include="dr400-main.xml">
+    <sim>
+        <variant-of>dr400-dauphin</variant-of>
+        <description>Robin DR400-dauphin wit glass panel (FG1000)</description>
+        <author>Bertrand AUGRAS (3D), Daniel DUBREUIL (FDM), Clement de l'Hamaide (3D, Systems, Adaptation), PAF team, Julio Santa Cruz</author>
+        <model>
+            <config>
+                <panel>fg1000</panel>
+                <pichichi>sarlanga</pichichi>
+            </config>
+        </model>
+    </sim>
+
+    <instrumentation>
+        <fg1000>
+            <serviceable type="bool">true</serviceable>
+            <loaded type="bool">false</loaded>
+        </fg1000>
+    </instrumentation>
+
+    <nasal>
+        <fg1000>
+            <file>Aircraft/DR400-dauphin/Nasal/fg1000.nas</file>
+        </fg1000>
+    </nasal>
+
+</PropertyList>

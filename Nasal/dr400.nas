@@ -434,7 +434,7 @@ global_system = func{
     setprop("/controls/engines/engine[0]/starter",0);
   }
 
-  if(getprop("/systems/electrical/outputs/master-avionics") > 6){
+  if(getprop("/systems/electrical/outputs/bus-avionics") > 6){
     setprop("/instrumentation/attitude-indicator/spin",10);
   }else{
     setprop("/instrumentation/attitude-indicator/spin",0);

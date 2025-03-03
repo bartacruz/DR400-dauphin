@@ -82,7 +82,7 @@ var loader = func(n){
 		if (!loaded) {
 			load_gns530();
 		}
-		power_listener = setlistener("/systems/electrical/outputs/master-avionics", fg1000_power);
+		power_listener = setlistener("/systems/electrical/outputs/gns530", fg1000_power);
 		print("GNS530 power listener hooked");
     } elsif (loaded) {
         # TODO: can't unload the nasal, but we should destroy the MFD...

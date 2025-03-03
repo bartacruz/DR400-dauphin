@@ -57,7 +57,7 @@ var loader = func(n){
 		if (!loaded) {
 			load_fg1000();
 		}
-		power_listener = setlistener("/systems/electrical/outputs/master-avionics", fg1000_power);
+		power_listener = setlistener("/systems/electrical/outputs/fg1000", fg1000_power);
 		print("FG1000 panel: power listener hooked");
     } elsif (loaded) {
         # TODO: can't unload the nasal, but we should destroy the MFD...

@@ -423,6 +423,12 @@
   </instrumentation>
 
   <nasal>
+    <updateloop>
+      <file>Aircraft/Generic/updateloop.nas</file>
+    </updateloop>
+    <Electric>
+    <file>Aircraft/DR400-dauphin/Nasal/Electric.nas</file>
+    </Electric>
     <dr400>
       <file>Aircraft/DR400-dauphin/Nasal/physics.nas</file>
       <file>Aircraft/DR400-dauphin/Nasal/light.nas</file>
@@ -433,6 +439,7 @@
       <file>Aircraft/Generic/limits.nas</file>
       <file>Aircraft/DR400-dauphin/Nasal/rain.nas</file>
     </dr400>
+    
     <kr87>
       <file>Aircraft/DR400-dauphin/Models/Interior/Instruments/kr87-adf/kr87.nas</file>
     </kr87>

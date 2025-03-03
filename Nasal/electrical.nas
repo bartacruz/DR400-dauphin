@@ -1,14 +1,12 @@
+###############################################################################
 ##
-# Procedural model of a Cessna 172S electrical system.  Includes a
-# preliminary battery charge/discharge model and realistic ammeter
-# gauge modeling.
-#
-
-
+##  Electrical management for DR400-dauphin
 ##
-# Initialize the electric system
-#
-
+##  Julio Santa Cruz (Barta)
+##  
+##  This file is licensed under the GPL license version 2 or later.
+##
+###############################################################################
 
 # Battery (12v 32a/h 240 CCA as per POH)
 #var battery = Electric.Battery.new("a","/controls/electric/battery-switch",13.5,240.0,32.0,32.0);
@@ -30,6 +28,7 @@ var avionics_bus = Electric.Bus.new("avionics","controls/switches/master-avionic
 main_bus.add_load(Electric.Load.new("starter",50.0,"/controls/engines/engine[0]/starter_cmd"));
 main_bus.add_load(Electric.Load.new("carb-heat",2.0,"/controls/anti-ice/engine/carb-heat"));
 main_bus.add_load(Electric.Load.new("fuel-pump",1.0,"/controls/fuel/tank/boost-pump"));
+# TODO add flaps.
 
 # Exterior lights
 main_bus.add_load(Electric.Load.new("landing-light",10.0,"/controls/lighting/landing-lights"));
@@ -45,8 +44,9 @@ main_bus.add_load(Electric.Load.new("instrument-lights[2]",1.0,"/controls/lighti
 # The avionics bus is connected to the master bus
 main_bus.add_load(avionics_bus);
 
-# AVionics
-avionics_bus.add_load(Electric.Load.new("turn-indicator",2.0,"/instrumentation/turn-indicator/power-btn"));
+# Avionics
+avionics_bus.add_load(Electric.Load.new("turn-coordinator",2.0,"controls/switches/master-avionics"));
+
 var panel = getprop("/sim/model/config/panel");
 if (panel == "traditional") {
     avionics_bus.add_load(Electric.Load.new("transponder",3.0,"/instrumentation/transponder/power-btn"));
@@ -54,11 +54,8 @@ if (panel == "traditional") {
     avionics_bus.add_load(Electric.Load.new("nav[0]",3.0,"/instrumentation/nav[0]/power-btn"));
     avionics_bus.add_load(Electric.Load.new("adf",3.0,"/instrumentation/adf/power-btn"));
 } elsif (panel == "fg1000") {
-    # avionics_bus.add_load(Electric.Load.new("comm[0]",3.0,"/instrumentation/comm[0]/power-btn"));
-    # avionics_bus.add_load(Electric.Load.new("nav[0]",3.0,"/instrumentation/nav[0]/power-btn"));
-    # avionics_bus.add_load(Electric.Load.new("comm[1]",3.0,"/instrumentation/comm[1]/power-btn"));
-    # avionics_bus.add_load(Electric.Load.new("nav[1]",3.0,"/instrumentation/nav[1]/power-btn"));
-    avionics_bus.add_load(Electric.Load.new("fg1000",1.0,"controls/switches/master-avionics"));
+    # separate this into MDF/PDF/Audio panel??
+    avionics_bus.add_load(Electric.Load.new("fg1000",9.0,"controls/switches/master-avionics"));
 } elsif (panel == "GNS530") {
     avionics_bus.add_load(Electric.Load.new("adf",3.0,"/instrumentation/adf/power-btn"));
     avionics_bus.add_load(Electric.Load.new("transponder",3.0,"/instrumentation/transponder/power-btn"));

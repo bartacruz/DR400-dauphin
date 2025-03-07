@@ -10,13 +10,14 @@
 
 # Battery (12v 32a/h 240 CCA as per POH)
 #var battery = Electric.Battery.new("a","/controls/electric/battery-switch",13.5,240.0,32.0,32.0);
-var battery = Electric.Battery.new("a","/controls/electric/battery-switch",24.0,120.0,32.0,32.0);
+
+var battery = Electric.Battery.new("a","/controls/electric/battery-switch",24.0,32.0,120.0);
 
 # Alternator (12v 50a/h as per POH)
 var alternator = Electric.Alternator.new("/controls/engines/engine[0]/master-alt","/engines/engine[0]/rpm",28.0,50.0);
 
 # External source
-var external_source = Electric.Alternator.new("/controls/electric/external-power",false,28.0,100.0);
+var external_source = Electric.Alternator.new("/controls/electric/external-power",false,28.0,50.0);
 
 # Main bus
 var main_bus = Electric.Bus.new("main", "/systems/electrical/serviceable");
@@ -25,41 +26,74 @@ var main_bus = Electric.Bus.new("main", "/systems/electrical/serviceable");
 var avionics_bus = Electric.Bus.new("avionics","controls/switches/master-avionics" );
 
 # Engine related loads
-main_bus.add_load(Electric.Load.new("starter",50.0,"/controls/engines/engine[0]/starter_cmd"));
-main_bus.add_load(Electric.Load.new("carb-heat",2.0,"/controls/anti-ice/engine/carb-heat"));
-main_bus.add_load(Electric.Load.new("fuel-pump",1.0,"/controls/fuel/tank/boost-pump"));
-# TODO add flaps.
+main_bus.add_load(Electric.Load.new("starter",80.0,"/controls/engines/engine[0]/starter_cmd"));
+# carb heat is not electric, but somehow it needs an electric output set.
+main_bus.add_load(Electric.Load.new("carb-heat",0.01,"/controls/anti-ice/engine/carb-heat"));
+main_bus.add_load(Electric.Load.new("fuel-pump",5.0,"/controls/fuel/tank/boost-pump"));
+#main_bus.add_load(Electric.Load.new("fuel-pump",5.0,"/controls/fuel/tank/boost-pump"));
+
 
 # Exterior lights
-main_bus.add_load(Electric.Load.new("landing-light",10.0,"/controls/lighting/landing-lights"));
-main_bus.add_load(Electric.Load.new("strobe-lights",5.0,"/controls/lighting/strobe-lights"));
-main_bus.add_load(Electric.Load.new("nav-lights",5.0,"/controls/lighting/nav-lights"));
-main_bus.add_load(Electric.Load.new("taxi-lights",8.0,"/controls/lighting/taxi-lights"));
+# landing light 250w @28v
+main_bus.add_load(Electric.Load.new("landing-light",9.0,"/controls/lighting/landing-lights"));
+# Taxi light 100w @28v
+main_bus.add_load(Electric.Load.new("taxi-lights",3.6,"/controls/lighting/taxi-lights"));
+# 7w average led strobe light
+main_bus.add_load(Electric.Load.new("strobe-lights",0.25,"/controls/lighting/strobe-lights"));
+# 2x 15w led nav lights
+main_bus.add_load(Electric.Load.new("nav-lights",1.1,"/controls/lighting/nav-lights"));
 
-# Instrument lights (1A)
-main_bus.add_load(Electric.Load.new("instrument-lights[0]",1.0,"/controls/lighting/instrument-lights[0]"));
-main_bus.add_load(Electric.Load.new("instrument-lights[1]",1.0,"/controls/lighting/instrument-lights[1]"));
-main_bus.add_load(Electric.Load.new("instrument-lights[2]",1.0,"/controls/lighting/instrument-lights[2]"));
+
+# Instrument lights (led 3w each)
+main_bus.add_load(Electric.Load.new("instrument-lights[0]",0.11,"/controls/lighting/instrument-lights[0]"));
+main_bus.add_load(Electric.Load.new("instrument-lights[1]",0.11,"/controls/lighting/instrument-lights[1]"));
+main_bus.add_load(Electric.Load.new("instrument-lights[2]",0.11,"/controls/lighting/instrument-lights[2]"));
 
 # The avionics bus is connected to the master bus
 main_bus.add_load(avionics_bus);
 
 # Avionics
-avionics_bus.add_load(Electric.Load.new("turn-coordinator",2.0,"controls/switches/master-avionics"));
+
+var check_radio_setup = func(n) {
+    var radio_setup = n.getValue();
+    avionics_bus.clear();
+    avionics_bus.add_load(Electric.Load.new("turn-coordinator",.0,"controls/switches/master-avionics"));
+
+    if (radio_setup == "bendix") {
+        avionics_bus.add_load(Electric.Load.new("transponder",1.0,"/instrumentation/transponder/power-btn"));
+        avionics_bus.add_load(Electric.Load.new("comm[0]",0.5,"/instrumentation/comm[0]/power-btn"));
+        avionics_bus.add_load(Electric.Load.new("nav[0]",0.5,"/instrumentation/nav[0]/power-btn"));
+        avionics_bus.add_load(Electric.Load.new("adf",1.0,"/instrumentation/adf/power-btn"));
+        avionics_bus.add_load(Electric.Load.new("gps",0.5,"controls/switches/master-avionics"));
+        print("### Bendix avionics connected to bus");
+    } elsif (radio_setup == "garmin") {
+        avionics_bus.add_load(Electric.Load.new("ipad",0.5,"controls/switches/master-avionics"));
+        avionics_bus.add_load(Electric.Load.new("comm[0]",1.0,"controls/switches/master-avionics"));
+        avionics_bus.add_load(Electric.Load.new("nav[0]",1.0,"controls/switches/master-avionics"));
+        avionics_bus.add_load(Electric.Load.new("transponder",30.0,"controls/switches/master-avionics"));
+        print("### Garmin avionics connected to bus");
+    } elsif (radio_setup == "gns530") {
+        avionics_bus.add_load(Electric.Load.new("gns530",3.0,"controls/switches/master-avionics"));
+        # Comms are tricky b/c they use a lot only when transmitting.
+        # TODO: add a "peak use" to Electric.Load
+        avionics_bus.add_load(Electric.Load.new("comm[0]",0.5,"controls/switches/master-avionics"));
+        avionics_bus.add_load(Electric.Load.new("nav[0]",0.5,"controls/switches/master-avionics"));
+        avionics_bus.add_load(Electric.Load.new("transponder",3.0,"/instrumentation/transponder/power-btn"));
+        print("### GNS530 avionics connected to bus");
+    } else {
+        print("### WARNING: NO avionics connected to bus");
+    }
+    
+}
 
 var panel = getprop("/sim/model/config/panel");
 if (panel == "traditional") {
-    avionics_bus.add_load(Electric.Load.new("transponder",3.0,"/instrumentation/transponder/power-btn"));
-    avionics_bus.add_load(Electric.Load.new("comm[0]",3.0,"/instrumentation/comm[0]/power-btn"));
-    avionics_bus.add_load(Electric.Load.new("nav[0]",3.0,"/instrumentation/nav[0]/power-btn"));
-    avionics_bus.add_load(Electric.Load.new("adf",3.0,"/instrumentation/adf/power-btn"));
+    setlistener("sim/model/config/radio-setup", check_radio_setup,1);
+    
 } elsif (panel == "fg1000") {
     # separate this into MDF/PDF/Audio panel??
     avionics_bus.add_load(Electric.Load.new("fg1000",9.0,"controls/switches/master-avionics"));
-} elsif (panel == "GNS530") {
-    avionics_bus.add_load(Electric.Load.new("adf",3.0,"/instrumentation/adf/power-btn"));
-    avionics_bus.add_load(Electric.Load.new("transponder",3.0,"/instrumentation/transponder/power-btn"));
-    avionics_bus.add_load(Electric.Load.new("gns530",6.0,"controls/switches/master-avionics"));
+    
 }
     
 
@@ -115,11 +149,11 @@ var update_virtual_bus = func (dt) {
             ammeter = battery.charge_amps;
         }
     }
-    setprop("/systems/electrical/amps", ammeter);
-    setprop("/systems/electrical/volts", source.volts());
+    Electric.setpropr(4,"/systems/electrical/amps", ammeter);
+    Electric.setpropr(4,"/systems/electrical/volts", source.volts());
     setprop("/systems/electrical/source", source_label);
-    setprop("/systems/electrical/amps_charging", charge_amps);
-    setprop("/systems/electrical/amps_remaining", remaining_amps);
+    Electric.setpropr(4,"/systems/electrical/amps_charging", charge_amps);
+    Electric.setpropr(4,"/systems/electrical/amps_remaining", remaining_amps);
     return load_amps;
 }
 

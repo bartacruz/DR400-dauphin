@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ########################################
+
+ # DR400-dauphin by PAF team
+ # April 2012 : Modified by PAF team
+ # http://equipe-flightgear.forumactif.com
+
+##########################################-->
+
+<PropertyList>
+    <model>
+        <name>GNS530</name>
+        <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/GNS530/GNS530.xml</path>
+        <offsets>
+            <x-m> -0.008</x-m>
+            <y-m> 0.145 </y-m>
+            <z-m> 0.12 </z-m>
+            <pitch-deg>  -5.3 </pitch-deg>
+        </offsets>
+    </model>
+
+    <!-- GNC255A-->
+    <model>
+        <name>GNC255A.530</name>
+        <path>Instruments/GNC255A/gnc255a.xml</path>
+        <offsets>
+            <x-m>-0.001</x-m>
+            <y-m> 0.145 </y-m>
+            <z-m> 0.038 </z-m>
+            <pitch-deg>-5</pitch-deg>
+        </offsets>
+    </model>
+    <text>
+        <name>textosg</name>
+        <type type="string">literal</type>
+        <text type="string">Com2.</text>
+        <draw-text type="bool">true</draw-text>
+        <font>Helvetica.txf</font>
+        <character-size type="double">0.014</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <axis-alignment>yz-plane</axis-alignment>
+        <max-height>0.06</max-height>
+        <max-width>0.08</max-width>
+        <font-resolution>
+            <width type="int">64</width>
+            <height type="int">64</height>
+        </font-resolution>
+        <alignment>center-center</alignment>
+        <offsets>
+            <x-m>-0.021</x-m>
+            <y-m> 0.145 </y-m>
+            <z-m> 0.038 </z-m>
+            <pitch-deg>-5</pitch-deg>
+        </offsets>
+    </text>
+
+
+    <!-- GTX328-->
+    <model>
+        <name>GTX328.530</name>
+        <path>Instruments/GTX328/gtx328.xml</path>
+        <offsets>
+            <x-m>-0.005</x-m>
+            <y-m> 0.145 </y-m>
+            <z-m>-0.007 </z-m>
+            <!-- <x-m alias="../../../low-panel-x-m"/>
+			<y-m> 0.147 </y-m>
+			<z-m>0.092 </z-m> -->
+            <pitch-deg>-5</pitch-deg>
+        </offsets>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <!-- tablet -->
+        <object-name>GTX328.530</object-name>
+        <object-name>GNC255A.530</object-name>
+        <object-name>GNS530</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>sim/model/config/panel</property>
+                    <value>traditional</value>
+                </equals>
+                <equals>
+                    <property>sim/model/config/radio-setup</property>
+                    <value>gns530</value>
+                </equals>
+            </and>
+        </condition>
+    </animation>
+
+</PropertyList>

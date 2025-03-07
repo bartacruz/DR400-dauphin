@@ -40,8 +40,8 @@
     <type>scale</type>
     <object-name>panel-cover</object-name>
     <x-offset>1.0</x-offset>
-    <y-offset>1.2</y-offset>
-    <z-offset>2.2</z-offset>
+    <y-offset>1.0</y-offset>
+    <z-offset>1.1</z-offset>
   </animation>
     
  </PropertyList>

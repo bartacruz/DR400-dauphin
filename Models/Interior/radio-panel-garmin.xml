@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ########################################
+
+ # DR400-dauphin by PAF team
+ # April 2012 : Modified by PAF team
+ # http://equipe-flightgear.forumactif.com
+
+##########################################-->
+
+<PropertyList>
+    <model>
+        <name>tablet-screen</name>
+        <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/tablet/tablet.xml</path>
+        <offsets>
+            <x-m>  -0.011 </x-m>
+            <y-m>  0.145 </y-m>
+
+            <z-m>  0.068 </z-m>
+            <roll-deg>    0.0 </roll-deg>
+            <pitch-deg>  -5.3 </pitch-deg>
+            <heading-deg> 0.0 </heading-deg>
+        </offsets>
+    </model>
+
+    <!-- GNC255A-->
+    <model>
+        <name>GNC255A</name>
+        <path>Instruments/GNC255A/gnc255a.xml</path>
+        <offsets>
+            <x-m>-0.001</x-m>
+            <y-m> 0.145 </y-m>
+            <z-m> 0.038 </z-m>
+            <pitch-deg>-5</pitch-deg>
+        </offsets>
+    </model>
+
+    <!-- GTX328-->
+    <model>
+        <name>GTX328</name>
+        <path>Instruments/GTX328/gtx328.xml</path>
+        <offsets>
+            <x-m>-0.005</x-m>
+            <y-m> 0.145 </y-m>
+            <z-m>-0.007 </z-m>
+            <!-- <x-m alias="../../../low-panel-x-m"/>
+			<y-m> 0.147 </y-m>
+			<z-m>0.092 </z-m> -->
+            <pitch-deg>-5</pitch-deg>
+        </offsets>
+    </model>
+    <animation>
+        <type>select</type>
+        <object-name>GTX328</object-name>
+        <object-name>GNC255A</object-name>
+        <object-name>tablet-screen</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>sim/model/config/panel</property>
+                    <value>traditional</value>
+                </equals>
+                <equals>
+                    <property>sim/model/config/radio-setup</property>
+                    <value>garmin</value>
+                </equals>
+            </and>
+        </condition>
+    </animation>
+
+</PropertyList>

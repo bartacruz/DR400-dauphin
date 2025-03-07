@@ -78,7 +78,7 @@ var fg1000_power = func(n) {
 
 var loader = func(n){
 	var loaded = props.globals.getNode("/instrumentation/gns530/loaded").getBoolValue();
-	if (n.getValue() == "GNS530"){	
+	if (n.getValue() == "gns530"){	
 		if (!loaded) {
 			load_gns530();
 		}
@@ -94,6 +94,6 @@ var loader = func(n){
 
     }
 }
-setlistener("sim/model/config/panel", loader,1);
+setlistener("sim/model/config/radio-setup", loader,1);
 
 

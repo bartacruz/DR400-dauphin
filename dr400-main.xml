@@ -86,6 +86,7 @@
         <enable-crash type="bool">0</enable-crash>
         <breakable-gears type="bool">0</breakable-gears>
         <simulate-g-force type="bool">0</simulate-g-force>
+        <radio-setup type="string">bendix</radio-setup>
       </config>
     </model>
 

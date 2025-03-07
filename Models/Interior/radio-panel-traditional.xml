@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ########################################
+
+ # DR400-dauphin by PAF team
+ # April 2012 : Modified by PAF team
+ # http://equipe-flightgear.forumactif.com
+
+##########################################-->
+
+<PropertyList>
+    <!-- KR87 ADF receiver -->
+    <model>
+        <name>KR87</name>
+        <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/kr87-adf/kr87.xml</path>
+        <offsets>
+            <x-m>-0.0175</x-m>
+            <y-m> 0.147 </y-m>
+            <z-m> 0.030 </z-m>
+            <roll-deg>    0.0 </roll-deg>
+            <pitch-deg>  -5.0 </pitch-deg>
+            <heading-deg> 0.0 </heading-deg>
+        </offsets>
+    </model>
+
+    <!-- KX165-->
+    <model>
+        <name>KX165</name>
+        <path>Aircraft/Instruments-3d/kx165/kx165-1.xml</path>
+        <overlay>
+            <params>
+                <dimming>systems/electrical/outputs/instrument-lights[2]</dimming>
+                <red>0.01</red>
+                <green>0.01</green>
+                <blue>0.01</blue>
+            </params>
+        </overlay>
+        <offsets>
+            <x-m>-0.0215</x-m>
+            <y-m> 0.147 </y-m>
+            <z-m> 0.074 </z-m>
+            <roll-deg>    0.0 </roll-deg>
+            <pitch-deg>  -5.0 </pitch-deg>
+            <heading-deg> 0.0 </heading-deg>
+
+        </offsets>
+    </model>
+
+    <!-- KT76A-->
+    <model>
+        <name>KT76A</name>
+        <path>Aircraft/Instruments-3d/kt76a/kt76a.xml</path>
+        <overlay>
+            <params>
+                <dimming>systems/electrical/outputs/instrument-lights[2]</dimming>
+            </params>
+        </overlay>
+        <offsets>
+            <x-m>-0.010</x-m>
+            <y-m> 0.147 </y-m>
+            <z-m>-0.007 </z-m>
+            <roll-deg>    0.0 </roll-deg>
+            <pitch-deg>  -5.0 </pitch-deg>
+            <heading-deg> 0.0 </heading-deg>
+        </offsets>
+    </model>
+
+    <!-- Garmin GPS196 -->
+    <model>
+        <name>GarminGPS</name>
+        <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/garmin196/garmin196_support2.xml</path>
+        <offsets>
+            <x-m>-0.0155</x-m>
+            <y-m> 0.147 </y-m>
+            <z-m> 0.143 </z-m>
+            <roll-deg>    0.0 </roll-deg>
+            <pitch-deg>  -5.0 </pitch-deg>
+            <heading-deg> 0.0 </heading-deg>
+        </offsets>
+    </model>
+    <animation>
+        <type>select</type>
+        <object-name>GarminGPS</object-name>
+        <object-name>KX165</object-name>
+        <object-name>KR87</object-name>
+        <object-name>KT76A</object-name>
+        <condition>
+            <and>
+                <equals>
+                    <property>sim/model/config/panel</property>
+                    <value>traditional</value>
+                </equals>
+                <equals>
+                    <property>sim/model/config/radio-setup</property>
+                    <value>bendix</value>
+                </equals>
+            </and>
+        </condition>
+    </animation>
+</PropertyList>

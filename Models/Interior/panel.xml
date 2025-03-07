@@ -44,8 +44,8 @@
 
   <!-- ################################################################-->
   <!-- INSTRUMENTS : ALT, ADF, AI, ASI, RPM, EGT, HDG, HI, VSI, Turn,
-                     Fuel-press, Clock, KI206, KR87, KX165, Volts,
-                     Warning lights, Oil-temp, Oil-press, Garmin196, ELT -->
+                     Fuel-press, Clock, KI206,  Volts,
+                     Warning lights, Oil-temp, Oil-press, ELT -->
   <!-- ################################################################-->
 
   <!-- ASI -->
@@ -76,70 +76,6 @@
     </offsets>
   </model>
   
-  <model>
-      <name>GNS530</name>
-      <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/GNS530/GNS530.xml</path>
-      <offsets>
-        <x-m> -0.008</x-m>
-        <z-m> 0.11 </z-m>
-        <y-m> 0.147 </y-m>
-        <pitch-deg>  -5.3 </pitch-deg>
-      </offsets>
-  </model>
-
-  <model>
-    <name>PFD</name>
-    <path>Aircraft/Instruments-3d/FG1000/GDU104X/GDU-1045.1.xml</path>
-    <offsets>
-      <x-m> -0.0063 </x-m>
-      <y-m> -0.105 </y-m>
-      <z-m>  0.0775 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>  -5.3 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <name>GMA</name>
-    <path>Aircraft/Instruments-3d/FG1000/GMA1347/GMA1347.xml</path>
-    <offsets>
-      <x-m> -0.009 </x-m>
-      <y-m>  0.0645 </y-m>
-      <z-m>  0.0775 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>  -5.3 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <name>MFD</name>
-    <path>Aircraft/Instruments-3d/FG1000/GDU104X/GDU-1045.2.xml</path>
-    <offsets>
-      <x-m> -0.0063 </x-m>
-      <y-m>  0.235 </y-m>
-      <z-m>  0.0775 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>  -5.3 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <name>panel-cover</name>
-    <path>Aircraft/DR400-dauphin/Models/Interior/Parts/panel-cover/panel-cover.xml</path>
-    <offsets>
-      <x-m> -0.01307 </x-m>
-      <y-m>  0.145 </y-m>
-      <z-m>  0.078 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>  -5.3 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
-
 
   <!-- ALT -->
   <model>
@@ -346,62 +282,6 @@
     </offsets>
   </model>
   
-  <!-- KR87 ADF receiver -->
-  <model>
-    <name>KR87</name>
-    <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/kr87-adf/kr87.xml</path>
-    <offsets>
-      <x-m>-0.0175</x-m>
-      <y-m> 0.147 </y-m>
-      <z-m> 0.030 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>  -5.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
-  <!-- KX165-->
-  <model>
-    <name>KX165</name>
-    <!--<path>Aircraft/DR400-dauphin/Models/Interior/Instruments/kx165/kx165-1.xml</path>-->
-    <path>Aircraft/Instruments-3d/kx165/kx165-1.xml</path>
-    <overlay>
-      <params>
-        <dimming>systems/electrical/outputs/instrument-lights[2]</dimming>
-        <red>0.01</red>
-        <green>0.01</green>
-        <blue>0.01</blue>
-      </params>
-    </overlay>
-    <offsets>
-      <x-m>-0.0215</x-m>
-      <y-m> 0.147 </y-m>
-      <z-m> 0.074 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>  -5.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
-  <!-- KT76A-->
-  <model>
-    <name>KT76A</name>
-    <path>Aircraft/Instruments-3d/kt76a/kt76a.xml</path>
-    <overlay>
-      <params>
-        <dimming>systems/electrical/outputs/instrument-lights[2]</dimming>
-      </params>
-    </overlay>
-    <offsets>
-      <x-m>-0.010</x-m>
-      <y-m> 0.147 </y-m>
-      <z-m>-0.007 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>  -5.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
   <!-- Volts -->
   <model>
     <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/volts/volts.xml</path>
@@ -411,20 +291,6 @@
       <z-m> -0.1710 </z-m>
       <roll-deg>    0.0 </roll-deg>
       <pitch-deg> -10.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
-  <!-- Garmin GPS196 -->
-  <model>
-  <name>GarminGPS</name>
-  <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/garmin196/garmin196_support2.xml</path>
-    <offsets>
-      <x-m>-0.0155</x-m>
-      <y-m> 0.147 </y-m>
-      <z-m> 0.143 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>  -5.0 </pitch-deg>
       <heading-deg> 0.0 </heading-deg>
     </offsets>
   </model>
@@ -454,6 +320,18 @@
       <heading-deg> 0.0 </heading-deg>
     </offsets>
   </model>
+
+  <model>
+    <path>Aircraft/DR400-dauphin/Models/Interior/radio-panel-traditional.xml</path>
+  </model>
+  <model>
+    <path>Aircraft/DR400-dauphin/Models/Interior/radio-panel-garmin.xml</path>
+  </model>
+  <model>
+    <path>Aircraft/DR400-dauphin/Models/Interior/radio-panel-gns530.xml</path>
+  </model>
+
+
 
   <!-- ################################################################-->
   <!-- TEXT -->
@@ -845,63 +723,16 @@
     </condition>
   </animation>
 
-  <!-- Switch between glass cockpit and classic cockpit -->
-
-  <animation>
-    <type>select</type>
-    <object-name>PFD</object-name>
-    <object-name>GMA</object-name>
-    <object-name>MFD</object-name>
-    <object-name>panel-cover</object-name>
-    <object-name>ALTBackup</object-name>
-    <condition>
-      <equals>
-        <property>sim/model/config/panel</property>
-        <value>fg1000</value>
-      </equals>
-    </condition>
-  </animation>
   <animation>
     <type>select</type>
     <object-name>KI206</object-name>
     <object-name>ADF</object-name>
-    <object-name>KR87</object-name>
-    <object-name>KT76A</object-name>
     <object-name>Chrono</object-name>
     <object-name>ALT</object-name>
     <object-name>AI</object-name>
     <object-name>VSI</object-name>
     <object-name>HI</object-name>
     <object-name>CarbTemp</object-name>
-    <condition>
-      <or>
-        <equals>
-          <property>sim/model/config/panel</property>
-          <value>GNS530</value>
-        </equals>
-        <equals>
-          <property>sim/model/config/panel</property>
-          <value>traditional</value>
-        </equals>
-      </or>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>GNS530</object-name>
-    <condition>
-      <equals>
-        <property>sim/model/config/panel</property>
-        <value>GNS530</value>
-      </equals>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>GarminGPS</object-name>
-    <object-name>KX165</object-name>
     <condition>
       <equals>
         <property>sim/model/config/panel</property>

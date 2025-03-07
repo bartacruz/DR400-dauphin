@@ -8,7 +8,7 @@
 
 ##########################################-->
 
- <PropertyList include="dr400-main.xml">
+<PropertyList include="dr400-main.xml">
 
   <sim>
     <description>Robin DR400-dauphin (JSBSim)</description>
@@ -24,11 +24,11 @@
 
     <tags>
       <tag>1-engine</tag>
-      <tag>1970s</tag> <!-- first flight in 1972 -->
+      <tag>1970s</tag>      <!-- first flight in 1972 -->
       <tag>1980s</tag>
       <tag>1990s</tag>
       <tag>2000s</tag>
-      <tag>2010s</tag> <!-- still in production -->
+      <tag>2010s</tag>      <!-- still in production -->
       <tag>fixed-gear</tag>
       <tag>ga</tag>
       <tag>piston</tag>
@@ -55,10 +55,11 @@
     <sound>
       <path archive="y">Aircraft/DR400-dauphin/Sounds/sound.xml</path>
     </sound>
-	
+
     <model>
       <config>
         <panel>traditional</panel>
+        <radio-setup>garmin</radio-setup>
       </config>
     </model>
 
@@ -136,12 +137,12 @@
       <test type="bool">0</test>
     </elt>
     <comm n="0">
-      <power-btn type="bool">false</power-btn>
-      <volume type="double">0</volume>
+      <power-btn type="bool">true</power-btn>
+      <volume type="double">0.6</volume>
     </comm>
     <nav n="0">
-      <power-btn type="bool">false</power-btn>
-      <volume type="double">0.6</volume>
+      <power-btn type="bool">true</power-btn>
+      <volume type="double">0.0</volume>
     </nav>
     <comm n="1">
       <power-btn type="bool">false</power-btn>
@@ -151,17 +152,64 @@
       <power-btn type="bool">false</power-btn>
       <volume type="double">0.6</volume>
     </nav>
-    <adf n="0">      
+    <adf n="0">
       <power-btn type="bool">false</power-btn>
       <volume-norm type="double">0</volume-norm>
       <adf-btn type="bool">true</adf-btn>
-    </adf>  
+    </adf>
+    <gnc255a>
+      <comm-mode type="bool">1</comm-mode>
+      <serviceable type="bool">1</serviceable>
+    </gnc255a>
   </instrumentation>
 
   <nasal>
     <garmin196>
       <file>Aircraft/Instruments-3d/garmin196/garmin196.nas</file>
+      <condition>
+        <equals>
+          <property>sim/model/config/radio-setup</property>
+          <value>bendix</value>
+        </equals>
+      </condition>
     </garmin196>
+    <canvas_tablet>
+      <file>Models/Interior/Instruments/tablet/tablet.nas</file>
+      <condition>
+        <equals>
+          <property>sim/model/config/radio-setup</property>
+          <value>garmin</value>
+        </equals>
+      </condition>
+    </canvas_tablet>
+    <canvas_gnc255a>
+      <file>Models/Interior/Instruments/GNC255A/gnc255a.nas</file>
+      <condition>
+        <equals>
+          <property>sim/model/config/radio-setup</property>
+          <value>garmin</value>
+        </equals>
+      </condition>
+    </canvas_gnc255a>
+    <gtx328>
+      <file>Models/Interior/Instruments/GTX328/gtx328.nas</file>
+      <condition>
+        <equals>
+          <property>sim/model/config/radio-setup</property>
+          <value>garmin</value>
+        </equals>
+      </condition>
+    </gtx328>
+    <gns530>
+      <file>Aircraft/DR400-dauphin/Models/Interior/Instruments/GNS530/gns530.nas</file>
+      <condition>
+        <equals>
+          <property>sim/model/config/radio-setup</property>
+          <value>gns530</value>
+        </equals>
+      </condition>
+    </gns530>
+    
   </nasal>
 
 </PropertyList>

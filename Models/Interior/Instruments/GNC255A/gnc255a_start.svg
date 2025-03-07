@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="200"
+   height="33"
+   viewBox="0 0 200 33"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="gnc255a_start.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#404040"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="112.88711"
+     inkscape:cy="21.730106"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1600"
+     inkscape:window-height="1131"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="0,0"
+       orientation="1,0"
+       id="guide845"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="200,33"
+       orientation="1,0"
+       id="guide847"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-288.26875)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.92974329px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;letter-spacing:0.67519236px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.14824358px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="176.46046"
+       y="296.00653"
+       id="text863"
+       transform="scale(0.99054779,1.0095424)"
+       inkscape:label="#text851"><tspan
+         sodipodi:role="line"
+         id="tspan861"
+         x="177.28276"
+         y="296.00653"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.14824358px">PRESS ANY </tspan><tspan
+         sodipodi:role="line"
+         x="176.46046"
+         y="301.93628"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.14824358px"
+         id="tspan904">KEY TO</tspan><tspan
+         sodipodi:role="line"
+         x="176.46046"
+         y="307.86603"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.14824358px"
+         id="tspan906">CONTINUE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.00437307px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.17510933px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="4.3423653"
+       y="299.2446"
+       id="sq.flag"
+       transform="scale(1.0083945,0.99167539)"
+       inkscape:label="#text851"><tspan
+         sodipodi:role="line"
+         id="tspan865"
+         x="4.3423653"
+         y="299.2446"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;stroke-width:0.17510933px">GNC 255A</tspan><tspan
+         sodipodi:role="line"
+         x="4.3423653"
+         y="306.24896"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;stroke-width:0.17510933px"
+         id="tspan908">SW Ver.: 0.0</tspan><tspan
+         sodipodi:role="line"
+         x="4.3423653"
+         y="313.25336"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;stroke-width:0.17510933px"
+         id="tspan912">AVN DB: VERIFYING</tspan><tspan
+         sodipodi:role="line"
+         x="4.3423653"
+         y="320.25772"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;stroke-width:0.17510933px"
+         id="tspan914">DB REGION: VERIFYING</tspan><tspan
+         sodipodi:role="line"
+         x="4.3423653"
+         y="327.26208"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;stroke-width:0.17510933px"
+         id="tspan910" /></text>
+  </g>
+</svg>

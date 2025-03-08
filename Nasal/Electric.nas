@@ -30,15 +30,15 @@ Battery.new = func (x, switch, volts,amps,cc_amps, charge_percent=0) {
 # Negative amps indicates a battery charge.
 #
 Battery.apply_load = func(amps, dt, x) {
-    var old_charge_percent = getprop("/systems/electrical/battery-charge-percent-"~x);
+    # var old_charge_percent = getprop("/systems/electrical/battery-charge-percent-"~x);
     if (getprop("/sim/freeze/replay-state"))
-        return me.ideal_amps * old_charge_percent;
+        return me.ideal_amps * me.charge_percent;
     var amps_used = amps * dt / 3600.0;
     var percent_used = amps_used / me.ideal_amps;
 
-    var new_charge_percent = std.max(0.0, std.min(old_charge_percent - percent_used, 1.0));
+    var new_charge_percent = std.max(0.0, std.min(me.charge_percent - percent_used, 1.0));
 
-    if (new_charge_percent < 0.1 and old_charge_percent >= 0.1)
+    if (new_charge_percent < 0.1 and me.charge_percent >= 0.1)
         gui.popupTip("Warning: Low battery! Enable alternator or apply external power to recharge battery!", 10);
     me.charge_percent = new_charge_percent;
     setpropr(4,"/systems/electrical/battery-charge-percent-"~x, new_charge_percent);
@@ -206,6 +206,7 @@ Load.new = func (name, amps, switch, breaker=nil) {
     setpropr(5, obj.draw, 0.0 );
     return obj;
 }
+
 Load.get_load = func(volts) {
     var load = 0.0;
     # switch could be a potentiometer (ie: a light dimmer)

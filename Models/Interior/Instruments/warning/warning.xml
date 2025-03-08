@@ -94,115 +94,73 @@
   
   <!-- Alarme visuelle pression huile-->
   <!-- Allumé si pression d'huile inférieur à 14PSI -->
+  <!-- EN: Oil pressure alarm -->  
   <animation>
     <type>select</type>
     <object-name>warning01.on</object-name>
     <condition>
-      <and>
-        <or>
-          <less-than-equals>
-            <property>engines/engine/oil-pressure-psi</property>
-            <value> 14 </value> 
-          </less-than-equals>
-          <property>controls/lighting/warning-test</property>
-        </or>
-        <property>controls/electric/battery-switch</property>
-      </and>
+    <property>/instrumentation/annunciators/engines/oil-pressure-low</property>
     </condition>
   </animation>
   
   <!-- Alarme visuelle pression essence -->
   <!-- Allumé si pression carburant inférieur à 1.1PSI-->
+  <!-- EN: Fuel pressure alarm -->
   <animation>
     <type>select</type>
     <object-name>warning02.on</object-name>
     <condition>
-      <and>
-        <or>
-          <less-than-equals>
-            <property>engines/engine/fuel-pressure-psi</property>
-            <value> 1.1 </value> 
-          </less-than-equals>
-          <property>controls/lighting/warning-test</property>
-        </or>
-        <property>controls/electric/battery-switch</property>
-      </and>
+      <property>/instrumentation/annunciators/systems/fuel/pressure-low</property>
     </condition>
   </animation>
   
   <!-- Alarmes fuel 1 litre= 0.264172052 gallons -->
   <!-- Allumé si quantité carburant inférieur à 10 litres -->
+  <!-- EN: Fuel qty alarm --> 
   <animation>
     <type>select</type>
     <object-name>warning03.on</object-name>
     <condition>
-      <and>
-        <or>
-          <property>consumables/fuel/fuel-low</property>
-          <property>controls/lighting/warning-test</property>
-        </or>
-        <property>controls/electric/battery-switch</property>
-      </and>
+      <property>/instrumentation/annunciators/systems/fuel/fuel-low</property>
     </condition>
   </animation>
    
   <!-- Alarme visuelle décharge batterie-->
   <!-- Allumé si le moteur tourne pas et/ou l'alternateur non engagé -->
+  <!-- EN: Battery charge alarm -->
   <animation>
     <type>select</type>
     <object-name>warning04.on</object-name>
     <condition>
-      <and>
-        <or>
-          <not><property>engines/engine/running</property></not>
-          <not><property>controls/engines/engine/master-alt</property></not>
-          <property>controls/lighting/warning-test</property>
-        </or>
-        <property>controls/electric/battery-switch</property>
-      </and>
+    <property>/instrumentation/annunciators/systems/electric/battery-charge</property>
     </condition>
   </animation>
   
   <!-- Demarreur -->
   <!-- Allumé si tension démarreur supérieur à 8V-->
+  <!-- EN: Starter indicator -->
   <animation>
     <type>select</type>
     <object-name>warning05.on</object-name>
     <condition>
-      <and>
-        <or>
-          <greater-than-equals>
-            <property>systems/electrical/outputs/starter</property>
-            <value> 8 </value>
-          </greater-than-equals>
-          <property>controls/lighting/warning-test</property>
-        </or>
-        <property>controls/electric/battery-switch</property>
-      </and>
+    <property>/instrumentation/annunciators/engines/engine[0]/starter</property>
     </condition>
   </animation>
   
   <!-- Alarme visuelle volets -->
   <!-- Allumé si volet(s) sorti -->
+  <!-- EN: Flaps extended indicator-->
   <animation>
     <type>select</type>
     <object-name>warning06.on</object-name>
     <condition>
-      <and>
-        <or>
-          <greater-than-equals>
-            <property>surface-positions/flap-pos-norm</property>
-            <value> 0.06 </value>
-          </greater-than-equals>
-          <property>controls/lighting/warning-test</property>
-        </or>
-        <property>controls/electric/battery-switch</property>
-      </and>
+      <property>/instrumentation/annunciators/flaps</property>
     </condition>
   </animation>
   
   <!-- Pitot-->
   <!-- Allumé si tension pitot supérieur à 8V -->
+  <!-- EN: Pitot indicator TODO: afaik we don't have a pitot heater...-->
   <animation>
     <type>select</type>
     <object-name>warning07.on</object-name>
@@ -283,5 +241,3 @@
   </animation>
 
 </PropertyList>
-
-

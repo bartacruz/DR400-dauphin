@@ -30,7 +30,8 @@ main_bus.add_load(Electric.Load.new("starter",80.0,"/controls/engines/engine[0]/
 # carb heat is not electric, but somehow it needs an electric output set.
 main_bus.add_load(Electric.Load.new("carb-heat",0.01,"/controls/anti-ice/engine/carb-heat"));
 main_bus.add_load(Electric.Load.new("fuel-pump",5.0,"/controls/fuel/tank/boost-pump"));
-#main_bus.add_load(Electric.Load.new("fuel-pump",5.0,"/controls/fuel/tank/boost-pump"));
+
+
 
 
 # Exterior lights
@@ -43,6 +44,13 @@ main_bus.add_load(Electric.Load.new("strobe-lights",0.25,"/controls/lighting/str
 # 2x 15w led nav lights
 main_bus.add_load(Electric.Load.new("nav-lights",1.1,"/controls/lighting/nav-lights"));
 
+# Annunciators
+main_bus.add_load(Electric.Load.new("annunciator-battery-charge",0.036,"/instrumentation/annunciators/systems/electric/battery-charge"));
+main_bus.add_load(Electric.Load.new("annunciator-oil-pressure",0.036,"/instrumentation/annunciators/engines/oil-pressure-low"));
+main_bus.add_load(Electric.Load.new("annunciator-fuel-pressure",0.036,"/instrumentation/annunciators/systems/fuel/pressure-low"));
+main_bus.add_load(Electric.Load.new("annunciator-fuel-low",0.036,"/instrumentation/annunciators/systems/fuel/fuel-low"));
+main_bus.add_load(Electric.Load.new("annunciator-starter",0.036,"/instrumentation/annunciators/engines/engine[0]/starter"));
+main_bus.add_load(Electric.Load.new("annunciator-flaps",0.036,"/instrumentation/annunciators/flaps"));
 
 # Instrument lights (led 3w each)
 main_bus.add_load(Electric.Load.new("instrument-lights[0]",0.11,"/controls/lighting/instrument-lights[0]"));
@@ -127,13 +135,16 @@ var update_virtual_bus = func (dt) {
     }
     # 
     if (source.volts() > 0) {
-        var draw = main_bus.get_load(source.volts()); # in Watts
-        load_amps = draw / source.volts(); # convert to Amps
+        var load_amps = main_bus.get_load(source.volts());
         # apply load and get remaining amps for battery charging purposes.
         remaining_amps = source.apply_load( load_amps, dt, "a");
+        
+        
         # charge the battery
+        # TODO: if the load surpasses the alternator current, should the battery
+        # be discharged then??
         if (source != battery and  source.volts() >= battery.volts()) {
-            charge_amps = std.min(battery.charge_amps, remaining_amps);
+            charge_amps = std.min(battery.ideal_amps, remaining_amps);
             battery.apply_load(-1*charge_amps, dt, "a");
         }
     }
@@ -146,7 +157,7 @@ var update_virtual_bus = func (dt) {
         if ( source == battery) {
             ammeter = -load_amps;
         } else {
-            ammeter = battery.charge_amps;
+            ammeter = charge_amps
         }
     }
     Electric.setpropr(4,"/systems/electrical/amps", ammeter);

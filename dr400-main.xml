@@ -198,6 +198,10 @@
       <electrical>
         <path></path>
       </electrical>
+      <property-rule>
+        <name>dr400-annunciators</name>
+        <path>Systems/warning-annunciators.xml</path>
+      </property-rule>
     </systems>
 
   </sim>
@@ -309,6 +313,9 @@
       <brake-parking type="bool">1</brake-parking>
       <brake-parking-pos type="double">1.0</brake-parking-pos>
     </gear>
+    <lighting>
+      <battery-charge type="bool">0</battery-charge>
+    </lighting>
     <throttle-coupled type="bool">1</throttle-coupled>
     <mixture-coupled type="bool">1</mixture-coupled>
     <prop-coupled type="bool">1</prop-coupled>

@@ -1,0 +1,70 @@
+<PropertyList>
+  <!-- Switch between glass cockpit and classic cockpit -->
+
+  <model>
+    <name>PFD</name>
+    <path>Aircraft/Instruments-3d/FG1000/GDU104X/GDU-1045.1.xml</path>
+    <offsets>
+      <x-m> -0.0063 </x-m>
+      <y-m> -0.105 </y-m>
+      <z-m>  0.0775 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg>  -5.3 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>GMA</name>
+    <path>Aircraft/Instruments-3d/FG1000/GMA1347/GMA1347.xml</path>
+    <offsets>
+      <x-m> -0.009 </x-m>
+      <y-m>  0.0645 </y-m>
+      <z-m>  0.0775 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg>  -5.3 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>MFD</name>
+    <path>Aircraft/Instruments-3d/FG1000/GDU104X/GDU-1045.2.xml</path>
+    <offsets>
+      <x-m> -0.0063 </x-m>
+      <y-m>  0.235 </y-m>
+      <z-m>  0.0775 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg>  -5.3 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- <model>
+    <name>panel-cover</name>
+    <path>Aircraft/DR400-dauphin/Models/Interior/Parts/panel-cover/panel-cover.xml</path>
+    <offsets>
+      <x-m> -0.01307 </x-m>
+      <y-m>  0.145 </y-m>
+      <z-m>  0.078 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg>  -5.3 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+   -->
+  <animation>
+    <type>select</type>
+    <object-name>PFD</object-name>
+    <object-name>GMA</object-name>
+    <object-name>MFD</object-name>
+    <!-- <object-name>panel-cover</object-name> -->
+    <object-name>ALTBackup</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/panel</property>
+        <value>fg1000</value>
+      </equals>
+    </condition>
+  </animation>
+</PropertyList>

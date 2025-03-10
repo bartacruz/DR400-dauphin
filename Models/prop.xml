@@ -12,12 +12,39 @@
   </effect>
 
   <animation>
+        <type>blend</type>
+        <object-name>propeller-running</object-name>
+        <property>/engines/engine[0]/rpm</property>
+        <factor>0.00022</factor>
+        <max>0.99</max>
+        <min>0.01</min>
+    </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>propeller-running</object-name>
+    <property>engines/engine[0]/rpm</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.00000 </z-m>
+    </center>
+    <axis>
+      <x> -1.000 </x>
+      <y>  0.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+
+
+  <animation>
     <type>select</type>
     <object-name>propeller-running</object-name>
     <condition>
       <greater-than>
         <property>engines/engine[0]/rpm</property>
-        <value>250</value>
+        <value>300</value>
       </greater-than>
     </condition>
   </animation>

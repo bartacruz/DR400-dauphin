@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Pink</name>
+        <fuselage-texture>Liveries/fuselage-pink.png</fuselage-texture>
+        <wings-texture>Liveries/wings-pink.png</wings-texture>
+        <interior-texture>../Liveries/interior-brown.png</interior-texture>
+        <panel-cover>../../../Liveries/panel-cover-brown.png</panel-cover>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

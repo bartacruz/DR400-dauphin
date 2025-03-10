@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="200"
+   height="33"
+   viewBox="0 0 200 33"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="gnc255a_com.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#404040"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="41.817437"
+     inkscape:cy="19.448372"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1600"
+     inkscape:window-height="1131"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="0,0"
+       orientation="1,0"
+       id="guide845"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="200,33"
+       orientation="1,0"
+       id="guide847"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-288.26875)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:23.43556786px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans Bold';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.58588922px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="13.788213"
+       y="293.06647"
+       id="com.active"
+       transform="scale(0.95697791,1.0449562)"
+       inkscape:label="#text851"><tspan
+         sodipodi:role="line"
+         id="tspan849"
+         x="13.788213"
+         y="293.06647"
+         style="font-size:21.33333397px;letter-spacing:0px;stroke-width:0.58588922px">000.000</tspan></text>
+    <text
+       inkscape:label="#text851"
+       transform="scale(0.95697791,1.0449562)"
+       id="com.standby"
+       y="293.07648"
+       x="129.4131"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.33333397px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans Bold';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.55942005px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:21.33333397px;letter-spacing:0px;stroke-width:0.55942005px"
+         y="293.07648"
+         x="129.4131"
+         id="tspan853"
+         sodipodi:role="line">000.000</tspan></text>
+    <text
+       inkscape:label="#text851"
+       transform="scale(1.0083945,0.99167542)"
+       id="text859"
+       y="320.49493"
+       x="12.329269"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.2283659px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.23070914px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;stroke-width:0.23070914px"
+         y="320.49493"
+         x="12.329269"
+         id="tspan857"
+         sodipodi:role="line">COM ACTIVE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.06504059px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:1.03219414px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.22662601px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="124.23535"
+       y="314.82278"
+       id="text863"
+       transform="scale(0.99054777,1.0095424)"
+       inkscape:label="#text851"><tspan
+         sodipodi:role="line"
+         id="tspan861"
+         x="124.23535"
+         y="314.82278"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;stroke-width:0.22662601px">COM STANDBY</tspan></text>
+    <text
+       inkscape:label="#text851"
+       transform="scale(1.0083945,0.99167539)"
+       id="text871"
+       y="308.01242"
+       x="0.51075131"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.91056824px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.14776422px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;stroke-width:0.14776422px"
+         y="308.01242"
+         x="0.51075131"
+         id="tspan869"
+         sodipodi:role="line">ACT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.18705559px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.20467642px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="90.426826"
+       y="298.86444"
+       id="text875"
+       transform="scale(1.0083945,0.99167539)"
+       inkscape:label="#text851"><tspan
+         sodipodi:role="line"
+         id="tspan873"
+         x="90.426826"
+         y="298.86444"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;stroke-width:0.20467642px">COM</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35563993px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.15889102px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="110.16575"
+       y="308.16553"
+       id="stb.flag"
+       transform="scale(1.0083945,0.99167539)"
+       inkscape:label="#text851"><tspan
+         sodipodi:role="line"
+         id="tspan881"
+         x="110.16575"
+         y="308.16553"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;stroke-width:0.15889102px">STB</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.77166843px;line-height:100%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.16929173px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="0.64062029"
+       y="299.70065"
+       id="sq.flag"
+       transform="scale(1.0083945,0.99167539)"
+       inkscape:label="#text851"><tspan
+         sodipodi:role="line"
+         id="tspan2107"
+         x="0.64062029"
+         y="299.70065"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;stroke-width:0.16929173px">SQ</tspan></text>
+  </g>
+</svg>

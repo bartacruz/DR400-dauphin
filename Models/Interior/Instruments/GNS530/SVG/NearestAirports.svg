@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024px"
+   height="768px"
+   viewBox="0 0 1024 768"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="NearestAirports.svg">
+  <sodipodi:namedview
+     inkscape:guide-bbox="true"
+     inkscape:document-rotation="0"
+     showguides="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-page="true"
+     inkscape:snap-nodes="true"
+     inkscape:bbox-paths="false"
+     inkscape:snap-to-guides="true"
+     inkscape:snap-others="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-grids="true"
+     inkscape:snap-global="false"
+     inkscape:window-maximized="1"
+     inkscape:window-y="36"
+     inkscape:window-x="1680"
+     inkscape:window-height="985"
+     inkscape:window-width="1680"
+     showgrid="true"
+     inkscape:current-layer="NearestAirportsGroup"
+     inkscape:document-units="px"
+     inkscape:cy="325.30418"
+     inkscape:cx="436.17179"
+     inkscape:zoom="0.46140348"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="0"
+     bordercolor="#ffffff"
+     pagecolor="#ffffff"
+     id="base">
+    <inkscape:grid
+       id="grid4269"
+       type="xygrid" />
+    <sodipodi:guide
+       id="guide103"
+       orientation="0,-1"
+       position="-640,718" />
+    <sodipodi:guide
+       id="guide105"
+       orientation="1,0"
+       position="242.73766,803.76046" />
+    <sodipodi:guide
+       id="guide107"
+       orientation="0,-1"
+       position="598.17494,52.790832" />
+    <sodipodi:guide
+       id="guide1142"
+       orientation="0,-1"
+       position="560.51659,238.89993" />
+  </sodipodi:namedview>
+  <defs
+     id="defs7962" />
+  <metadata
+     id="metadata7965">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="NearestAirportsLayer"
+     id="layer3"
+     inkscape:groupmode="layer">
+    <g
+       id="NearestAirportsGroup"
+       inkscape:label="#g4237">
+      <rect
+         style="opacity:1;fill:#334da1;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.58274;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="Background"
+         width="790.62628"
+         height="662.40961"
+         x="243.58232"
+         y="53.791374"
+         inkscape:label="#rect8921" />
+      <text
+         transform="scale(0.96767669,1.033403)"
+         id="text4355"
+         y="612.62054"
+         x="543.96942"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+           y="612.62054"
+           x="543.96942"
+           id="tspan4357"
+           sodipodi:role="line"> </tspan></text>
+      <rect
+         y="530.01666"
+         x="262.32324"
+         height="168.59799"
+         width="317.96646"
+         id="rect4377"
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.29213;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="510.42404"
+         x="271.90759"
+         height="39.277184"
+         width="264.39975"
+         id="rect4379"
+         style="opacity:1;fill:#1a3030;fill-opacity:1;fill-rule:nonzero;stroke:#fffcfa;stroke-width:1.72352;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text4381"
+         y="544.06262"
+         x="286.10757"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.968397px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.968397px"
+           y="544.06262"
+           x="286.10757"
+           sodipodi:role="line"
+           id="tspan4383">APPROACHES</tspan></text>
+      <text
+         id="NearestAirportsApproach0"
+         y="595.24713"
+         x="272.66379"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+           y="595.24713"
+           x="272.66379"
+           id="tspan4387"
+           sodipodi:role="line">TOWER</tspan></text>
+      <text
+         inkscape:label="#text4232"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="272.66379"
+         y="639.40845"
+         id="NearestAirportsApproach1"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+           sodipodi:role="line"
+           id="tspan4395"
+           x="272.66379"
+           y="639.40845">TOWER</tspan></text>
+      <text
+         id="NearestAirportsApproach2"
+         y="683.5697"
+         x="272.66379"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"
+         inkscape:label="#text4232"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+           y="683.5697"
+           x="272.66379"
+           id="tspan4403"
+           sodipodi:role="line">TOWER</tspan></text>
+      <g
+         id="g1231">
+        <rect
+           y="94.09021"
+           x="602.96472"
+           height="271.87634"
+           width="416"
+           id="rect9743"
+           style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.70293;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <rect
+           y="74.363243"
+           x="618.69678"
+           height="39.308346"
+           width="366.98578"
+           id="rect9753"
+           style="opacity:1;fill:#1a3030;fill-opacity:1;fill-rule:nonzero;stroke:#fffcfa;stroke-width:1.69165;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text9749"
+           y="108.01742"
+           x="648.18982"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.967722px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="108.01742"
+             x="648.18982"
+             id="tspan9751"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.967722px">NRST AIRPORTS</tspan></text>
+        <text
+           id="NearestAirportsID0"
+           y="160.00148"
+           x="645.46948"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="160.00148"
+             x="645.46948"
+             id="tspan4242"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">KSFO</tspan></text>
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="790.74725"
+           y="160.00148"
+           id="NearestAirportsCRS0"><tspan
+             sodipodi:role="line"
+             id="tspan4253"
+             x="790.74725"
+             y="160.00148"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">359</tspan></text>
+        <text
+           id="NearestAirportsDST0"
+           y="160.00148"
+           x="992.91388"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="160.00148"
+             x="992.91388"
+             id="tspan4257"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">200</tspan></text>
+        <path
+           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.875844px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 614.31286,138.16997 v 4.06208 h 9.44228 v 4.06207 l 8.67785,-6.0619 -8.67785,-6.12431 v 4.06206 z"
+           id="NearestAirportsArrow0"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccc"
+           inkscape:label="#path4259" />
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="645.46948"
+           y="208.17114"
+           id="NearestAirportsID1"><tspan
+             sodipodi:role="line"
+             id="tspan4263"
+             x="645.46948"
+             y="208.17114"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">KSFO</tspan></text>
+        <text
+           id="NearestAirportsCRS1"
+           y="208.17114"
+           x="790.74725"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="208.17114"
+             x="790.74725"
+             id="tspan4267"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">359</tspan></text>
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="992.91388"
+           y="208.17114"
+           id="NearestAirportsDST1"><tspan
+             sodipodi:role="line"
+             id="tspan4271"
+             x="992.91388"
+             y="208.17114"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">200</tspan></text>
+        <path
+           inkscape:label="#path4259"
+           sodipodi:nodetypes="cccccccc"
+           inkscape:connector-curvature="0"
+           id="NearestAirportsArrow1"
+           d="m 614.31286,187.94866 v 4.06207 h 9.44228 v 4.06207 l 8.67785,-6.0619 -8.67785,-6.1243 v 4.06206 z"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.875844px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <text
+           id="NearestAirportsID2"
+           y="256.34079"
+           x="645.46948"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="256.34079"
+             x="645.46948"
+             id="tspan4277"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">KSFO</tspan></text>
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="790.74725"
+           y="256.34079"
+           id="NearestAirportsCRS2"><tspan
+             sodipodi:role="line"
+             id="tspan4281"
+             x="790.74725"
+             y="256.34079"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">359</tspan></text>
+        <text
+           id="NearestAirportsDST2"
+           y="256.34079"
+           x="992.91388"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="256.34079"
+             x="992.91388"
+             id="tspan4285"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">200</tspan></text>
+        <path
+           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.875844px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 614.31286,237.72736 v 4.06207 h 9.44228 v 4.06207 l 8.67785,-6.06189 -8.67785,-6.12431 v 4.06206 z"
+           id="NearestAirportsArrow2"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccc"
+           inkscape:label="#path4259" />
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="645.46948"
+           y="304.51044"
+           id="NearestAirportsID3"><tspan
+             sodipodi:role="line"
+             id="tspan4291"
+             x="645.46948"
+             y="304.51044"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">KSFO</tspan></text>
+        <text
+           id="NearestAirportsCRS3"
+           y="304.51044"
+           x="790.74725"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="304.51044"
+             x="790.74725"
+             id="tspan4295"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">359</tspan></text>
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="992.91388"
+           y="304.51044"
+           id="NearestAirportsDST3"><tspan
+             sodipodi:role="line"
+             id="tspan4299"
+             x="992.91388"
+             y="304.51044"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">200</tspan></text>
+        <path
+           inkscape:label="#path4259"
+           sodipodi:nodetypes="cccccccc"
+           inkscape:connector-curvature="0"
+           id="NearestAirportsArrow3"
+           d="m 614.31286,287.50603 v 4.06207 h 9.44228 v 4.06207 l 8.67785,-6.06189 -8.67785,-6.12431 v 4.06206 z"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.875844px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <text
+           id="NearestAirportsID4"
+           y="352.68008"
+           x="645.46948"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="352.68008"
+             x="645.46948"
+             id="tspan4319"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">KSFO</tspan></text>
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="790.74725"
+           y="352.68008"
+           id="NearestAirportsCRS4"><tspan
+             sodipodi:role="line"
+             id="tspan4323"
+             x="790.74725"
+             y="352.68008"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">359</tspan></text>
+        <text
+           id="NearestAirportsDST4"
+           y="352.68008"
+           x="992.91388"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="352.68008"
+             x="992.91388"
+             id="tspan4327"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.6667px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">200</tspan></text>
+        <path
+           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.875844px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 614.31286,337.28471 v 4.06207 h 9.44228 v 4.06207 l 8.67785,-6.06189 -8.67785,-6.12431 v 4.06206 z"
+           id="NearestAirportsArrow4"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccc"
+           inkscape:label="#path4259" />
+        <rect
+           style="opacity:1;fill:#c0c0c0;fill-opacity:1;fill-rule:nonzero;stroke:#c0c0c0;stroke-width:1.72607;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="NearestAirportsAirportScrollBar"
+           width="8.1178379"
+           height="229.37941"
+           x="1006.2554"
+           y="124.63072"
+           inkscape:label="#rect4231" />
+        <rect
+           inkscape:label="#rect4231"
+           y="124.22847"
+           x="1003.9562"
+           height="50.407803"
+           width="10.799279"
+           id="NearestAirportsAirportScroll"
+           style="opacity:1;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:#808080;stroke-width:0.933267;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
+      <g
+         transform="translate(-4.7683716e-5,80.456921)"
+         id="g1140">
+        <rect
+           y="449.73181"
+           x="602.83301"
+           height="168.33708"
+           width="416.24832"
+           id="rect9747"
+           style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.46981;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <rect
+           y="430.25259"
+           x="622.35846"
+           height="39.242355"
+           width="292.77792"
+           id="rect4156"
+           style="opacity:1;fill:#1a3030;fill-opacity:1;fill-rule:nonzero;stroke:#fffcfa;stroke-width:1.75869;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text4158"
+           y="462.75742"
+           x="638.74756"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.968736px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="462.75742"
+             x="638.74756"
+             sodipodi:role="line"
+             id="tspan4162"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.968736px">FREQUENCIES</tspan></text>
+        <text
+           id="NearestAirportsFreqLabel0"
+           y="514.79022"
+           x="623.61414"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="514.79022"
+             x="623.61414"
+             id="tspan4254"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">TOWER</tspan></text>
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="992.17316"
+           y="514.79022"
+           id="NearestAirportsFreq0"><tspan
+             sodipodi:role="line"
+             id="tspan4258"
+             x="992.17316"
+             y="514.79022"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">119.875</tspan></text>
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="623.61414"
+           y="558.95154"
+           id="NearestAirportsFreqLabel1"><tspan
+             sodipodi:role="line"
+             id="tspan4262"
+             x="623.61414"
+             y="558.95154"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">TOWER</tspan></text>
+        <text
+           id="NearestAirportsFreq1"
+           y="558.95154"
+           x="992.17316"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="558.95154"
+             x="992.17316"
+             id="tspan4266"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">119.875</tspan></text>
+        <text
+           id="NearestAirportsFreqLabel2"
+           y="603.11279"
+           x="623.61414"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="603.11279"
+             x="623.61414"
+             id="tspan4270"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">TOWER</tspan></text>
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="992.17316"
+           y="603.11279"
+           id="NearestAirportsFreq2"><tspan
+             sodipodi:role="line"
+             id="tspan4274"
+             x="992.17316"
+             y="603.11279"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">119.875</tspan></text>
+        <rect
+           inkscape:label="#rect4231"
+           y="483.25461"
+           x="1006.2796"
+           height="127.67633"
+           width="8.0693922"
+           id="NearestAirportsFreqScrollBar"
+           style="opacity:1;fill:#c0c0c0;fill-opacity:1;fill-rule:nonzero;stroke:#c0c0c0;stroke-width:1.28391;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <rect
+           style="opacity:1;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:#808080;stroke-width:0.6654;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="NearestAirportsFreqScroll"
+           width="8.7547817"
+           height="31.608269"
+           x="1005.9369"
+           y="482.97556"
+           inkscape:label="#rect4231" />
+      </g>
+      <rect
+         inkscape:label="#rect4231"
+         y="563.76166"
+         x="566.78021"
+         height="130.20757"
+         width="8.632225"
+         id="NearestAirportsApproachScrollBar"
+         style="opacity:1;fill:#c0c0c0;fill-opacity:1;fill-rule:nonzero;stroke:#c0c0c0;stroke-width:1.34103;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:#808080;stroke-width:0.695004;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="NearestAirportsApproachScroll"
+         width="9.3654213"
+         height="32.234917"
+         x="566.40112"
+         y="563.41077"
+         inkscape:label="#rect4231" />
+      <g
+         transform="translate(-5.6020975,-424.97255)"
+         id="g1154">
+        <text
+           id="NearestAirportsRunwayDimensions"
+           y="896.93787"
+           x="273.60437"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="896.93787"
+             x="273.60437"
+             id="tspan4250"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">PCL FREQUENCY - 122.90</tspan></text>
+        <rect
+           y="828.17303"
+           x="260.5304"
+           height="88.749046"
+           width="764.05328"
+           id="rect4331"
+           style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.66921;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <rect
+           y="809.7569"
+           x="272.36511"
+           height="39.159447"
+           width="308.06958"
+           id="rect4333"
+           style="opacity:1;fill:#1a3030;fill-opacity:1;fill-rule:nonzero;stroke:#fffcfa;stroke-width:1.84055;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text4335"
+           y="843.33661"
+           x="296.40002"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.967722px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="843.33661"
+             x="296.40002"
+             id="tspan4337"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.967722px">INFORMATION</tspan></text>
+        <text
+           id="NearestAirportsName"
+           y="897.82587"
+           x="273.25415"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"
+           inkscape:label="#text4232"><tspan
+             y="897.82587"
+             x="273.25415"
+             id="tspan4361"
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">SAN FRANCISCO INTERNATIONAL</tspan></text>
+      </g>
+      <g
+         id="g1188">
+        <rect
+           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.85764;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect9745"
+           width="323.86047"
+           height="213.35152"
+           x="252.02379"
+           y="99.787643" />
+        <rect
+           style="fill:#1a3030;fill-opacity:1;fill-rule:nonzero;stroke:#fffcfa;stroke-width:1.69021;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4150"
+           width="195.26418"
+           height="39.308544"
+           x="262.60541"
+           y="77.783798" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.967722px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="277.34601"
+           y="108.76914"
+           id="text4152"
+           transform="scale(0.96767669,1.033403)"><tspan
+             sodipodi:role="line"
+             id="tspan4154"
+             x="277.34601"
+             y="108.76914"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.967722px">RUNWAYS</tspan></text>
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="363.39014"
+           y="168.99086"
+           id="NearestAirportsRunwayID"
+           transform="scale(0.96767669,1.033403)"><tspan
+             sodipodi:role="line"
+             id="tspan4238"
+             x="363.39014"
+             y="168.99086"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">17-35</tspan></text>
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="556.84088"
+           y="229.14949"
+           id="NearestAirportsRunwaySurface"><tspan
+             sodipodi:role="line"
+             id="tspan4246"
+             x="556.84088"
+             y="229.14949"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">HARD SURFACE</tspan></text>
+        <path
+           style="fill:#404040;fill-opacity:1;fill-rule:evenodd;stroke:#404040;stroke-width:2.22093px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 281.06769,148.40948 v 23.57014 l -10.72505,-11.63776 z"
+           id="NearestAirportsRunwayIDLeft"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccc"
+           inkscape:label="#path4222" />
+        <path
+           inkscape:label="#path4222"
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0"
+           id="NearestAirportsRunwayIDRight"
+           d="m 420.28535,148.40948 v 23.57014 l 10.72505,-11.63776 z"
+           style="fill:#404040;fill-opacity:1;fill-rule:evenodd;stroke:#404040;stroke-width:2.22093px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <text
+           transform="scale(0.96767669,1.033403)"
+           id="text1158"
+           y="267.76514"
+           x="277.82123"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.967722px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.967722px"
+             y="267.76514"
+             x="277.82123"
+             id="tspan1156"
+             sodipodi:role="line">ELEV</tspan></text>
+        <text
+           inkscape:label="#text4232"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:0%;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#80ffff;fill-opacity:1;stroke:none;stroke-width:0.980458px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="559.13092"
+           y="276.70929"
+           id="NearestAirportsAlt"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:monoMMM_5;-inkscape-font-specification:'monoMMM_5, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.980458px"
+             sodipodi:role="line"
+             id="tspan4375"
+             x="559.13092"
+             y="276.70929">123ft</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

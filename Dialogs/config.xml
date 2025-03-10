@@ -57,6 +57,24 @@
           <stretch>true</stretch>
         </hrule>
       </group>
+      <text>
+				<halign>left</halign>
+				<label>Radio panel</label>
+			</text>
+      <combo>
+				<halign>left</halign>
+        
+				<name>radio-setup</name>
+				<pref-width>150</pref-width>
+				<property>sim/model/config/radio-setup</property>
+				<value>bendix</value>
+				<value>garmin</value>
+        <value>gns530</value>
+        <binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live>true</live>
+			</combo>
 
       <checkbox>
         <halign>left</halign>

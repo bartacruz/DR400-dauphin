@@ -20,6 +20,16 @@
     <object-name>fuel-valve-ccw</object-name>
   </animation>
 
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>FuelSelect</object-name>
+    <object-name>base</object-name>
+    <object-name>start</object-name>
+    <object-name>fuel-valve-cw</object-name>
+    <object-name>fuel-valve-ccw</object-name>
+  </effect>
+
+
   <animation>
     <type>material</type>
     <object-name>FuelSelect</object-name>

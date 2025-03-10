@@ -19,6 +19,12 @@
     <!-- Objets transparents -->
   </animation>
   
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>on-off</object-name>
+  </effect>
+
+  
   <!--<animation>
     <type>material</type>
     <object-name>on-off</object-name>

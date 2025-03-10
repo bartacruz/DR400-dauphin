@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ########################################
+
+ # DR400-dauphin by PAF team
+ # April 2012 : Modified by PAF team
+ # http://equipe-flightgear.forumactif.com
+
+##########################################-->
+
+<PropertyList include="dr400-main.xml">
+    <sim>
+        <variant-of>dr400-dauphin</variant-of>
+        <description>Robin DR400-dauphin with GNS530 as Radio,Nav, and GPS</description>
+        <author>Bertrand AUGRAS (3D), Daniel DUBREUIL (FDM), Clement de l'Hamaide (3D, Systems, Adaptation), PAF team, Julio Santa Cruz</author>
+        <model>
+            <config>
+                <panel>GNS530</panel>
+            </config>
+        </model>
+    </sim>>
+    <instrumentation>
+        <gns530>
+            <serviceable type="bool">true</serviceable>
+            <loaded type="bool">false</loaded>
+        </gns530>
+    </instrumentation>
+
+    <nasal>
+        <gns530>
+            <file>Aircraft/DR400-dauphin/Models/Interior/Instruments/GNS530/gns530.nas</file>
+        </gns530>
+    </nasal>
+
+</PropertyList>

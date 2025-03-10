@@ -244,17 +244,28 @@
 
   <!-- Transparent objects -->
   <effect>
-    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-glasses</inherits-from>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-glasses-rain-outside</inherits-from>
     <object-name>rear-windows</object-name>
     <object-name>front-windows</object-name>
     <object-name>landing-light-windows</object-name>
   </effect>
 
   <effect>
-    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-glasses-interior</inherits-from>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-glasses-rain-inside</inherits-from>
     <object-name>rear-windows-int</object-name>
     <object-name>front-windows-int</object-name>
   </effect>
+
+     <animation>
+        <type>blend</type>
+        <object-name>propeller</object-name>
+        <object-name>cone-propeller</object-name>
+        <property>/engines/engine[0]/rpm</property>
+        <factor>0.00049</factor>
+        <max>0.9</max>
+        <min>0.0</min>
+    </animation>
+
 
   <!-- Propeller -->
   <animation>
@@ -602,6 +613,7 @@
 
   <!-- Lights -->
   <model>
+    <name>StrobeLight-rembrandt</name>
     <path>Aircraft/DR400-dauphin/Models/Lights/StrobeLight-rembrandt.xml</path>
     <offsets>
       <x-m> 0.5348 </x-m>
@@ -611,6 +623,18 @@
   </model>
 
   <model>
+    <name>StrobeLight-ALS</name>
+    <path>Aircraft/DR400-dauphin/Models/Lights/ALS/procedural_light_beacon.xml</path>
+    <offsets>
+      <x-m> 0.5348 </x-m>
+      <y-m> 0.000  </y-m>
+      <z-m> 0.6692 </z-m>
+    </offsets>
+  </model>
+
+
+  <model>
+    <name>NavLightL-rembrandt</name>
     <path>Aircraft/DR400-dauphin/Models/Lights/NavLightL-rembrandt.xml</path>
     <offsets>
       <x-m> -1.3955  </x-m>
@@ -620,6 +644,18 @@
   </model>
 
   <model>
+    <name>NavLightL-ALS</name>
+    <path>Aircraft/DR400-dauphin/Models/Lights/ALS/procedural_light_nav_left.xml</path>
+    <offsets>
+      <x-m> -1.3955  </x-m>
+      <y-m> -4.3895  </y-m>
+      <z-m>  0.07344 </z-m>
+    </offsets>
+  </model>
+
+
+  <model>
+    <name>NavLightR-rembrandt</name>
     <path>Aircraft/DR400-dauphin/Models/Lights/NavLightR-rembrandt.xml</path>
     <offsets>
       <x-m> -1.3955  </x-m>
@@ -629,6 +665,17 @@
   </model>
 
   <model>
+    <name>NavLightR-ALS</name>
+    <path>Aircraft/DR400-dauphin/Models/Lights/ALS/procedural_light_nav_right.xml</path>
+    <offsets>
+      <x-m> -1.3955  </x-m>
+      <y-m>  4.3895  </y-m>
+      <z-m>  0.07344 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>TaxiLight-rembrandt</name>
     <path>Aircraft/DR400-dauphin/Models/Lights/TaxiLight-rembrandt.xml</path>
     <offsets>
       <x-m> -1.742 </x-m>
@@ -638,6 +685,18 @@
   </model>
 
   <model>
+    <name>TaxiLight-ALS</name>
+    <path>Aircraft/DR400-dauphin/Models/Lights/ALS/procedural_light_taxi.xml</path>
+    <offsets>
+      <x-m> -1.6800 </x-m>
+      <y-m> -2.2132 </y-m>
+      <z-m> -0.3145 </z-m>
+    </offsets>
+  </model>
+
+
+  <model>
+    <name>LandingLight-rembrandt</name>
     <path>Aircraft/DR400-dauphin/Models/Lights/LandingLight-rembrandt.xml</path>
     <offsets>
       <x-m> -1.742 </x-m>
@@ -645,6 +704,44 @@
       <z-m> -0.3145 </z-m>
     </offsets>
   </model>
+
+  <model>
+    <name>LandingLight-ALS</name>
+    <path>Aircraft/DR400-dauphin/Models/Lights/ALS/procedural_light_landing.xml</path>
+    <offsets>
+      <x-m> -1.6800 </x-m>
+      <y-m> -2.3654 </y-m>
+      <z-m> -0.3145 </z-m>
+    </offsets>
+  </model>
+
+
+    <animation>
+    <type>select</type>
+    <condition>
+        <not>
+            <property>sim/rendering/shaders/skydome</property>
+        </not>
+    </condition>
+    <object-name>StrobeLight-rembrandt</object-name>
+    <object-name>NavLightL-rembrandt</object-name>
+    <object-name>NavLightR-rembrandt</object-name>
+    <object-name>TaxiLight-rembrandt</object-name>
+    <object-name>LandingLight-rembrandt</object-name>
+    </animation>
+    
+    <animation>
+    <type>select</type>
+    <condition>
+        <property>sim/rendering/shaders/skydome</property>
+    </condition>
+    <object-name>StrobeLight-ALS</object-name>
+    <object-name>NavLightL-ALS</object-name>
+    <object-name>NavLightR-ALS</object-name>
+    <object-name>TaxiLight-ALS</object-name>
+    <object-name>LandingLight-ALS</object-name>
+    </animation>
+
 
 </PropertyList>
 

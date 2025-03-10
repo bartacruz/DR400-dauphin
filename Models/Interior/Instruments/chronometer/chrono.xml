@@ -44,6 +44,18 @@
     <object-name>stop.button</object-name>
   </animation>
 
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>face</object-name>
+    <object-name>lcd</object-name>
+    <object-name>on-off.button</object-name>
+    <object-name>reset.button</object-name>
+    <object-name>start.button</object-name>
+    <object-name>pause.button</object-name>
+    <object-name>stop.button</object-name>
+  </effect>
+
+
   <animation>
     <type>range</type>
     <min-m>  0 </min-m>

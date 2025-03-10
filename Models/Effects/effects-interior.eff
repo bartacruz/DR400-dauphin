@@ -1,94 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <PropertyList>
-  <name>DR400-dauphin-effects-interior</name>
-  <inherits-from>Effects/model-combined-deferred</inherits-from>
-
-  <parameters>
-    <!-- Normal map -->
-    <normalmap-enabled type="int"> 0 </normalmap-enabled>
-    <normalmap-dds type="int"> 0 </normalmap-dds>
-    <texture n="2">
-      <!--<image>Aircraft/DR400-dauphin/Models/Effects/normalmap-interior.png</image>-->
-    </texture>
-    <!-- Light map -->
-    <lightmap-enabled type="int"> 0 </lightmap-enabled>
-    <!-- Reflection map -->
-    <reflection-enabled type="int"> 0 </reflection-enabled>
-    <reflect-map-enabled type="int"> 0 </reflect-map-enabled>
-    <reflection-correction type="float"> 0.0 </reflection-correction>
-    <reflection-dynamic type="int"> 0 </reflection-dynamic>
-    <texture n="4">
-      <image>Aircraft/DR400-dauphin/Models/Effects/reflectmap-interior.png</image>
-    </texture>
-<!--###BEGIN interior cubemap -->
-			<texture n="5">
-				<type>cubemap</type>
-				<images>
-					<positive-x>Aircraft/DR400-dauphin/Models/Effects/Textures/Cubemap/Interior/back.png</positive-x>
-					<negative-x>Aircraft/DR400-dauphin/Models/Effects/Textures/Cubemap/Interior/front.png</negative-x>
-					<positive-y>Aircraft/DR400-dauphin/Models/Effects/Textures/Cubemap/Interior/right.png</positive-y>
-					<negative-y>Aircraft/DR400-dauphin/Models/Effects/Textures/Cubemap/Interior/left.png</negative-y>
-					<positive-z>Aircraft/DR400-dauphin/Models/Effects/Textures/Cubemap/Interior/up.png</positive-z>
-					<negative-z>Aircraft/DR400-dauphin/Models/Effects/Textures/Cubemap/Interior/down.png</negative-z>
-				</images>
-			</texture>
-<!-- ###END interior cubemap -->
-    <ambient-correction type="float"> 0.1 </ambient-correction>
-  </parameters>
-
-  <!-- ####################
-  ### NORMALMAP INCLUDE ###
-  ######################### -->
-  <generate>
-    <tangent type="int">6</tangent>
-    <binormal type="int">7</binormal>
-  </generate>
-
-  <technique n="4">
-    <pass>
-      <program>
-        <attribute>
-          <name>tangent</name>
-          <index>6</index>
-        </attribute>
-        <attribute>
-          <name>binormal</name>
-          <index>7</index>
-        </attribute>
-      </program>
-    </pass>
-  </technique>
-
-  <technique n="7">
-    <pass>
-      <program>
-        <attribute>
-          <name>tangent</name>
-          <index>6</index>
-        </attribute>
-        <attribute>
-          <name>binormal</name>
-          <index>7</index>
-        </attribute>
-      </program>
-    </pass>
-  </technique>
-
-  <technique n="9">
-    <pass>
-      <program>
-        <attribute>
-          <name>tangent</name>
-          <index>6</index>
-        </attribute>
-        <attribute>
-          <name>binormal</name>
-          <index>7</index>
-        </attribute>
-      </program>
-    </pass>
-  </technique>
-  <!-- ########################
-  ### END NORMALMAP INCLUDE ###
-  ############################# -->
+    <name>interior</name>
+    <inherits-from>Effects/model-interior</inherits-from>
+    <parameters>
+        <texture n="4">
+            <type>cubemap</type>
+            <images>
+                <positive-x>Aircraft/DR400-dauphin/Models/Effects/Textures/Cubemap/Shadows/0004.png</positive-x>
+                <negative-x>Aircraft/DR400-dauphin/Models/Effects/Textures/Cubemap/Shadows/0002.png</negative-x>
+                <positive-y>Aircraft/DR400-dauphin/Models/Effects/Textures/Cubemap/Shadows/0001.png</positive-y>
+                <negative-y>Aircraft/DR400-dauphin/Models/Effects/Textures/Cubemap/Shadows/0003.png</negative-y>
+                <positive-z>Aircraft/DR400-dauphin/Models/Effects/Textures/Cubemap/Shadows/0006.png</positive-z>
+                <negative-z>Aircraft/DR400-dauphin/Models/Effects/Textures/Cubemap/Shadows/0005.png</negative-z>
+            </images>
+        </texture>
+        <opacity-cube-center type="vec3d" n="0"> -1.37408 0.009582 0.633576 </opacity-cube-center>
+        <opacity-cube-scale type="vec3d" n="0"> 0.672322 0.672322 0.672322</opacity-cube-scale>
+        <light-filter-one type="vec3d">0.5 0.5 0.5</light-filter-one>
+        <light-filter-two type="vec3d">0.9 0.2 0.2</light-filter-two>
+        <light-radius type="float">13</light-radius>
+        <irradiance-map-type type="int">2</irradiance-map-type>
+        <irradiance-map-strength type="float">0.25</irradiance-map-strength>
+	<residual-ambience-r type="float">0.02</residual-ambience-r>
+	<residual-ambience-g type="float">0.01</residual-ambience-g>
+	<residual-ambience-b type="float">0.00</residual-ambience-b>
+    </parameters>
 </PropertyList>

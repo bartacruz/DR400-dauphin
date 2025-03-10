@@ -19,6 +19,15 @@
     <object-name>hotspotDown</object-name>
   </animation>
 
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>Switch</object-name>
+    <object-name>SwitchNut</object-name>
+    <object-name>hotspotUp</object-name>
+    <object-name>hotspotDown</object-name>
+  </effect>
+
+
   <animation>
     <type>select</type>
     <object-name>hotspotUp</object-name>

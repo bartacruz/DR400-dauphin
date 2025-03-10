@@ -11,6 +11,10 @@
 <PropertyList>
 
   <path>plaque.ac</path>
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>plaque</object-name>
+  </effect>
 
   <animation>
     <type>material</type>

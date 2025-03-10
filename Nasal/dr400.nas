@@ -27,7 +27,7 @@ var config_dlg = gui.Dialog.new("/sim/gui/dialogs/config/dialog", getprop("/sim/
 #####################################
 
 var canopy = aircraft.door.new("canopy", 3);
-
+  setprop("canopy/position-norm",0);
 ###############################################
 #Fuel Management (+ Daniel Dubreuil, March 2013)
 ###############################################
@@ -320,11 +320,15 @@ var Startup = func{
   setprop("/controls/engines/engine[0]/magnetos",3);
   setprop("controls/engines/engine[0]/mixture",1);
   setprop("/controls/gear/brake-parking",0);
-  setprop("/controls/lighting/instruments-norm",1);
+  setprop("/controls/lighting/instruments-norm",0.8);
+  setprop("/controls/lighting/instruments-norm[1]",0.8);
+  setprop("/controls/lighting/instruments-norm[2]",0.8);
+  setprop("/controls/lighting/nav-lights",1);
+  setprop("/controls/lighting/strobe-lights",1);
   setprop("/instrumentation/comm[0]/power-btn",1);
   setprop("/instrumentation/comm[0]/volume",1);
   setprop("/instrumentation/nav[0]/power-btn",1);  
-  setprop("/instrumentation/nav[0]/volume",1);
+  setprop("/instrumentation/nav[0]/volume",0); 
   setprop("/instrumentation/adf[0]/power-btn",1);
   setprop("/instrumentation/adf[0]/volume",1);
   setprop("/instrumentation/adf[0]/volume-norm",1);
@@ -344,6 +348,10 @@ var Shutdown = func{
   setprop("/engines/engine[0]/running",0);
   setprop("/controls/gear/brake-parking",1);
   setprop("/controls/lighting/instruments-norm",0);
+  setprop("/controls/lighting/instruments-norm[1]",0);
+  setprop("/controls/lighting/instruments-norm[2]",0);
+  setprop("/controls/lighting/nav-lights",0);
+  setprop("/controls/lighting/strobe-lights",0);
   setprop("/instrumentation/comm[0]/power-btn",0);
   setprop("/instrumentation/comm[0]/volume",0);
   setprop("/instrumentation/nav[0]/power-btn",0);
@@ -426,7 +434,7 @@ global_system = func{
     setprop("/controls/engines/engine[0]/starter",0);
   }
 
-  if(getprop("/systems/electrical/outputs/master-avionics") > 6){
+  if(getprop("/systems/electrical/outputs/bus-avionics") > 6){
     setprop("/instrumentation/attitude-indicator/spin",10);
   }else{
     setprop("/instrumentation/attitude-indicator/spin",0);
@@ -523,3 +531,4 @@ var nasalInit = setlistener("/sim/signals/fdm-initialized", func{
   settimer(upsideDown_system, 2);
   removelistener(nasalInit);
 });
+var fg1000system = nil;

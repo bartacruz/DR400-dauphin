@@ -10,7 +10,7 @@
 
 <PropertyList>
 
-  <chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
+  <chase-distance-m type="double" archive="y">-9.0</chase-distance-m>
 
   <view n="100">
     <name>Aft Passenger View</name>
@@ -23,7 +23,7 @@
       <y-offset-m archive="y">  0.60 </y-offset-m>	<!-- Up    -->
       <z-offset-m archive="y"> -1.289 </z-offset-m>	<!-- Back  -->
       <pitch-offset-deg>-15</pitch-offset-deg>
-      <default-field-of-view-deg>60</default-field-of-view-deg>
+      <default-field-of-view-deg>85</default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>
@@ -55,7 +55,7 @@
       <y-offset-m archive="y">  0.473 </y-offset-m>	<!-- Up    -->
       <z-offset-m archive="y"> -0.361 </z-offset-m>	<!-- Back  -->
       <pitch-offset-deg>0</pitch-offset-deg>
-      <default-field-of-view-deg>60</default-field-of-view-deg>
+      <default-field-of-view-deg>85</default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>
@@ -71,7 +71,7 @@
       <y-offset-m archive="y">  0.473 </y-offset-m>	<!-- Up    -->
       <z-offset-m archive="y"> -0.361 </z-offset-m>	<!-- Back  -->
       <pitch-offset-deg>0</pitch-offset-deg>
-      <default-field-of-view-deg>60</default-field-of-view-deg>
+      <default-field-of-view-deg>85</default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>
@@ -87,7 +87,7 @@
       <y-offset-m archive="y">  0.60 </y-offset-m>	<!-- Up    -->
       <z-offset-m archive="y"> -1.15 </z-offset-m>	<!-- Back  -->
       <pitch-offset-deg>-10</pitch-offset-deg>
-      <default-field-of-view-deg>60</default-field-of-view-deg>
+      <default-field-of-view-deg>85</default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>
@@ -97,11 +97,11 @@
     <config>
       <from-model type="bool">true</from-model>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-      <x-offset-m archive="y"> -0.217 </x-offset-m>	<!-- Right -->
-      <y-offset-m archive="y">  0.56 </y-offset-m>	<!-- Up    -->
-      <z-offset-m archive="y"> -1.189 </z-offset-m>	<!-- Back  -->
-      <pitch-offset-deg>-19.4</pitch-offset-deg>
-      <default-field-of-view-deg>74.0</default-field-of-view-deg>
+      <x-offset-m archive="y"> -0.195 </x-offset-m>	<!-- Right -->
+      <y-offset-m archive="y">  0.62 </y-offset-m>	<!-- Up    -->
+      <z-offset-m archive="y"> -1.075 </z-offset-m>	<!-- Back  -->
+      <pitch-offset-deg>-12.2</pitch-offset-deg>
+      <default-field-of-view-deg>85.0</default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>

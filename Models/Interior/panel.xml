@@ -42,19 +42,15 @@
     </offsets>
   </model>
 
-  <!-- All screws -->
-  <!--<model>
-    <path>Aircraft/DR400-dauphin/Models/Interior/Parts/screws/screws.xml</path>
-  </model>-->
-
   <!-- ################################################################-->
   <!-- INSTRUMENTS : ALT, ADF, AI, ASI, RPM, EGT, HDG, HI, VSI, Turn,
-                     Fuel-press, Clock, KI206, KR87, KX165, Volts,
-                     Warning lights, Oil-temp, Oil-press, Garmin196, ELT -->
+                     Fuel-press, Clock, KI206,  Volts,
+                     Warning lights, Oil-temp, Oil-press, ELT -->
   <!-- ################################################################-->
 
   <!-- ASI -->
   <model>
+  <name>ASI</name>
     <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/asi/asi.xml</path>
     <offsets>
       <x-m> -0.016 </x-m>
@@ -68,6 +64,7 @@
 
   <!-- AI -->
   <model>
+  <name>AI</name>
     <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/ai/ai.xml</path>
     <offsets>
       <x-m> -0.016 </x-m>
@@ -78,9 +75,11 @@
       <heading-deg> 0.0 </heading-deg>
     </offsets>
   </model>
+  
 
   <!-- ALT -->
   <model>
+  <name>ALT</name>
     <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/alt/alt.xml</path>
     <offsets>
       <x-m> -0.016 </x-m>
@@ -92,8 +91,24 @@
     </offsets>
   </model>
 
+  <!-- ALT Backup (with G1000) -->
+  <model>
+  <name>ALTBackup</name>
+    <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.100 </y-m>
+      <z-m> -0.148 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg> -10.0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+
   <!-- KI206 -->
   <model>
+    <name>KI206</name>
     <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/ki206/ki206.xml</path>
     <offsets>
       <x-m> -0.016 </x-m>
@@ -107,6 +122,7 @@
 
   <!-- Turn -->
   <model>
+  <name>Turn</name>
     <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/turn/turn.xml</path>
     <offsets>
       <x-m> -0.016 </x-m>
@@ -120,6 +136,7 @@
 
   <!-- ADF -->
   <model>
+    <name>ADF</name>
     <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/adf/adf.xml</path>
     <offsets>
       <x-m> -0.012 </x-m>
@@ -133,6 +150,7 @@
 
   <!-- VSI -->
   <model>
+  <name>VSI</name>
     <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/vsi/vsi.xml</path>
     <offsets>
       <x-m> -0.012 </x-m>
@@ -146,6 +164,7 @@
 
   <!-- HI -->
   <model>
+  <name>HI</name>
     <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/hi/hi.xml</path>
     <offsets>
       <x-m> -0.016 </x-m>
@@ -185,6 +204,7 @@
 
   <!-- Chrono -->
   <model>
+    <name>Chrono</name>
     <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/chronometer/chrono.xml</path>
     <offsets>
       <x-m>-0.012 </x-m>
@@ -237,6 +257,7 @@
 
   <!-- Fuel-temp -->
   <model>
+    <name>CarbTemp</name>
     <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/carb-temp/carb-temp.xml</path>
     <offsets>
       <x-m>-0.002 </x-m>
@@ -261,59 +282,6 @@
     </offsets>
   </model>
   
-  <!-- KR87 ADF receiver -->
-  <model>
-    <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/kr87-adf/kr87.xml</path>
-    <offsets>
-      <x-m>-0.0175</x-m>
-      <y-m> 0.147 </y-m>
-      <z-m> 0.030 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>  -5.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
-  <!-- KX165-->
-  <model>
-    <!--<path>Aircraft/DR400-dauphin/Models/Interior/Instruments/kx165/kx165-1.xml</path>-->
-    <path>Aircraft/Instruments-3d/kx165/kx165-1.xml</path>
-    <overlay>
-      <params>
-        <dimming>systems/electrical/outputs/instrument-lights[2]</dimming>
-        <red>0.01</red>
-        <green>0.01</green>
-        <blue>0.01</blue>
-      </params>
-    </overlay>
-    <offsets>
-      <x-m>-0.0215</x-m>
-      <y-m> 0.147 </y-m>
-      <z-m> 0.074 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>  -5.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
-  <!-- KT76A-->
-  <model>
-    <path>Aircraft/Instruments-3d/kt76a/kt76a.xml</path>
-    <overlay>
-      <params>
-        <dimming>systems/electrical/outputs/instrument-lights[2]</dimming>
-      </params>
-    </overlay>
-    <offsets>
-      <x-m>-0.010</x-m>
-      <y-m> 0.147 </y-m>
-      <z-m>-0.007 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>  -5.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
   <!-- Volts -->
   <model>
     <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/volts/volts.xml</path>
@@ -323,19 +291,6 @@
       <z-m> -0.1710 </z-m>
       <roll-deg>    0.0 </roll-deg>
       <pitch-deg> -10.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
-    </offsets>
-  </model>
-
-  <!-- Garmin GPS196 -->
-  <model>
-  <path>Aircraft/DR400-dauphin/Models/Interior/Instruments/garmin196/garmin196_support2.xml</path>
-    <offsets>
-      <x-m>-0.0155</x-m>
-      <y-m> 0.147 </y-m>
-      <z-m> 0.143 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>  -5.0 </pitch-deg>
       <heading-deg> 0.0 </heading-deg>
     </offsets>
   </model>
@@ -365,6 +320,18 @@
       <heading-deg> 0.0 </heading-deg>
     </offsets>
   </model>
+
+  <model>
+    <path>Aircraft/DR400-dauphin/Models/Interior/radio-panel-traditional.xml</path>
+  </model>
+  <model>
+    <path>Aircraft/DR400-dauphin/Models/Interior/radio-panel-garmin.xml</path>
+  </model>
+  <model>
+    <path>Aircraft/DR400-dauphin/Models/Interior/radio-panel-gns530.xml</path>
+  </model>
+
+
 
   <!-- ################################################################-->
   <!-- TEXT -->
@@ -756,5 +723,22 @@
     </condition>
   </animation>
 
-</PropertyList>
+  <animation>
+    <type>select</type>
+    <object-name>KI206</object-name>
+    <object-name>ADF</object-name>
+    <object-name>Chrono</object-name>
+    <object-name>ALT</object-name>
+    <object-name>AI</object-name>
+    <object-name>VSI</object-name>
+    <object-name>HI</object-name>
+    <object-name>CarbTemp</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/config/panel</property>
+        <value>traditional</value>
+      </equals>
+    </condition>
+  </animation>
 
+</PropertyList>

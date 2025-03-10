@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel-cover.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel-cover</object-name>
+   </animation>
+
+   <animation>
+    <type>material</type>
+    <texture>panel-cover.png</texture>
+    <texture-prop>panel-cover</texture-prop>
+    <property-base>sim/model/livery</property-base>
+    <object-name>panel-cover</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/DR400-dauphin/Models/Effects/effects-interior</inherits-from>
+    <object-name>panel-cover</object-name>
+  </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>panel-cover</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <emission>
+      <red>   0.002 </red>
+      <green> 0.002 </green>
+      <blue>  0.002 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>scale</type>
+    <object-name>panel-cover</object-name>
+    <x-offset>1.0</x-offset>
+    <y-offset>1.0</y-offset>
+    <z-offset>1.1</z-offset>
+  </animation>
+    
+ </PropertyList>

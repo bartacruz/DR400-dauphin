@@ -1,0 +1,114 @@
+<PropertyList>
+
+
+    <logic>
+        <name>Battery charge warning</name>
+        <input>
+            <and>
+                <or>
+                    <not>
+                        <property>engines/engine/running</property>
+                    </not>
+                    <not>
+                        <property>controls/engines/engine/master-alt</property>
+                    </not>
+                    <property>controls/lighting/warning-test</property>
+                </or>
+                <property>controls/electric/battery-switch</property>
+            </and>
+        </input>
+        <output>
+            <property>/instrumentation/annunciators/systems/electric/battery-charge</property>
+        </output>
+    </logic>
+    <logic>
+        <name>oil-pressure-low-annunciator</name>
+        <input>
+            <and>
+                <or>
+                    <less-than-equals>
+                        <property>engines/engine/oil-pressure-psi</property>
+                        <value> 14 </value>
+                    </less-than-equals>
+                    <property>controls/lighting/warning-test</property>
+                </or>
+                <property>controls/electric/battery-switch</property>
+            </and>
+        </input>
+        <output>
+            <property>/instrumentation/annunciators/engines/engine[0]/oil-pressure-low</property>
+        </output>
+    </logic>
+    <logic>
+        <name>fuel-pressure-low-annunciator</name>
+        <input>
+            <and>
+                <or>
+                    <less-than-equals>
+                        <property>engines/engine/fuel-pressure-psi</property>
+                        <value> 1.1 </value>
+                    </less-than-equals>
+                    <property>controls/lighting/warning-test</property>
+                </or>
+                <property>controls/electric/battery-switch</property>
+            </and>
+        </input>
+        <output>
+            <property>/instrumentation/annunciators/systems/fuel/system[0]/pressure-low</property>
+        </output>
+    </logic>
+
+    <logic>
+        <name>starter-annunciator</name>
+        <input>
+            <and>
+                <or>
+                    <greater-than-equals>
+                        <property>systems/electrical/outputs/starter</property>
+                        <value> 8 </value>
+                    </greater-than-equals>
+                    <property>controls/lighting/warning-test</property>
+                </or>
+                <property>controls/electric/battery-switch</property>
+            </and>
+        </input>
+        <output>
+            <property>/instrumentation/annunciators/engines/engine[0]/starter</property>
+        </output>
+    </logic>
+
+    <logic>
+        <name>flaps-annunciator</name>
+        <input>
+            <and>
+                <or>
+                    <greater-than-equals>
+                        <property>surface-positions/flap-pos-norm</property>
+                        <value> 0.06 </value>
+                    </greater-than-equals>
+                    <property>controls/lighting/warning-test</property>
+                </or>
+                <property>controls/electric/battery-switch</property>
+            </and>
+        </input>
+        <output>
+            <property>/instrumentation/annunciators/flaps</property>
+        </output>
+    </logic>
+    <logic>
+        <name>fuel-qty-annunciator</name>
+        <input>
+            <and>
+                <or>
+                    <property>consumables/fuel/fuel-low</property>
+                    <property>controls/lighting/warning-test</property>
+                </or>
+                <property>controls/electric/battery-switch</property>
+            </and>
+        </input>
+        <output>
+            <property>/instrumentation/annunciators/systems/fuel/fuel-low</property>
+        </output>
+    </logic>
+
+</PropertyList>

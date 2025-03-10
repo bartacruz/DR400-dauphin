@@ -13,6 +13,121 @@ Christian Thiriot: sounds based on real Lycoming sound (Jan 2012)
 <PropertyList>
 
   <fx>
+
+        <canopy-open >
+            <name>canopy-open</name>
+            <mode>once</mode>
+            <path>Aircraft/DR400-dauphin/Sounds/canopy.wav</path>
+            <condition>
+                <greater-than>
+              <property>canopy/position-norm</property>
+                    <value>0.1</value>
+                </greater-than>
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>0.0</x>
+                <y>0.5</y>
+                <z>0.8</z>
+            </position>
+            <reference-dist>0.5</reference-dist>
+            <max-dist>2.0</max-dist>
+        </canopy-open>
+        
+        <canopy-close>
+            <name>canopy-close</name>
+            <mode>once</mode>
+            <path>Aircraft/DR400-dauphin/Sounds/canopy-close.wav</path>
+            <condition>
+                <less-than>
+              <property>canopy/position-norm</property>
+                    <value>1</value>
+                </less-than>
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>0.0</x>
+                <y>0.5</y>
+                <z>0.8</z>
+            </position>
+            <reference-dist>0.5</reference-dist>
+            <max-dist>2.0</max-dist>
+        </canopy-close>
+
+
+
+        <thunder1>
+            <name>thunder1</name>
+            <mode>once</mode>
+            <path>Sounds/thunder1.wav</path>
+            <property>/sim/model/DR400-dauphin/sound/click-thunder1</property>
+            <volume>4</volume>
+        </thunder1>
+        <thunder2>
+            <name>thunder2</name>
+            <mode>once</mode>
+            <path>Sounds/thunder2.wav</path>
+            <property>/sim/model/DR400-dauphin/sound/click-thunder2</property>
+            <volume>4</volume>
+        </thunder2>
+        <thunder3>
+            <name>thunder3</name>
+            <mode>once</mode>
+            <path>Sounds/thunder3.wav</path>
+            <property>/sim/model/DR400-dauphin/sound/click-thunder3</property>
+            <volume>4</volume>
+        </thunder3>
+
+         <rain>
+            <name>rain</name>
+            <mode>looped</mode>
+            <path>Sounds/rain.wav</path>
+            <condition>
+                <greater-than>
+                    <property>/environment/rain-norm</property>
+                    <value>0</value>
+                </greater-than>
+            </condition>
+            <volume>
+                <factor>0.35</factor>
+            </volume>
+        </rain>
+
+        <rain-windshield>
+            <name>rain-windshield</name>
+            <mode>looped</mode>
+            <path>Sounds/rain-windshield.wav</path>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>/environment/rain-norm</property>
+                        <value>0</value>
+                    </greater-than>
+                    <property>/sim/current-view/internal</property>
+                </and>
+            </condition>
+            <position>
+                <x>-0.5</x>
+                <y>0.0</y>
+                <z>0.0</z>
+            </position>
+            <volume>
+                <property>velocities/airspeed-kt</property>
+                <factor>0.015</factor>
+                <min>0.01</min>
+            </volume>
+            <volume>
+                <offset>0.08</offset>
+            </volume>
+        </rain-windshield>
+
+
     <crank>
       <name>engstart</name>
       <path>Aircraft/DR400-dauphin/Sounds/starter.wav</path>
@@ -35,7 +150,7 @@ Christian Thiriot: sounds based on real Lycoming sound (Jan 2012)
         </not>
       </condition>
       <volume>
-        <offset>0.9</offset>
+        <offset>-0.3</offset>
       </volume>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
@@ -64,7 +179,7 @@ Christian Thiriot: sounds based on real Lycoming sound (Jan 2012)
           </greater-than>
           <or>
             <greater-than>
-              <property>instrumentation/doors/crew/position-norm</property>
+              <property>canopy/position-norm</property>
               <value>0</value>
             </greater-than>
             <not>
@@ -96,27 +211,34 @@ Christian Thiriot: sounds based on real Lycoming sound (Jan 2012)
       <path>Aircraft/DR400-dauphin/Sounds/engine-internal.wav</path>
       <condition>
         <and>
+          <property>sim/current-view/internal</property>
           <greater-than>
             <property>engines/engine/rpm</property>
-            <value>60</value>
+            <value>10</value>
           </greater-than>
           <not>
             <greater-than>
-              <property>instrumentation/doors/crew/position-norm</property>
+              <property>canopy/position-norm</property>
               <value>0</value>
             </greater-than>
           </not>
         </and>
       </condition>
+      <volume>
+        <property>engines/engine/mp-osi</property>
+        <factor>0.0355</factor>
+        <min>0.6</min>
+        <max>4.5</max>
+      </volume>
       <pitch>
         <property>engines/engine/rpm</property>
-        <factor>0.0005</factor>
+        <factor>0.00045</factor>
         <min>0.2</min>
         <max>2.0</max>
         <offset>0.15</offset>
       </pitch>
       <reference-dist>4.0</reference-dist>
-      <max-dist>10.0</max-dist>
+      <max-dist>100.0</max-dist>
       <position>
         <x> -2.672 </x>
         <y>  0 </y>
@@ -136,7 +258,7 @@ Christian Thiriot: sounds based on real Lycoming sound (Jan 2012)
         <not>
           <and>
             <equals>
-              <property>instrumentation/doors/crew/position-norm</property>
+              <property>canopy/position-norm</property>
               <value>0</value>
             </equals>
             <property>sim/current-view/internal</property>
@@ -145,7 +267,7 @@ Christian Thiriot: sounds based on real Lycoming sound (Jan 2012)
       </condition>
       <pitch>
         <property>/engines/engine/mp-osi</property>
-        <factor>0.0036</factor>
+        <factor>0.0039</factor>
         <min>0.5</min>
         <max>2.0</max>
         <offset>0.9</offset>
@@ -311,7 +433,7 @@ Christian Thiriot: sounds based on real Lycoming sound (Jan 2012)
 
     <!-- Pompe fuel -->
     <pump>
-      <name>Pompe fuel</name>
+      <name>Pompe-fuel</name>
       <mode>looped</mode>
       <path>Aircraft/DR400-dauphin/Sounds/pompe_fuel.wav</path>
       <condition>
@@ -334,12 +456,12 @@ Christian Thiriot: sounds based on real Lycoming sound (Jan 2012)
       <property>velocities/airspeed-kt</property>
       <volume>
         <property>velocities/airspeed-kt</property>
-        <factor>0.005</factor>
+        <factor>0.006</factor>
         <max>1.5</max>
       </volume>
       <pitch>
         <property>velocities/airspeed-kt</property>
-        <factor>0.005</factor>
+        <factor>0.006</factor>
       </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>

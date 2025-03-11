@@ -79,8 +79,10 @@ Battery.apply_load = func(amps, dt) {
         return me.ideal_amps * me.charge_percent;
     load_amps = amps;
     if (amps < 0 ) {
-        load_amps = me.charge_amps;
+        load_amps = math.max(-1*me.charge_amps,amps);
         me.set_prop("charging", load_amps);
+    } else {
+        me.set_prop("charging", 0);
     }
     var amps_used = load_amps * dt / 3600.0;
     var percent_used = amps_used / me.ideal_amps;
@@ -381,19 +383,39 @@ System.new = func(name, path="/systems/electrical/") {
     obj.loop = updateloop.UpdateLoop.new(components: [obj], update_period: 0.0, enable: 0);
     return obj;
 }
-System.connect = func(source,load) {
-    source.add_load(load);
-    load.add_source(source);
-    if (! source.is_instance(Breaker)) {
-        me.sources[source.name]= source;
-        print("Adding " ~ source.name ~ "as a source");
-    }  else {
-        print("Ignorign breaker " ~ source.name ~ " as a source");
-    }
-    me.loads[load.name]= load;
+
+###
+# Connects 2 or more elements
+#
+# To create a 15A landing light and hook it to the main bus via a 20A breaker:
+# main_bus = Bus.new("main", etc-);
+# system.connect(main_bus, Breaker.new("landing-light",20), Light.new("landing-light",15));
+###
+System.connect = func {
+    var load = nil;
+    var source = nil;
+    for (var i=0; i< size(arg)-1 ; i=i+1) {
+        source = arg[i] or source;
+        load = arg[i+1];
+
+        if (!source or ! load) continue;
+
+        source.add_load(load);
+        load.add_source(source);
+        if (! source.is_instance(Breaker)) {
+            me.sources[source.name]= source; 
+        }  
+        me.loads[load.name]= load;
     return load;
 }
-
+System.add_light = func(source, name, amps, breaker_amps=0) {
+    var light = Light.new(name,amps);
+    if (breaker_amps){
+        me.connect(source,Breaker.new(name,breaker_amps),);
+    } else {
+        me.connect(source,Light.new(name,amps));
+    }
+}
 # UpdateLoop methods
 System.enable = func {
     me.loop.reset();
@@ -422,18 +444,27 @@ System.update = func(dt){
             var remaining_amps=0.0;
             foreach (var source; sources) {
                 if (source.volts() > 0) {
-                    if (remaining_amps < 0 and source.is_instance(Battery)) {
+                    if (remaining_amps < 0 and source.is_instance(Battery) and source.charge_percent < 1) {
                         # charge battery!
                         remaining_amps= source.apply_load( remaining_amps, dt);
+                        source.set_prop("rem",0);
+                        source.set_prop("load",0);
                     } else {
                         # apply load to the source and get remaining amps.
                         # remaing >0 means it didn't fulfill the load.
                         # remaining < 0 means it has power left to charge batteries.
                         remaining_amps= source.apply_load( load_amps, dt);
+                        var loaded = remaining_amps > 0 ? load_amps - remaining_amps: load_amps; 
                         load_amps = math.max(0,remaining_amps);
                         
+                        source.set_prop("rem",remaining_amps);
+                        source.set_prop("load",loaded);
                     } 
-                } else break;
+                } else {
+                    source.set_prop("rem",0);
+                    source.set_prop("load",0);
+                    break;
+                }
             }
         }
 

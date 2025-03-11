@@ -434,9 +434,9 @@
     <updateloop>
       <file>Aircraft/Generic/updateloop.nas</file>
     </updateloop>
-    <Electric>
-    <file>Aircraft/DR400-dauphin/Nasal/Electric.nas</file>
-    </Electric>
+    <electric>
+    <file>Aircraft/DR400-dauphin/Nasal/electric.nas</file>
+    </electric>
     <dr400>
       <file>Aircraft/DR400-dauphin/Nasal/physics.nas</file>
       <file>Aircraft/DR400-dauphin/Nasal/light.nas</file>

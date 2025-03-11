@@ -12,6 +12,9 @@
 # Save data
 #####################################
 
+# 12v or 24v electric system
+var system_volts = 12;
+
 foreach( var config; props.globals.getNode("/sim/model/config").getChildren() ) {
   aircraft.data.add(config);
 }
@@ -21,6 +24,7 @@ foreach( var config; props.globals.getNode("/sim/model/config").getChildren() ) 
 #####################################
 
 var config_dlg = gui.Dialog.new("/sim/gui/dialogs/config/dialog", getprop("/sim/aircraft-dir")~"/Dialogs/config.xml");
+var electric_dlg = gui.Dialog.new("/sim/gui/dialogs/electric/dialog", getprop("/sim/aircraft-dir")~"/Dialogs/electrical.xml");
 
 #####################################
 # Canopy
@@ -73,7 +77,7 @@ var canopy = aircraft.door.new("canopy", 3);
 var Fuel = func {
   
   var engine_run = getprop("/engines/engine/running");
-  var pump_on = (getprop("/systems/electrical/outputs/fuel-pump") > 20) ? 1 : 0;
+  var pump_on = (getprop("/systems/electrical/outputs/fuel-pump") >= system_volts*0.8) ? 1 : 0;
   var fuel_level_0 = getprop("consumables/fuel/tank[0]/level-lbs");
   var fuel_level_1 = getprop("consumables/fuel/tank[1]/level-lbs");
   var fuel_level_2 = getprop("consumables/fuel/tank[2]/level-lbs");
@@ -226,7 +230,7 @@ var Engine = {
         ###################################
 	var et0 = getprop("/environment/temperature-degc");
 	# var cbt = et0 + 0.85 * mp; #carb temperature
-        if(props.globals.getNode("systems/electrical/outputs/carb-heat").getValue() > 24){
+        if(props.globals.getNode("systems/electrical/outputs/carb-heat").getValue() >= system_volts){
           cheat += 0.01;
           if(cheat > 15) cheat = 15;
           setprop("engines/engine["~eng_num~"]/carb-heat", cheat);
@@ -428,13 +432,13 @@ setlistener("/instrumentation/elt/test", func(n) {
 ############################################
 global_system = func{
 
-  if(getprop("/systems/electrical/outputs/starter") > 18){
+  if(getprop("/systems/electrical/outputs/starter") >= system_volts){
     setprop("/controls/engines/engine[0]/starter",1);
   }else{
     setprop("/controls/engines/engine[0]/starter",0);
   }
 
-  if(getprop("/systems/electrical/outputs/bus-avionics") > 6){
+  if(getprop("/systems/electrical/buses/avionics/volts") > 6){
     setprop("/instrumentation/attitude-indicator/spin",10);
   }else{
     setprop("/instrumentation/attitude-indicator/spin",0);

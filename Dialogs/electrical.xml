@@ -1,0 +1,172 @@
+<PropertyList>
+
+  <name>electrical</name>
+  <modal>false</modal>
+  <layout>vbox</layout>
+  <padding>80</padding>
+
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <stretch>1</stretch>
+    </empty>		
+    <text>
+      <label>Robin DR400-dauphin electrical</label>
+    </text>
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend></legend>
+      <keynum>27</keynum>
+      <border>2</border>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+    </button>
+  </group>
+
+  <hrule/>
+
+    <!-- fila 1-->
+    <group>
+        <layout>hbox</layout>
+
+        <!-- col 1-->
+        
+        <group>
+            <layout>vbox</layout>
+            <pref-width>120</pref-width>
+            <text>
+                <label>Main</label>
+                <valign>center</valign>
+            </text>
+            <text>
+                <border>1</border>
+                <label>V</label>
+                <valign>center</valign>
+                <property>/systems/electrical/buses/main/volts</property>
+                <live>1</live>
+            </text>
+            <text>
+                <border>1</border>
+                <label>A</label>
+                <valign>center</valign>
+                <property>/systems/electrical/buses/main/amps</property>
+                <live>1</live>
+            </text>
+            <text>
+                <border>1</border>
+                <valign>center</valign>
+            </text>
+        </group>
+        <!-- col 2-->
+        <group>
+            <layout>vbox</layout>
+            <text>
+                <label>Batt</label>
+                <valign>center</valign>
+            </text>
+            <pref-width>120</pref-width>
+            <text>
+                <border>1</border>
+                <label>V</label>
+                <valign>center</valign>
+                <property>/systems/electrical/sources/battery/volts</property>
+                <live>1</live>
+            </text>
+            <text>
+                <border>1</border>
+                <label>A</label>
+                <valign>center</valign>
+                <property>/systems/electrical/sources/battery/amps</property>
+                <live>1</live>
+            </text>
+            <text>
+                <border>1</border>
+                <label>C</label>
+                <valign>center</valign>
+                <property>/systems/electrical/sources/battery/charge</property>
+                <live>1</live>
+            </text>
+        </group>
+        <!-- col 3-->
+        <group>
+            <layout>vbox</layout>
+            <text>
+                <label>Alt</label>
+                <valign>center</valign>
+            </text>
+            <pref-width>120</pref-width>
+            <text>
+                <border>1</border>
+                <label>V</label>
+                <valign>center</valign>
+                <property>/systems/electrical/sources/alternator/volts</property>
+                <live>1</live>
+            </text>
+            <text>
+                <border>1</border>
+                <label>A</label>
+                <valign>center</valign>
+                <property>/systems/electrical/sources/alternator/amps</property>
+                <live>1</live>
+            </text>
+            <text>
+                <border>1</border>
+                <label>9</label>
+                <valign>center</valign>
+            
+                <live>1</live>
+            </text>
+        </group>
+          <hrule/>
+
+
+    </group>
+    <group>
+      <checkbox>
+            <halign>left</halign>
+            <label>Place Ground Power Unit</label>
+            <live>true</live>
+            <property>/sim/gpu/enable</property>
+            <enable>
+                <less-than>
+                    <property>velocities/groundspeed-kt</property>
+                    <value>0.1</value>
+                </less-than>
+            </enable>
+            <binding>
+                <command>property-toggle</command>
+                <property>/sim/gpu/enable</property>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>
+                    if (!getprop("/sim/gpu/enable")) setprop("/controls/electric/external-power", 0);
+                </script>
+            </binding>
+            <binding>
+                <command>dialog-update</command>
+            </binding>
+        </checkbox>
+    </group>
+    <hrule/>
+      <group>
+    <layout>vbox</layout>
+    <button>
+      <legend>Close</legend>
+      <default>true</default>
+      <key>Esc</key>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+    </button>
+  </group>
+
+</PropertyList>

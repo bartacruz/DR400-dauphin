@@ -28,6 +28,13 @@
           <property>sim/model/start-idling</property>
         </binding>
       </item>
+      <item>
+        <label>Electric</label>
+        <binding>
+          <command>nasal</command>
+          <script>dr400.electric_dlg.open()</script>
+        </binding>
+      </item>
     </menu>
   </default>
 

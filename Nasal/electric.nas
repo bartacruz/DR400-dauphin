@@ -11,10 +11,16 @@ Class.new = func(name) {
         parents:[Class],
         name:name,
         is_instance: func(class) {
-            foreach(var c; me.parents) {
-                if (c.class_name == class.class_name) return true;
+            var find_parent = func(o,class){                
+                if (o.class_name == class.class_name) return true;
+                if (size(o.parents) > 1){
+                    for (var i=1; i<size(o.parents) ; i+=1) {
+                        return find_parent(o.parents[i],class);
+                    }
+                }
+                return false;
             }
-            return false;
+            return find_parent(me,class);
         },
     }
 };
@@ -37,7 +43,11 @@ Source.new = func(name) {
             append(me.loads,load);
             return load;
         },
+        current: 0, 
+        voltage: 0,
     };
+    obj.set_prop("voltage",0.0 );
+    obj.set_prop("current",0.0 );
     return obj;
 };
 
@@ -62,8 +72,8 @@ Battery.new = func (name, switch, volts,amps,cc_amps, charge_amps=nil, charge_pe
     };
     obj.charge_percent= charge_percent or obj.get_prop("charge-percent") or 1.0;
     obj.set_prop("charge-percent",obj.charge_percent);
-    obj.set_prop("volts",obj.volts());
-    obj.set_prop("amps", obj.amps());
+    obj.set_prop("volts",obj.get_volts());
+    obj.set_prop("amps", obj.get_amps());
     return obj;
 }
 
@@ -93,20 +103,20 @@ Battery.apply_load = func(amps, dt) {
         gui.popupTip("Warning: Low battery! Enable alternator or apply external power to recharge battery!", 10);
     me.charge_percent = new_charge_percent;
     me.set_prop("charge-percent",me.charge_percent);
-    me.set_prop("volts",me.volts());
-    me.set_prop("amps", me.amps());
+    me.set_prop("volts",me.get_volts());
+    me.set_prop("amps", me.get_amps());
     
     if (load_amps < 0) {
         return load_amps - amps;
     } 
-    return load_amps - me.amps();
+    return load_amps - me.get_amps();
 }
 
 ##
 # Return output volts based on percent charged.  Currently based on a simple
 # polynomial percent charge vs. volts function.
 #
-Battery.volts = func {
+Battery.get_volts = func {
     if (! getprop( me.switch )) {
         return 0;
     }
@@ -124,7 +134,7 @@ Battery.volts = func {
 # There is probably some physical limits to the number of instantaneous amps
 # a battery can produce (cold cranking amps?)
 #
-Battery.amps = func {
+Battery.get_amps = func {
     if (! getprop( me.switch )) {
         return 0;
     }
@@ -161,8 +171,8 @@ Alternator.new = func (name,switch,source,volts,amps,rpm_threshold=800){
     if (obj.rpm_source) {
         setprop( obj.rpm_source, 0.0 );
     }
-    obj.set_prop("volts",obj.volts());
-    obj.set_prop("amps", obj.amps());
+    obj.set_prop("volts",obj.get_volts());
+    obj.set_prop("amps", obj.get_amps());
     return obj;
 }
 
@@ -192,8 +202,8 @@ Alternator.get_factor = func {
 #
 Alternator.apply_load = func( amps, dt ) {    
     # print( "alternator amps = ", me.ideal_amps * factor );
-    var available_amps = me.amps();
-    me.set_prop("volts",me.volts());
+    var available_amps = me.get_amps();
+    me.set_prop("volts",me.get_volts());
     me.set_prop("amps", available_amps);
     return amps - available_amps;
 }
@@ -201,14 +211,14 @@ Alternator.apply_load = func( amps, dt ) {
 ##
 # Return output volts based on rpm
 #
-Alternator.volts = func {
+Alternator.get_volts = func {
     return me.ideal_volts * me.get_factor();
 }
 
 ##
 # Return output amps available based on rpm.
 #
-Alternator.amps = func {
+Alternator.get_amps = func {
     return me.ideal_amps * me.get_factor();
 }
 
@@ -220,9 +230,10 @@ Bus.new = func (name, switch){
                 get_node: func { return "/systems/electrical/buses/"~me.name~"/" },
                 switch : switch,
                 sources : [],
+                
     };
-    obj.set_prop("volts",0.0 );
-    obj.set_prop("amps",0.0 );
+    me.set_prop("volts",0);
+    me.set_prop("amps",0);
     return obj;
 }
 Bus.add_source = func(source) {
@@ -235,20 +246,21 @@ Bus.clear = func() {
     me.sources = [];
 }
 
-Bus.volts = func() {
+Bus.get_volts = func() {
     var v = 0;
     if (size(me.sources) > 0){
-        var sources = sort (me.sources, func (a,b) a.volts() < b.volts());
-        var v = sources[0].volts();
+        var sources = sort (me.sources, func (a,b) a.get_volts() < b.get_volts());
+        var v = sources[0].get_volts();
     } 
     me.set_prop("sources",size(me.sources) );
-    return 0;
+    me.voltage = v;
+    return v;
 }
 
-Bus.amps = func() {
+Bus.get_amps = func() {
     var amps = 0;
     foreach(var source; me.sources){
-        amps += source.amps();
+        amps += source.get_amps();
     }
     return amps;
 }
@@ -264,6 +276,8 @@ Bus.get_load = func(volts) {
     }
     me.set_prop("volts",v);
     me.set_prop("amps",bus_load);
+    me.voltage = v;
+    me.current = bus_load;
     return bus_load;
 }
 
@@ -272,10 +286,17 @@ Load.new = func (name, amps, switch) {
     var obj = { parents : [Load, Class.new(name)],
                 switch : switch,
                 output: "/systems/electrical/outputs/"~name,
-                amps:amps,
+                amps:amps, # nominal
+                current: 0, # actual
+                voltage: 0,
                 sources:[] };
-    setprop( obj.output, 0.0 );
+    obj.set_output(0);
     return obj;
+}
+Load.set_output = func(v) {
+    setpropr(5,me.output, v);
+    me.voltage = v;
+    
 }
 Load.add_source = func(source) {
     append(me.sources,source);
@@ -284,7 +305,10 @@ Load.add_source = func(source) {
 
 # Can be overwritten by subclasses or instances to accomodate variable loads.
 # ie: panel lights, ignition coil, etc.
-Load.get_volts = func(volts) {
+Load.get_volts = func(volts=nil) {
+    if (volts == nil) {
+        return me._volts;
+    }
     # switch could be a potentiometer (ie: a light dimmer)
     var switch = getprop(me.switch);
     if (switch == nil or switch == false) {
@@ -292,7 +316,7 @@ Load.get_volts = func(volts) {
     }
     return  switch * volts;
 }
-Load.get_amps = func(volts) {
+Load.get_amps = func(volts=nil) {
     return me.amps;
 }
 
@@ -301,11 +325,12 @@ Load.get_load = func(volts) {
     var v = me.get_volts(volts);
     var a = me.get_amps(v);
     if (v and a ) {
-        setpropr(5,me.output, v);
+        me.set_output(v);
         load = a;
     } else {
-        setpropr(5,me.output, 0.0);
+        me.set_output(0);
     }
+    me.current = load;
     # setpropr(5,me.draw, load);
     return load;
 }
@@ -323,13 +348,13 @@ Breaker.new = func (name, amps, path=nil, output=nil) {
                 amps_burn: amps,
     };
     setprop( obj.path, 1 );
-    obj.set_prop("volts",0.0 );
-    obj.set_prop("amps",0.0 );
     obj.set_prop("amps_burn",obj.amps_burn );
     if (obj.output) setprop( obj.output, 0.0 );
     return obj;
 }
-
+Breaker.apply_load = func(amps, dt) {
+    return 0.0;
+}
 Breaker.get_load = func(volts) {
     if (!getprop(me.path)) {
         #we're popped. No volts through this puppy...
@@ -349,6 +374,8 @@ Breaker.get_load = func(volts) {
     if (me.output) setprop( obj.output, v );
     me.set_prop("volts",volts);
     me.set_prop("amps",bus_load);
+    me.voltage = volts;
+    me.current = bus_load;
     return bus_load;
 }
 Breaker.pop = func {
@@ -406,6 +433,7 @@ System.connect = func {
             me.sources[source.name]= source; 
         }  
         me.loads[load.name]= load;
+    }
     return load;
 }
 System.add_light = func(source, name, amps, breaker_amps=0) {
@@ -425,10 +453,11 @@ System.disable = func {
     me.loop.disable();
 };
 System.reset = func {};
+
 System.update = func(dt){
     var serviceable = getprop(me.path ~ "serviceable");
     foreach (var source; values(me.sources)) {
-        if (source.volts() <=0 ) continue;
+        if (source.get_volts() <=0 ) continue;
         var load_amps = 0.0;
         load_buses = [];
         foreach (var load;source.loads){
@@ -437,13 +466,14 @@ System.update = func(dt){
         
         foreach (var bus; load_buses){
             # Bus sources sorted by volts.
-            var sources = sort (bus.sources, func (a,b) a.volts() < b.volts());
+            var sources = sort (bus.sources, func (a,b) a.get_volts() < b.get_volts());
             var batteries=[];
-            var sources_volts = sources[0].volts();
+            var sources_volts = sources[0].get_volts();
             var load_amps = bus.get_load(sources_volts);
             var remaining_amps=0.0;
             foreach (var source; sources) {
-                if (source.volts() > 0) {
+                if (source.is_instance(Breaker)) continue;
+                if (source.get_volts() > 0) {
                     if (remaining_amps < 0 and source.is_instance(Battery) and source.charge_percent < 1) {
                         # charge battery!
                         remaining_amps= source.apply_load( remaining_amps, dt);
@@ -453,6 +483,7 @@ System.update = func(dt){
                         # apply load to the source and get remaining amps.
                         # remaing >0 means it didn't fulfill the load.
                         # remaining < 0 means it has power left to charge batteries.
+
                         remaining_amps= source.apply_load( load_amps, dt);
                         var loaded = remaining_amps > 0 ? load_amps - remaining_amps: load_amps; 
                         load_amps = math.max(0,remaining_amps);

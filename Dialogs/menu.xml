@@ -29,6 +29,13 @@
         </binding>
       </item>
       <item>
+        <label>Save/Restore</label>
+        <binding>
+          <command>nasal</command>
+          <script>dr400.show_save_dialog()</script>
+        </binding>
+      </item>
+      <item>
         <label>Electric</label>
         <binding>
           <command>nasal</command>

@@ -446,6 +446,7 @@
       <file>Aircraft/DR400-dauphin/Nasal/interpolate.nas</file>
       <file>Aircraft/Generic/limits.nas</file>
       <file>Aircraft/DR400-dauphin/Nasal/rain.nas</file>
+      <file>Aircraft/DR400-dauphin/Nasal/save.nas</file>
     </dr400>
     
     <kr87>

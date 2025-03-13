@@ -1,0 +1,503 @@
+
+var setpropr = func(dec,path,val) {
+    var mult = math.pow(10,dec);
+    var val_r = int(val * mult) / mult;
+    setprop(path,val_r);
+}
+
+var Class ={class_name: "Class"};
+Class.new = func(name) {
+    var obj = {
+        parents:[Class],
+        name:name,
+        is_instance: func(class) {
+            var find_parent = func(o,class){                
+                if (o.class_name == class.class_name) return true;
+                if (size(o.parents) > 1){
+                    for (var i=1; i<size(o.parents) ; i+=1) {
+                        return find_parent(o.parents[i],class);
+                    }
+                }
+                return false;
+            }
+            return find_parent(me,class);
+        },
+    }
+};
+Class.names = func(v) {
+    var ret = [];
+    foreach(var c;v) append(ret,c.name);
+    return ret;
+}
+
+    # 
+var Source ={class_name: "Source",};
+Source.new = func(name) {
+    var obj= {
+        parents: [Source,Class.new(name)],
+        loads:[],
+        get_node: func { return "/systems/electrical/sources/"~me.name~"/" },
+        get_prop: func(prop) { return getprop(me.get_node()~prop); },
+        set_prop: func(prop,val) { setprop(me.get_node()~prop,val);},
+        add_load: func(load) {
+            append(me.loads,load);
+            return load;
+        },
+        current: 0, 
+        voltage: 0,
+    };
+    obj.set_prop("voltage",0.0 );
+    obj.set_prop("current",0.0 );
+    return obj;
+};
+
+
+
+##
+# Battery model class.
+#
+
+var Battery = {class_name: "Battery"};
+
+
+##
+# 
+Battery.new = func (name, switch, volts,amps,cc_amps, charge_amps=nil, charge_percent=0) {
+    var obj = { parents : [Battery,Source.new(name)],
+      switch: switch,
+      ideal_volts : volts,
+      ideal_amps : amps,
+      cc_amps: cc_amps,
+      charge_amps: charge_amps or amps*0.3,
+    };
+    obj.charge_percent= charge_percent or obj.get_prop("charge-percent") or 1.0;
+    obj.set_prop("charge-percent",obj.charge_percent);
+    obj.set_prop("volts",obj.get_volts());
+    obj.set_prop("amps", obj.get_amps());
+    return obj;
+}
+
+##
+# Passing in positive amps means the battery will be discharged.
+# Negative amps indicates a battery charge.
+# return 
+#    >0 means it didn't fulfill the load.
+#    < 0 means it has power left to charge batteries
+
+Battery.apply_load = func(amps, dt) {
+    if (getprop("/sim/freeze/replay-state"))
+        return me.ideal_amps * me.charge_percent;
+    load_amps = amps;
+    if (amps < 0 ) {
+        load_amps = math.max(-1*me.charge_amps,amps);
+        me.set_prop("charging", load_amps);
+    } else {
+        me.set_prop("charging", 0);
+    }
+    var amps_used = load_amps * dt / 3600.0;
+    var percent_used = amps_used / me.ideal_amps;
+
+    var new_charge_percent = std.max(0.0, std.min(me.charge_percent - percent_used, 1.0));
+
+    if (new_charge_percent < 0.1 and me.charge_percent >= 0.1)
+        gui.popupTip("Warning: Low battery! Enable alternator or apply external power to recharge battery!", 10);
+    me.charge_percent = new_charge_percent;
+    me.set_prop("charge-percent",me.charge_percent);
+    me.set_prop("volts",me.get_volts());
+    me.set_prop("amps", me.get_amps());
+    
+    if (load_amps < 0) {
+        return load_amps - amps;
+    } 
+    return load_amps - me.get_amps();
+}
+
+##
+# Return output volts based on percent charged.  Currently based on a simple
+# polynomial percent charge vs. volts function.
+#
+Battery.get_volts = func {
+    if (! getprop( me.switch )) {
+        return 0;
+    }
+    var x = 1.0 - me.charge_percent;
+    var tmp = -(3.0 * x - 1.0);
+    
+    var factor = (tmp*tmp*tmp*tmp*tmp + 32) / 32;
+    return me.ideal_volts * factor;
+}
+
+
+##
+# Return output amps available.  This function is totally wrong and should be
+# fixed at some point with a more sensible function based on charge percent.
+# There is probably some physical limits to the number of instantaneous amps
+# a battery can produce (cold cranking amps?)
+#
+Battery.get_amps = func {
+    if (! getprop( me.switch )) {
+        return 0;
+    }
+    
+    # var x = 1.0 - me.charge_percent;
+    # var tmp = -(3.0 * x - 1.0);
+    # var factor = (tmp*tmp*tmp*tmp*tmp + 32) / 32;
+    # return me.ideal_amps * factor;
+    return me.ideal_amps * me.charge_percent;
+}
+
+##
+# Set the current charge instantly to 100 %.
+#
+Battery.reset_to_full_charge = func  {
+    me.apply_load(-(1.0 - me.charge_percent) * me.ideal_amps, 3600);
+}
+
+##
+# Alternator model class.
+#
+
+var Alternator = {class_name:"Alternator"};
+
+Alternator.new = func (name,switch,source,volts,amps,rpm_threshold=800){
+    var obj = { parents : [Alternator,Source.new(name)],
+                switch: switch,
+                rpm_source : source,
+                rpm_threshold : rpm_threshold,
+                ideal_volts : volts,
+                ideal_amps : amps,
+    };
+    
+    if (obj.rpm_source) {
+        setprop( obj.rpm_source, 0.0 );
+    }
+    obj.set_prop("volts",obj.get_volts());
+    obj.set_prop("amps", obj.get_amps());
+    return obj;
+}
+
+##
+# Scale alternator output for rpms < 800.  For rpms >= 800
+# give full output.  This is just a WAG, and probably not how
+# it really works but I'm keeping things "simple" to start.   
+Alternator.get_factor = func {
+    # If alternator switch is off, you no get no juice from this puppy..
+    if (! getprop( me.switch )) {
+        return 0;
+    }
+    if (! me.rpm_source) {
+        # No factor. Could be an external source.
+        return 1.0;
+    }
+    var rpm = getprop( me.rpm_source );
+    var factor = rpm / me.rpm_threshold;
+    if ( factor > 1.0 ) {
+        factor = 1.0;
+    }
+    return factor;
+}
+
+##
+# Computes available amps and returns remaining amps after load is applied
+#
+Alternator.apply_load = func( amps, dt ) {    
+    # print( "alternator amps = ", me.ideal_amps * factor );
+    var available_amps = me.get_amps();
+    me.set_prop("volts",me.get_volts());
+    me.set_prop("amps", available_amps);
+    return amps - available_amps;
+}
+
+##
+# Return output volts based on rpm
+#
+Alternator.get_volts = func {
+    return me.ideal_volts * me.get_factor();
+}
+
+##
+# Return output amps available based on rpm.
+#
+Alternator.get_amps = func {
+    return me.ideal_amps * me.get_factor();
+}
+
+
+var Bus = {class_name: "Bus"};
+
+Bus.new = func (name, switch){
+    var obj = { parents : [Bus, Source.new(name)],
+                get_node: func { return "/systems/electrical/buses/"~me.name~"/" },
+                switch : switch,
+                sources : [],
+                
+    };
+    me.set_prop("volts",0);
+    me.set_prop("amps",0);
+    return obj;
+}
+Bus.add_source = func(source) {
+    append(me.sources,source);
+    return source;
+}
+
+Bus.clear = func() {
+    me.loads = [];
+    me.sources = [];
+}
+
+Bus.get_volts = func() {
+    var v = 0;
+    if (size(me.sources) > 0){
+        var sources = sort (me.sources, func (a,b) a.get_volts() < b.get_volts());
+        var v = sources[0].get_volts();
+    } 
+    me.set_prop("sources",size(me.sources) );
+    me.voltage = v;
+    return v;
+}
+
+Bus.get_amps = func() {
+    var amps = 0;
+    foreach(var source; me.sources){
+        amps += source.get_amps();
+    }
+    return amps;
+}
+
+Bus.get_load = func(volts) {
+    var bus_load = 0.0;
+    var v = 0.0;
+    if (me.switch == nil or getprop(me.switch)) {
+        v = volts;
+    }
+    foreach(var load; me.loads) {
+        bus_load += load.get_load(v);
+    }
+    me.set_prop("volts",v);
+    me.set_prop("amps",bus_load);
+    me.voltage = v;
+    me.current = bus_load;
+    return bus_load;
+}
+
+var Load = {class_name:"Load"};
+Load.new = func (name, amps, switch) {
+    var obj = { parents : [Load, Class.new(name)],
+                switch : switch,
+                output: "/systems/electrical/outputs/"~name,
+                amps:amps, # nominal
+                current: 0, # actual
+                voltage: 0,
+                sources:[] };
+    obj.set_output(0);
+    return obj;
+}
+Load.set_output = func(v) {
+    setpropr(5,me.output, v);
+    me.voltage = v;
+    
+}
+Load.add_source = func(source) {
+    append(me.sources,source);
+    return source;
+}
+
+# Can be overwritten by subclasses or instances to accomodate variable loads.
+# ie: panel lights, ignition coil, etc.
+Load.get_volts = func(volts=nil) {
+    if (volts == nil) {
+        return me._volts;
+    }
+    # switch could be a potentiometer (ie: a light dimmer)
+    var switch = getprop(me.switch);
+    if (switch == nil or switch == false) {
+        switch = 0;
+    }
+    return  switch * volts;
+}
+Load.get_amps = func(volts=nil) {
+    return me.amps;
+}
+
+Load.get_load = func(volts) {
+    var load = 0.0;
+    var v = me.get_volts(volts);
+    var a = me.get_amps(v);
+    if (v and a ) {
+        me.set_output(v);
+        load = a;
+    } else {
+        me.set_output(0);
+    }
+    me.current = load;
+    # setpropr(5,me.draw, load);
+    return load;
+}
+
+##
+# Breaker.
+# Basically, a bus that can pop..
+#
+var Breaker = {class_name: "Breaker"};
+Breaker.new = func (name, amps, path=nil, output=nil) {
+    var obj = { parents : [Breaker,Bus.new(name,nil)],
+                get_node: func { return "/systems/electrical/breakers/"~me.name~"/" },
+                path : path or "/controls/circuit-breakers/"~name,
+                output: output,
+                amps_burn: amps,
+    };
+    setprop( obj.path, 1 );
+    obj.set_prop("amps_burn",obj.amps_burn );
+    if (obj.output) setprop( obj.output, 0.0 );
+    return obj;
+}
+Breaker.apply_load = func(amps, dt) {
+    return 0.0;
+}
+Breaker.get_load = func(volts) {
+    if (!getprop(me.path)) {
+        #we're popped. No volts through this puppy...
+        volts = 0;
+    }
+    # call super (Bus.get_load)
+    var bus_load = me.parents[1].get_load(volts);
+    # check load current
+    if (bus_load  > me.amps_burn * 1.1) {
+        # Load exceded. Pop breaker.
+        print(sprintf("### Circuit-breaker %s popped! %f > %f", me.name, bus_load, me.amps_burn ));
+        me.pop();
+        volts = 0;
+        bus_load = 0.0;
+        
+    }
+    if (me.output) setprop( obj.output, v );
+    me.set_prop("volts",volts);
+    me.set_prop("amps",bus_load);
+    me.voltage = volts;
+    me.current = bus_load;
+    return bus_load;
+}
+Breaker.pop = func {
+    setprop(me.path,0);
+}
+Breaker.reset = func {
+    setprop(me.path,1);
+}
+
+
+var Light = {class_name:"Light"};
+Light.new = func (name, amps, switch=nil) {
+    var obj = { 
+        parents : [Light, Load.new(name,amps,switch)],
+        switch : switch or "/controls/lighting/" ~ name,
+    };
+    return obj;
+};
+
+System = {};
+
+##
+# Initializes a new electric system.
+System.new = func(name, path="/systems/electrical/") {
+    var obj = {
+        parents: [System,Class.new(name)],
+        path: path,
+        sources:{},
+        buses: [],
+        loads: {},
+    };
+    obj.loop = updateloop.UpdateLoop.new(components: [obj], update_period: 0.0, enable: 0);
+    return obj;
+}
+
+###
+# Connects 2 or more elements
+#
+# To create a 15A landing light and hook it to the main bus via a 20A breaker:
+# main_bus = Bus.new("main", etc-);
+# system.connect(main_bus, Breaker.new("landing-light",20), Light.new("landing-light",15));
+###
+System.connect = func {
+    var load = nil;
+    var source = nil;
+    for (var i=0; i< size(arg)-1 ; i=i+1) {
+        source = arg[i] or source;
+        load = arg[i+1];
+
+        if (!source or ! load) continue;
+
+        source.add_load(load);
+        load.add_source(source);
+        if (! source.is_instance(Breaker)) {
+            me.sources[source.name]= source; 
+        }  
+        me.loads[load.name]= load;
+    }
+    return load;
+}
+System.add_light = func(source, name, amps, breaker_amps=0) {
+    var light = Light.new(name,amps);
+    if (breaker_amps){
+        me.connect(source,Breaker.new(name,breaker_amps),);
+    } else {
+        me.connect(source,Light.new(name,amps));
+    }
+}
+# UpdateLoop methods
+System.enable = func {
+    me.loop.reset();
+    me.loop.enable();
+};
+System.disable = func {
+    me.loop.disable();
+};
+System.reset = func {};
+
+System.update = func(dt){
+    var serviceable = getprop(me.path ~ "serviceable");
+    foreach (var source; values(me.sources)) {
+        if (source.get_volts() <=0 ) continue;
+        var load_amps = 0.0;
+        load_buses = [];
+        foreach (var load;source.loads){
+            if (!contains(load_buses,load)) append(load_buses,load);
+        }
+        
+        foreach (var bus; load_buses){
+            # Bus sources sorted by volts.
+            var sources = sort (bus.sources, func (a,b) a.get_volts() < b.get_volts());
+            var batteries=[];
+            var sources_volts = sources[0].get_volts();
+            var load_amps = bus.get_load(sources_volts);
+            var remaining_amps=0.0;
+            foreach (var source; sources) {
+                if (source.is_instance(Breaker)) continue;
+                if (source.get_volts() > 0) {
+                    if (remaining_amps < 0 and source.is_instance(Battery) and source.charge_percent < 1) {
+                        # charge battery!
+                        remaining_amps= source.apply_load( remaining_amps, dt);
+                        source.set_prop("rem",0);
+                        source.set_prop("load",0);
+                    } else {
+                        # apply load to the source and get remaining amps.
+                        # remaing >0 means it didn't fulfill the load.
+                        # remaining < 0 means it has power left to charge batteries.
+
+                        remaining_amps= source.apply_load( load_amps, dt);
+                        var loaded = remaining_amps > 0 ? load_amps - remaining_amps: load_amps; 
+                        load_amps = math.max(0,remaining_amps);
+                        
+                        source.set_prop("rem",remaining_amps);
+                        source.set_prop("load",loaded);
+                    } 
+                } else {
+                    source.set_prop("rem",0);
+                    source.set_prop("load",0);
+                    break;
+                }
+            }
+        }
+
+    }
+};

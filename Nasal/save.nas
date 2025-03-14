@@ -25,8 +25,26 @@ var fuel_props = [
     "/controls/fuel/selected-tank",
     "/controls/fuel/selected-tank-pos",
 ];
-var electric_props = [];
+var electric_props = [
+    "/controls/electric/battery-switch",
+    "/controls/electric/external-power",
+    "/controls/engines/engine/master-alt",
+    "/controls/switches/master-avionics",
+    "/controls/lighting/instruments-norm",
+    "/controls/lighting/instruments-norm[1]",
+    "/controls/lighting/instruments-norm[2]",
+    "/controls/lighting/landing-lights",
+    "/controls/lighting/nav-lights",
+    "/controls/lighting/strobe-lights",
+    "/controls/lighting/taxi-lights",
+];
+var engine_props = [
 
+];
+var save_props = location_props
+                    ~ fuel_props
+                    ~ electric_props
+                    ;
 var save_state = func {
     var running = getprop("/engines/active-engine/running");
     var moving = getprop("/velocities/groundspeed-kt");
@@ -45,12 +63,16 @@ var save_state = func {
         gui.popupTip("Slope too steep to save state!", 5.0);
         return;
     }
-    var save_props = location_props
-                    ~ fuel_props
-                    ;
+    
     foreach (var path; save_props) {
-        setprop("/save" ~ path, getprop(path));
+        var v = getprop(path);
+        print(path,v);
+        setprop("/save" ~ path,v );
     }
+    # Special cases
+
+    # battery
+    setprop("/save/systems/electrical/sources/battery/set-charge-percent", getprop("/systems/electrical/sources/battery/charge-percent"));
 
     var timestring = getprop("/sim/time/real/year");
     timestring = timestring~ "-"~getprop("/sim/time/real/month");
@@ -83,9 +105,7 @@ var read_state = func {
     var readNode = props.globals.getNode("/save", 0);
     io.read_properties(path, readNode);
     
-    var save_props = location_props
-                    ~ fuel_props
-                    ;
+    
     foreach (var path; save_props) {
         setprop(path,getprop("/save"~path));
     }

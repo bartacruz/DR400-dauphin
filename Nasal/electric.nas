@@ -26,8 +26,13 @@ var Class= {
         return me.class_name~":"~me.name;
     },
     add_source: func(source){
-        append(me.sources,source);
+        if (!contains(me.sources,source))
+            append(me.sources,source);
         return source;
+    },
+    # Get sources sorted by bigger voltage.
+    get_sources: func {
+        return sort (me.sources, func (a,b) a.get_volts() < b.get_volts());
     },
     add_load: func(load) {
         append(me.loads,load);
@@ -61,37 +66,6 @@ var Class= {
         var fn = compile(fun);
         var ret = call(fn(),arg,me);
         return ret;
-        # var find_super= func(o,m) {
-        #     forindex(var i;o.parents){    
-        #         if (i==0)continue; # avoid myself
-        #         var parent = o.parents[i];
-        #         if (contains(parent.parents[0],m))
-        #             return parent;
-        #         else {
-        #             var ret = find_super(parent,m);
-        #             if (ret) return ret;
-        #         }
-        #     }
-        #     return false;
-        # };
-        # var parent=find_super(me,method);
-        # if (parent) {
-        #     var fn = compile(sprintf("parent.%s",method));
-        #     #printf("calling super %s for %s %s from %s %s",method,parent.class_name,parent.name,me.class_name,me.name);
-        #     var ret = call(fn(),append(arg,me),parent);
-        #     return ret;
-        # }
-        # forindex(var i;me.parents){
-        #     if (i==0)continue; # avoid myself
-        #     var parent = me.parents[i];
-        #     #printf("%s %s super of %s: testing parent %s %s",me.class_name,me.name,method,parent.class_name,parent.name);
-        #     if (contains(parent.parents[0],method)){
-        #         #printf("%s %s super of %s: calling %s[%s],%s,%s",me.class_name,me.name,method,parent.name,method,debug.string(arg),me.name);
-        #         var ret = call(parent.parents[0][method],arg,parent);
-        #         #printf("%s %s super of %s: returned %s",me.class_name,me.name,method,ret);
-        #         return ret;
-        #     } 
-        # }
     },
 
     reset: func {
@@ -171,7 +145,7 @@ var Load = {
     get_amps: func(volts=nil) {
         return me.amps;
     },
-    get_load: func(volts) {
+    get_load: func(volts,dt) {
         var v = me.get_volts(volts);
         var a = me.get_amps(v);
         if (v and a ) {
@@ -205,13 +179,18 @@ var Wire = {
         };
         return obj;
     },
-    get_load: func(volts) {
+    # Between 0-1
+    get_factor: func(volts) {
+        return 1;
+    },
+    get_load: func(volts,dt) {
         var current=0;
+        volts = volts * me.get_factor(volts);
         me.voltage = volts;
         foreach(var load; me.loads) {
             # Apply current to load only if our voltage is greater.
             if (load.voltage < volts) 
-                current += load.get_load(volts);
+                current += load.get_load(volts,dt);
             else
                 printf("Ignoring bigger load %s < %s",me.str(), load.str());
         }
@@ -225,6 +204,11 @@ var Wire = {
         # return sources[0].get_volts();
         # Mmmmm....
         return me.voltage;
+    },
+    apply_load: func(load,dt) {
+        if (me.get_factor(me.voltage) > 0)
+            return me.get_sources()[0].apply_load(load,dt);
+        return 0;
     }
 };
 
@@ -255,22 +239,11 @@ var Switch = {
         };
         return obj;
     },
-    get_volts: func {
+    get_factor: func(volts) {
         var switch = me.switch ? getprop(me.switch) : 1;
-        if (!switch) {
-            return 0;
-        }
-        return me.voltage;
+        return switch;
     },
-    get_load: func(volts){
-        var switch = me.switch ? getprop(me.switch) : 1;
-        var load = 0;
-        if (volts and switch) {
-            load = me.super(Wire,"get_load",volts*switch);
-        }
-        #printf("Switch %s: %s %s load=%s ",me.name,me.voltage,me.current, load);
-        return load;
-    }
+    
 };
 var Breaker = {
     class_name: "Breaker",
@@ -287,13 +260,15 @@ var Breaker = {
     get_state: func return getprop(me.state),
     
     set_state: func(state) setprop(me.state,state),
-    
-    get_load: func(volts){
+    get_factor: func(volts) {
+        return me.get_state();
+    },
+    get_load: func(volts,dt){
         if (!me.get_state()){
             me.current =0;
             me.voltage = 0;
         } else {
-            me.current = me.super(Wire,"get_load",volts);
+            me.current = me.super(Wire,"get_load",volts,dt);
             #printf("Breaker %s current=%s amps=%s", me.name,me.current,me.amps);
             if (me.current > me.amps *1.1) {
                 print(sprintf("### Circuit-breaker %s popped! %f > %f", me.name, me.current, me.amps ));
@@ -301,7 +276,7 @@ var Breaker = {
             }
         }
         return me.current;
-    }
+    },
 };
 
 ##
@@ -324,7 +299,6 @@ var Battery = {
         me.super(Class,"publish");
         me.set_prop("charge-percent",me.charge_percent);    
         me.set_prop("amps", me.get_amps());
-        me.set_prop("volts", me.voltage);
     },
     
     ##
@@ -356,7 +330,7 @@ var Battery = {
         return  amps - me.get_cc_amps();
     },
     get_load: func(volts,dt) {
-        if (volts < me.get_volts()) {
+        if (volts <= me.get_volts()) {
             return 0;
         }
         # TODO: factorize charge_amps using voltage difference with source.
@@ -364,7 +338,7 @@ var Battery = {
         var percent_used = amps_used / me.amps;
         me.charge_percent = std.min(me.charge_percent + percent_used, 1.0);
         me.voltage = me.get_volts();
-        me.current = me.get_amps();
+        me.current = -1*charge_amps;
         return me.charge_amps;
     }
 
@@ -434,7 +408,6 @@ var System = {
         var obj = {
             parents: [System,Class.new(name)],
             path: path,
-            sources:{},
             buses: [],
             loads: {},
         };
@@ -461,7 +434,7 @@ var System = {
             source.add_load(load);
             load.add_source(source);
             if (source.is_instance(Source)) {
-                me.sources[source.id()]= source; 
+                me.add_source(source); 
             }  
             me.loads[load.id()]= load;
         }
@@ -494,7 +467,7 @@ var System = {
             load.reset();
         }
         var load_buses = [];
-        foreach (var source; sort (values(me.sources), func (a,b) a.get_volts() < b.get_volts())) {
+        foreach (var source; me.get_sources()) {
             source.reset();
             if (source.get_volts() <=0 ) continue;
             foreach (var load;source.loads){
@@ -503,23 +476,26 @@ var System = {
         }
         print("load_buses ", Class.labels(load_buses));
         foreach (var bus; load_buses){
+            if (bus.voltage) {
+                # Already visited
+                continue;
+            }
             # Bus sources sorted by volts.
-
-            var sources = sort (bus.sources, func (a,b) a.get_volts() < b.get_volts());
+            var sources = bus.get_sources();
             var sources_volts = sources[0].get_volts();
 
             # Traverse the bus loads gathering current.
-            var load_amps = bus.get_load(sources_volts);
-            printf("%s (from %s) %sV %sA s=%s",bus.str(), sources[0].str(), sources_volts, load_amps, Class.names_str(sources));
+            var load_amps = bus.get_load(sources_volts,dt);
+            printf("%s (from %s) %sV %sA s=%s",bus.str(), sources[0].str(), sources_volts, load_amps, Class.ids(sources));
             # Draw the current from the sources.
-            var remaining_amps=0.0;
+            var remaining_amps=load_amps;
             foreach (var source; sources) {
                 if (source.get_volts() > 0) {
                         # apply load to the source and get remaining amps.
                         # remaing > 0 means it didn't fulfill the load.
                         # remaining < 0 means it has power left to charge batteries.
 
-                        remaining_amps= source.apply_load( load_amps, dt);
+                        remaining_amps= source.apply_load( remaining_amps, dt);
                         if (remaining_amps <=0) break;
                 } else {
                     break;
@@ -529,7 +505,7 @@ var System = {
         foreach(var load; values(me.loads)){
             load.publish();
         }
-        foreach(var source; values(me.sources)){
+        foreach(var source; me.sources){
             source.publish();
         }
         var end = systime();

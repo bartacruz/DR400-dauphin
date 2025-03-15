@@ -32,6 +32,9 @@ var battery_breaker = e.Breaker.new("battery",40.0);
 var battery_switch = e.Switch.new("battery-switch","/controls/electric/battery-switch");
 e_system.connect(battery,starter_bus,battery_breaker, battery_switch, main_bus);
 
+# Reverse connection for loading the battery...
+e_system.connect(main_bus,battery_switch,battery_breaker,starter_bus,battery);
+
 
 # Alternator (12v 50a/h as per POH)
 # Connected to the main bus via a 50A fuse and a switch
@@ -54,7 +57,7 @@ e_system.connect(external_source,e.Switch.new("external-power","/controls/electr
 ### Engine related loads
 
 # Starter engine draws 80A while cranking.
-e_system.connect(starter_bus,e.Load.new("starter",20.0,"/controls/engines/engine[0]/starter_cmd"));
+e_system.connect(starter_bus,e.Load.new("starter",80.0,"/controls/engines/engine[0]/starter_cmd"));
 
 # The ignition coil draws a max average of 4A at full RPM
 # Override to adjust the load with the RPMs of the engine.

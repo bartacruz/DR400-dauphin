@@ -77,14 +77,13 @@ var canopy = aircraft.door.new("canopy", 3);
 var Fuel = func {
   
   var engine_run = getprop("/engines/engine/running");
-  var pump_on = (getprop("/systems/electrical/outputs/fuel-pump") >= system_volts*0.8) ? 1 : 0;
+  var pump_on = (getprop("/systems/electrical/outputs/fuel-pump") > 9) ? 1 : 0;
   var fuel_level_0 = getprop("consumables/fuel/tank[0]/level-lbs");
   var fuel_level_1 = getprop("consumables/fuel/tank[1]/level-lbs");
   var fuel_level_2 = getprop("consumables/fuel/tank[2]/level-lbs");
   var tank_selector0 = getprop("consumables/fuel/tank[0]/selected");
   var tank_selector1 = getprop("consumables/fuel/tank[1]/selected");
   var tank_selector2 = getprop("consumables/fuel/tank[2]/selected");
-  
 #Fuel level low (15.43 lbs = 10 liters) in the selected tank
 # two warning thresholds: light then sound
 
@@ -230,7 +229,7 @@ var Engine = {
         ###################################
 	var et0 = getprop("/environment/temperature-degc");
 	# var cbt = et0 + 0.85 * mp; #carb temperature
-        if(props.globals.getNode("systems/electrical/outputs/carb-heat").getValue() >= system_volts){
+        if(props.globals.getNode("systems/electrical/outputs/carb-heat").getValue() >= 12){
           cheat += 0.01;
           if(cheat > 15) cheat = 15;
           setprop("engines/engine["~eng_num~"]/carb-heat", cheat);
@@ -438,7 +437,7 @@ global_system = func{
     setprop("/controls/engines/engine[0]/starter",0);
   }
 
-  if(getprop("/systems/electrical/buses/avionics/volts") > 6){
+  if(getprop("/systems/electrical/outputs/avionics-bus") > 8){
     setprop("/instrumentation/attitude-indicator/spin",10);
   }else{
     setprop("/instrumentation/attitude-indicator/spin",0);
@@ -451,9 +450,12 @@ global_system = func{
   if(getprop("/sim/model/config/breakable-gears")){
     dr400.physics();
   }
-
-  settimer(global_system, 0);
-
+}
+var gs_timer = maketimer(0.01,global_system);
+gs_timer.singleShot = 0;
+var start_global_system = func(){ 
+  gs_timer.start();
+  print("GLOBAL SYSTEM STARTED");
 }
 
 
@@ -530,8 +532,9 @@ var nasalInit = setlistener("/sim/signals/fdm-initialized", func{
     setprop("controls/engines/engine[0]/throttle-hand", throttle.getValue()-0.06);
     settimer(func { interpolate("controls/engines/engine[0]/throttle-hand", 0, 0.4); }, 3);
   });
+  
 
-  settimer(global_system, 2);
+  settimer(start_global_system, 2);
   settimer(upsideDown_system, 2);
   removelistener(nasalInit);
 });

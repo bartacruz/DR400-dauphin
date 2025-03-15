@@ -295,11 +295,9 @@
     <engines>
       <engine n="0">
         <magnetos type="int">0</magnetos>
-        <master-alt type="bool">1</master-alt>
-        <starter_cmd type="bool">0</starter_cmd>
       </engine>
       <engine n="0">
-        
+        <starter_cmd type="bool">0</starter_cmd>
       </engine>
     </engines>
     <flight>
@@ -317,17 +315,11 @@
     </gear>
     <lighting>
       <battery-charge type="bool">0</battery-charge>
-      <instruments-norm n="0">0</instruments-norm>
-      <instruments-norm n="1">0</instruments-norm>
-      <instruments-norm n="2">0</instruments-norm>
     </lighting>
     <throttle-coupled type="bool">1</throttle-coupled>
     <mixture-coupled type="bool">1</mixture-coupled>
     <prop-coupled type="bool">1</prop-coupled>
     <movement-scale>0.025</movement-scale>
-    <switches>
-      <master-avionics type="bool">0</master-avionics>
-    </switches>
   </controls>
 
   <autopilot>
@@ -454,7 +446,6 @@
       <file>Aircraft/DR400-dauphin/Nasal/interpolate.nas</file>
       <file>Aircraft/Generic/limits.nas</file>
       <file>Aircraft/DR400-dauphin/Nasal/rain.nas</file>
-      <file>Aircraft/DR400-dauphin/Nasal/save.nas</file>
     </dr400>
     
     <kr87>

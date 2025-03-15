@@ -43,7 +43,6 @@ Source.new = func(name) {
             append(me.loads,load);
             return load;
         },
-        apply_load:func( amps, dt ) {  return 0},
         current: 0, 
         voltage: 0,
     };
@@ -233,8 +232,8 @@ Bus.new = func (name, switch){
                 sources : [],
                 
     };
-    obj.set_prop("volts",0);
-    obj.set_prop("amps",0);
+    me.set_prop("volts",0);
+    me.set_prop("amps",0);
     return obj;
 }
 Bus.add_source = func(source) {
@@ -474,7 +473,6 @@ System.update = func(dt){
             var remaining_amps=0.0;
             foreach (var source; sources) {
                 if (source.is_instance(Breaker)) continue;
-                #if (!contains(source,"apply_load")) print(source.name, source.class_name);
                 if (source.get_volts() > 0) {
                     if (remaining_amps < 0 and source.is_instance(Battery) and source.charge_percent < 1) {
                         # charge battery!

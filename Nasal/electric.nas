@@ -191,8 +191,8 @@ var Wire = {
             # Apply current to load only if our voltage is greater.
             if (load.voltage < volts) 
                 current += load.get_load(volts,dt);
-            else
-                printf("Ignoring bigger load %s < %s",me.str(), load.str());
+            # else
+            #     printf("Ignoring bigger load %s < %s",me.str(), load.str());
         }
         #printf("\t%s %s get_load(%s) = %s | %s", me.class_name,me.name,volts,current,me.names_str(me.loads));
         me.current = current;
@@ -474,7 +474,7 @@ var System = {
                 if (!contains(load_buses,load)) append(load_buses,load);
             }
         }
-        print("load_buses ", Class.labels(load_buses));
+        #print("load_buses ", Class.labels(load_buses));
         foreach (var bus; load_buses){
             if (bus.voltage) {
                 # Already visited
@@ -486,7 +486,7 @@ var System = {
 
             # Traverse the bus loads gathering current.
             var load_amps = bus.get_load(sources_volts,dt);
-            printf("%s (from %s) %sV %sA s=%s",bus.str(), sources[0].str(), sources_volts, load_amps, Class.ids(sources));
+            #printf("%s (from %s) %sV %sA s=%s",bus.str(), sources[0].str(), sources_volts, load_amps, Class.ids(sources));
             # Draw the current from the sources.
             var remaining_amps=load_amps;
             foreach (var source; sources) {

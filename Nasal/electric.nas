@@ -1,3 +1,21 @@
+systems ={};
+
+var charge_battery_cb= func(node) {
+    var s = split("/",node.getPath());
+    var bn = s[-2];
+    var charge_percent = node.getDoubleValue();
+    if (charge_percent < 0 or charge_percent > 1) return;
+    foreach (var system; values(systems)) {
+        if (find(system.path,node.getPath()) < 0) continue;
+        foreach(var source;system.sources){
+            if (source.is_instance(Battery) and source.name == bn){
+                printf("setting charge of %s from %f to %f", source.id(),source.charge_percent,charge_percent);
+                source.set_charge_percent(charge_percent);
+            }
+        }
+    }
+};
+
 var setpropr = func(dec,path,val) {
     var mult = math.pow(10,dec);
     var val_r = int(val * mult) / mult;
@@ -17,6 +35,7 @@ var Class= {
             voltage:0,
             current:0,
             path: nil, # sublcasses must declare.
+            system:nil,
         };
         obj.publish();
         return obj;
@@ -293,6 +312,8 @@ var Battery = {
             charge_amps: charge_amps or amps*0.3,
         };
         obj.charge_percent= charge_percent or obj.get_prop("charge-percent") or 1.0;
+        # obj.set_prop("set-charge-percent",nil);
+        setlistener(obj.path ~ obj.name~"/set-charge-percent", charge_battery_cb ,0,0);
         return obj;
     },
     publish: func() {
@@ -338,10 +359,19 @@ var Battery = {
         var percent_used = amps_used / me.amps;
         me.charge_percent = std.min(me.charge_percent + percent_used, 1.0);
         me.voltage = me.get_volts();
-        me.current = -1*charge_amps;
+        me.current = -1* me.charge_amps;
         return me.charge_amps;
+    },
+    set_charge_percent: func(charge_percent) {
+        if (me.system.loop.enabled) {
+            # avoid our value being overwritten by the update process.
+            me.system.loop.disable();
+            me.charge_percent = charge_percent;
+            me.system.loop.enable();
+        } else {
+            me.charge_percent = charge_percent;
+        }
     }
-
 };
 
 ##
@@ -412,9 +442,9 @@ var System = {
             loads: {},
         };
         obj.loop = updateloop.UpdateLoop.new(components: [obj], update_period: update_period, enable: 0);
+        systems[name] = obj;
         return obj;
     },
-
     ###
     # Connects 2 or more elements
     #
@@ -430,6 +460,10 @@ var System = {
             load = arg[i+1];
 
             if (!source or ! load) continue;
+
+            # add a reference to the system they are connected (myself)
+            source.system = me;
+            load.system = me;
 
             source.add_load(load);
             load.add_source(source);
@@ -449,7 +483,7 @@ var System = {
             me.connect(source,Light.new(name,amps));
         }
     },
-
+    
     # UpdateLoop methods
     enable: func {
         me.loop.reset();

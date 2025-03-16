@@ -15,6 +15,27 @@ var location_props = [
     "/velocities/vBody-fps",
     "/velocities/wBody-fps",
 ];
+var instruments_props = [
+    "/instrumentation/altimeter/setting-inhg",
+    "/instrumentation/comm/frequencies/selected-mhz",
+    "/instrumentation/comm/frequencies/standby-mhz",
+    "/instrumentation/comm/volume",
+    "/instrumentation/comm[1]/frequencies/selected-mhz",
+    "/instrumentation/comm[1]/frequencies/standby-mhz",
+    "/instrumentation/comm[1]/volume",
+    "/instrumentation/elt/armed",
+    "/instrumentation/heading-indicator/offset-deg",
+    "/instrumentation/nav/frequencies/selected-mhz",
+    "/instrumentation/nav/frequencies/standby-mhz",
+    "/instrumentation/nav/volume",
+    "/instrumentation/nav[1]/frequencies/selected-mhz",
+    "/instrumentation/nav[1]/frequencies/standby-mhz",
+    "/instrumentation/nav[1]/volume",
+    "/instrumentation/transponder/inputs/digit",
+    "/instrumentation/transponder/inputs/digit[1]",
+    "/instrumentation/transponder/inputs/digit[2]",
+    "/instrumentation/transponder/inputs/digit[3]",
+];
 var fuel_props = [
     "/consumables/fuel/tank[0]/selected",
     "/consumables/fuel/tank[0]/level-lbs",
@@ -39,14 +60,37 @@ var electric_props = [
     "/controls/lighting/taxi-lights",
 ];
 var engine_props = [
-
+    "/controls/engines/engine/magnetos",
+    "/controls/engines/engine/mixture",
+    "/controls/engines/engine/throttle",
+    "/engines/engine/hours",
+    "/controls/anti-ice/engine/carb-heat",
+    
 ];
+var aircraft_props = [
+    "/payload/weight[0]/weight-lb",
+    "/payload/weight[1]/weight-lb",
+    "/payload/weight[2]/weight-lb",
+    "/payload/weight[3]/weight-lb",
+    "/payload/weight[4]/weight-lb",
+    "/canopy/position-norm",
+    "/controls/flight/aileron-trim",
+    "/controls/flight/elevator-trim",
+    "/controls/flight/rudder-trim",
+    "/controls/flight/flaps",
+    "/controls/gear/brake-parking",
+];
+
 var save_props = location_props
-                    ~ fuel_props
-                    ~ electric_props
-                    ;
+                ~ instruments_props
+                ~ fuel_props
+                ~ electric_props
+                ~ engine_props
+                ~ aircraft_props
+            ;
+
 var save_state = func {
-    var running = getprop("/engines/active-engine/running");
+    var running = getprop("/engines/engine/running");
     var moving = getprop("/velocities/groundspeed-kt");
     var pitch = getprop("/orientation/pitch-deg");
     var roll = getprop("/orientation/roll-deg");
@@ -93,25 +137,41 @@ var save_state = func {
     #var filename = getprop("/sim/gui/dialogs/c172p/save/filename");
     var filename = aircraft ~ "-save.xml";
     var path = getprop("/sim/fg-home") ~ "/aircraft-data/"~filename;
-    var nodeSave = props.globals.getNode("/save", 0);
+    var nodeSave = props.globals.getNode("/save", 1);
     io.write_properties(path, nodeSave);
 
     print("Current state written to ", filename, " !");
 }
+
+var traverse= func(node) {
+    var childrens = node.getChildren();
+    if (!size(childrens)) {
+        # extract "/save" from path
+        var path = substr(node.getPath(),5);
+        printf("setting %s to %s",path,node.getValue());
+        setprop(path,node.getValue());
+    } else {
+        foreach(var child; childrens) {
+            traverse(child);
+        }
+    }
+}
+
 var read_state = func {
     var aircraft = getprop("/sim/aircraft");
     var filename = aircraft ~ "-save.xml";
     var path = getprop("/sim/fg-home") ~ "/aircraft-data/"~filename;
-    var readNode = props.globals.getNode("/save", 0);
+    var readNode = props.globals.getNode("/save", 1);
     io.read_properties(path, readNode);
+    setprop("/sim/presets/airport-id", "");
+    setprop("/sim/presets/airport-requested", false);
+    setprop("/instrumentation/elt/armed",false);
+    traverse(readNode);
+    # fgcommand("reposition");
     
-    
-    foreach (var path; save_props) {
-        setprop(path,getprop("/save"~path));
-    }
-    fgcommand("reposition");
     print("State restored from ", filename, " !");
 }
+
 
 var show_save_dialog = func {
     var MARGIN = 12;
@@ -145,8 +205,20 @@ var show_save_dialog = func {
         .setText("Restore")
         .listen("clicked", func {
             dlg.del();
-            dr400.restore_state();
+            dr400.read_state();
         })
     );
     button_box.addStretch(1);
+}
+var update_electric_time = func {
+    var s = dr400.e_system;
+    var days = 3;
+    var hours = 0;
+    var minutes = 0;
+    var seconds = days *24*3600 + hours*3600 + minutes * 60;
+    printf(seconds);
+    setprop("/systems/electrical/sources/battery/set-charge-percent",1);
+    s.disable();
+    s.update(seconds);
+    s.enable();
 }

@@ -148,6 +148,10 @@ var traverse= func(node) {
     if (!size(childrens)) {
         # extract "/save" from path
         var path = substr(node.getPath(),5);
+        if (contains(location_props,path)) {
+            printf("Ignoring location node %s",path);
+            return;
+        }
         printf("setting %s to %s",path,node.getValue());
         setprop(path,node.getValue());
     } else {
@@ -162,12 +166,26 @@ var read_state = func {
     var filename = aircraft ~ "-save.xml";
     var path = getprop("/sim/fg-home") ~ "/aircraft-data/"~filename;
     var readNode = props.globals.getNode("/save", 1);
+
     io.read_properties(path, readNode);
     setprop("/sim/presets/airport-id", "");
-    setprop("/sim/presets/airport-requested", false);
-    setprop("/instrumentation/elt/armed",false);
+
+    foreach(var p; dr400.location_props) {
+        var n = readNode.getNode(substr(p,1));
+        var p = "/sim/presets/"~n.getName();
+        setprop(p,n.getValue());
+    }
+    
+    setprop("/sim/presets/altitude-ft", -9999);
+    setprop("/sim/presets/airspeed-kt", 0);
+    setprop("/sim/presets/offset-distance-nm", 0);
+    setprop("/sim/presets/glideslope-deg", 0);
+    setprop("/sim/presets/runway", "");
+    setprop("/sim/presets/parkpos", "");
+    setprop("/sim/presets/runway-requested", 0);
+    fgcommand("reposition");
     traverse(readNode);
-    # fgcommand("reposition");
+    
     
     print("State restored from ", filename, " !");
 }

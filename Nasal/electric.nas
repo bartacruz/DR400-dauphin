@@ -23,15 +23,26 @@ var setpropr = func(dec,path,val) {
 }
 
 
+##
+# Base class for all electric-related classes.
+# 
 var Class= {
     class_name: "Class",
-    
+
+    ##
+    # Creates and returns a new Class instance, calling init and publish.
+    # Subclasses shouldn't use Class.new. See #init
     new: func(name) {
         var obj = {parents:[Class]};
         obj.init(name);
-        me.publish();
+        obj.publish();
         return obj;
     },
+    ##
+    # Handy function for initializing without generating a new object (avoid calling new())
+    # Subclasses should call
+    #   me.super(Class,"init",name);
+    # inside their init func.
     init: func(name) {
         me.name = name;
         me.sources = [];
@@ -41,6 +52,10 @@ var Class= {
         me.path = nil; # sublcasses must declare.
         me.system = nil;
     },
+    ##
+    # Returns the id of this instance in the form class-name:name
+    # ie: Source:alternator, Bus:main-bus, etc.
+    #
     id: func {
         return me.class_name~":"~me.name;
     },
@@ -49,7 +64,9 @@ var Class= {
             append(me.sources,source);
         return source;
     },
-    # Get sources sorted by bigger voltage.
+    ##
+    # Returns the sources of this object, sorted by bigger voltage.
+    #
     get_sources: func {
         return sort (me.sources, func (a,b) a.get_volts() < b.get_volts());
     },
@@ -57,15 +74,27 @@ var Class= {
         append(me.loads,load);
         return load;
     },
+    ##
+    # Gets a prop relative to this object's path.
+    #
     get_prop: func(prop) { 
         if (me.path)
             return getprop(me.path ~ me.name ~ "/" ~ prop);
         return nil;
     },
+    ##
+    # Sets a prop's value relative to this object's path.
+    #
     set_prop: func(prop,val) { 
         if (me.path)
             setprop(me.path ~ me.name ~ "/" ~ prop,val);
     },
+    ##
+    # Checks if this object is instance of a Class.
+    # class: the class OBJECT (not it's name)
+    # example:
+    # obj.is_instance(electric.Bus)
+    #
     is_instance: func(class) {
         var find_parent = func(o,class){                
             if (o.class_name == class.class_name) return true;
@@ -78,6 +107,16 @@ var Class= {
         }
         return find_parent(me,class);
     },
+    ##
+    # Calls a method in a subclass of this object.
+    # class: the class OBJECT (not it's name)
+    # method: a string containing the method's name.
+    # Any other arguments in the call will be passed as arguments
+    # to the method.
+    # The method will be called with this object as namespace (me)
+    #
+    #  obj.super(electric.Class,"init",name);
+    # 
     super: func(class,method) {
         var fun = sprintf("%s.%s",class.class_name,method);
         var fn = compile(fun);
@@ -98,6 +137,9 @@ var Class= {
         return sprintf("[%s %.4fV %.4fA]",me.id(),me.voltage,me.current);
     },
 };
+##
+# Helper functions
+#
 Class.ids = func(v) {
     var ret = [];
     foreach(var c;v) append(ret,c.id());
@@ -117,6 +159,11 @@ Class.names_str = func(v) {
     return debug.string(Class.names(v));
 }
 
+##
+# 
+# Base class for all power sources. Batteries, Alternators, and so.
+# It's mainly used for identification (using is_instance)
+#
 var Source = {
     class_name: "Source",
     parents: [Class],
@@ -131,6 +178,11 @@ var Source = {
     },
 };
 
+##
+# A load is anything that draws current from the system.
+# Lights, instruments, pumps, etc.
+# It'll publish the voltage under /systems/electrical/outputs/[name]
+# 
 var Load = {
     parents: [Class],
     class_name: "Load",
@@ -157,6 +209,9 @@ var Load = {
         }
 
     },
+    
+    ##
+    # Returns the voltage output of this load, given an input voltage.
     # Can be overwritten by subclasses or instances to accomodate variable loads.
     # ie: panel lights, ignition coil, etc.
     get_volts: func(volts) {
@@ -167,9 +222,20 @@ var Load = {
         }
         return  switch * volts;
     },
+    ##
+    # Return the nominal current of this load.
+    # Can be overwritten by subclasses or instances to accomodate variable loads.
+    # ie: panel lights, ignition coil, etc.
     get_amps: func(volts=nil) {
         return me.amps;
     },
+
+    ##
+    # Main load function.
+    # Returns the current consumption (in Amps/h) of this load, given an input 
+    # voltage and a delta time.
+    # Calls get_volts and get_amps to calculate.
+    #
     get_load: func(volts,dt) {
         var v = me.get_volts(volts);
         var a = me.get_amps(v);
@@ -185,6 +251,9 @@ var Load = {
     }
 };
 
+##
+# Load specific implementation to represent a Light witha switch.
+# By default, it'll use the switch at "/controls/lighting/[name]"
 var Light = {
     parents: [Load],
     class_name:"Light",
@@ -200,6 +269,35 @@ var Light = {
     },
 };
 
+##
+# Load specific implementation to represent a panel annunciator.
+# By default, it'll use the switch at "/instrumentation/annunciators/[name]"
+# 
+var Annunciator = {
+    parents: [Load],
+    class_name:"Light",
+    DEFAULT_AMPS: 0.09, # Aprox 1w@12v
+    
+    new: func (name, amps=nil, switch=nil) {
+        var obj = {parents : [Light]};
+        amps = amps or Annunciator.DEFAULT_AMPS,
+        obj.init(name,amps,switch);
+        obj.publish();
+        return obj;
+    },
+    init: func(name,amps,switch=nil) {
+        switch = switch or "/instrumentation/annunciators/s" ~ name;
+        me.super(Load,"init",name,amps,switch);
+    },
+};
+
+
+##
+# Base class for connecting elements, that draws no load from the system.
+# It will pass on the calls to get_load and apply_load to the loads and sources
+# connected to it, returning the max voltage of its sources and the sum of the
+# currents of its loads, respectively.
+#
 var Wire = {
     parents: [Class],
     class_name: "Wire",
@@ -208,10 +306,8 @@ var Wire = {
         obj.init(name);
         return obj;
     },
-    # init: func(name){
-    #     me.super(Class,"init",name);
-    # },
-
+ 
+    #
     # Between 0-1
     get_factor: func(volts) {
         return 1;
@@ -245,7 +341,10 @@ var Wire = {
     }
 };
 
-# A special kind of wire that publishes it's output.
+##
+# A wire that publishes it's output to /systems/electrical/outputs/
+# unless otherwise specified.
+# 
 var Bus = {
     parents: [Wire],
     class_name: "Bus",
@@ -267,6 +366,7 @@ var Bus = {
     },
 };
 
+##
 # A wire with conditional conductivity.
 # switch: path to a prop that can take values from 0 to 1.
 #         The value of switch will be used to factorize conductivity.
@@ -290,7 +390,12 @@ var Switch = {
     },
     
 };
+
+##
 # A Wire that can burn/pop if current exceed its rated amps.
+# By default it'l use /controls/circuit-breakers/[name] prop
+# to get/set the breaker's state.
+#
 var Breaker = {
     parents: [Wire],
     class_name: "Breaker",
@@ -308,11 +413,17 @@ var Breaker = {
     },
     
     get_state: func return getprop(me.state),
-    
     set_state: func(state) setprop(me.state,state),
+
+    ##
+    # Override
     get_factor: func(volts) {
         return me.get_state();
     },
+
+    ##
+    # Override of Wire.get_load to check/set the breakers state
+    #
     get_load: func(volts,dt){
         if (!me.get_state()){
             me.current =0;
@@ -332,10 +443,18 @@ var Breaker = {
 ##
 # Battery model class.
 #
-
 var Battery = {
     class_name: "Battery",
     parents: [Source],
+
+    ##
+    # volts: rated volts (normally, 12 or 24)
+    # amps: amps/hour 
+    # cc_amps: cold crank amps
+    # charge_percent: between 0 and 1.
+    #
+    # TODO: implement cca discharge and recovery.
+    #
     new: func (name, volts,amps,cc_amps, charge_amps=nil, charge_percent=0) {
         var obj = { parents : [Battery]};
         obj.init(name, volts,amps,cc_amps, charge_amps, charge_percent);
@@ -374,6 +493,9 @@ var Battery = {
     get_cc_amps: func {
         return me.cc_amps * me.charge_percent;
     },
+    ##
+    # Discharge the battery
+    #
     apply_load: func(amps, dt) {
         if (getprop("/sim/freeze/replay-state"))
             return me.get_cc_amps();
@@ -385,6 +507,11 @@ var Battery = {
         me.current = load_amps;
         return  amps - me.get_cc_amps();
     },
+    ##
+    # Charge the battery
+    # Acts as a Load to draw current from the system if the system voltage
+    # is higher than his.
+    #
     get_load: func(volts,dt) {
         if (volts <= me.get_volts()) {
             return 0;
@@ -397,6 +524,10 @@ var Battery = {
         me.current = -1* me.charge_amps;
         return me.charge_amps;
     },
+
+    ##
+    # Updates this battery's charge percent.
+    # 
     set_charge_percent: func(charge_percent) {
         if (me.system.loop.enabled) {
             # avoid our value being overwritten by the update process.
@@ -412,7 +543,6 @@ var Battery = {
 ##
 # Alternator model class.
 #
-
 var Alternator = {
     parents: [Source],
     class_name: "Alternator",
@@ -497,10 +627,23 @@ var System = {
     },
     ###
     # Connects 2 or more elements
-    #
+    # If there's more than 2, it'll create a chain of source/loads for each pair of
+    # consecutive elements.
+    # ie:
     # To create a 15A landing light and hook it to the main bus via a 20A breaker:
-    # main_bus = electric.Wire.new("main", etc-);
-    # electric.system.connect(main_bus, Breaker.new("landing-light",20), Light.new("landing-light",15));
+    #   var main_bus = electric.Wire.new("main", etc-);
+    #   var breaker = electric.Breaker.new("landing-light",20);
+    #   var light = electric.Light.new("landing-light",15);
+    #
+    # Main bus is the source of the breaker, and the breaker is the load of the bus.
+    #   electric.system.connect(main_bus, breaker);
+    #
+    # The breaker is the source of the light, and the light is the load of the breaker.
+    #   electric.system.connect(breaker,light);
+    # 
+    # it's the same as:
+    # electric.system.connect(main_bus, breaker , light );
+    # 
     ###
     connect: func {
         var load = nil;

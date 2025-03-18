@@ -164,7 +164,7 @@
   </instrumentation>
 
   <nasal>
-    <garmin196>
+    <!-- <garmin196>
       <file>Aircraft/Instruments-3d/garmin196/garmin196.nas</file>
       <condition>
         <equals>
@@ -172,8 +172,8 @@
           <value>bendix</value>
         </equals>
       </condition>
-    </garmin196>
-    <canvas_tablet>
+    </garmin196> -->
+    <!-- <canvas_tablet>
       <file>Models/Interior/Instruments/tablet/tablet.nas</file>
       <condition>
         <equals>
@@ -181,14 +181,20 @@
           <value>garmin</value>
         </equals>
       </condition>
-    </canvas_tablet>
+    </canvas_tablet> -->
     <canvas_gnc255a>
       <file>Models/Interior/Instruments/GNC255A/gnc255a.nas</file>
       <condition>
-        <equals>
-          <property>sim/model/config/radio-setup</property>
-          <value>garmin</value>
-        </equals>
+        <or>
+          <equals>
+            <property>sim/model/config/radio-setup</property>
+            <value>garmin</value>
+          </equals>
+          <equals>
+            <property>sim/model/config/radio-setup</property>
+            <value>gns530</value>
+          </equals>
+        </or>
       </condition>
     </canvas_gnc255a>
     <gtx328>

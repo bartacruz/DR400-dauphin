@@ -317,9 +317,9 @@
     </gear>
     <lighting>
       <battery-charge type="bool">0</battery-charge>
-      <instruments-norm n="0">0</instruments-norm>
-      <instruments-norm n="1">0</instruments-norm>
-      <instruments-norm n="2">0</instruments-norm>
+      <instrument-lights n="0">0</instrument-lights>
+      <instrument-lights n="1">0</instrument-lights>
+      <instrument-lights n="2">0</instrument-lights>
     </lighting>
     <throttle-coupled type="bool">1</throttle-coupled>
     <mixture-coupled type="bool">1</mixture-coupled>

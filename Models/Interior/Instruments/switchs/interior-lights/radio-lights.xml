@@ -24,7 +24,7 @@
   <animation>
     <type>rotate</type>
     <object-name>knob</object-name>
-    <property>controls/lighting/instruments-norm[2]</property>
+    <property>controls/lighting/instrument-lights[2]</property>
     <factor> -270 </factor>
     <axis>
       <x> 1 </x>
@@ -42,7 +42,7 @@
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>controls/lighting/instruments-norm[2]</property>
+      <property>controls/lighting/instrument-lights[2]</property>
       <factor>0.1</factor>
       <min>0</min>
       <max>1.0</max>
@@ -55,7 +55,7 @@
       <command>set-tooltip</command>
       <tooltip-id>lighting2-brightness</tooltip-id>
       <label>Radio Lighting: %3d%%</label>
-      <property>controls/lighting/instruments-norm[2]</property>
+      <property>controls/lighting/instrument-lights[2]</property>
       <mapping>percent</mapping>
     </binding>
   </hovered>
@@ -69,7 +69,7 @@
       <button>4</button>
       <binding>
         <command>property-adjust</command>
-        <property>controls/lighting/instruments-norm[2]</property>
+        <property>controls/lighting/instrument-lights[2]</property>
         <step>0.05</step>
         <min>0</min>
         <max>1</max>
@@ -79,7 +79,7 @@
       <button>3</button>
       <binding>
         <command>property-adjust</command>
-        <property>controls/lighting/instruments-norm[2]</property>
+        <property>controls/lighting/instrument-lights[2]</property>
         <step>-0.05</step>
         <min>0</min>
         <max>1</max>

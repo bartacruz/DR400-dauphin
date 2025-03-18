@@ -323,9 +323,9 @@ var Startup = func{
   setprop("/controls/engines/engine[0]/magnetos",3);
   setprop("controls/engines/engine[0]/mixture",1);
   setprop("/controls/gear/brake-parking",0);
-  setprop("/controls/lighting/instruments-norm",0.8);
-  setprop("/controls/lighting/instruments-norm[1]",0.8);
-  setprop("/controls/lighting/instruments-norm[2]",0.8);
+  setprop("/controls/lighting/instrument-lights",0.8);
+  setprop("/controls/lighting/instrument-lights[1]",0.8);
+  setprop("/controls/lighting/instrument-lights[2]",0.8);
   setprop("/controls/lighting/nav-lights",1);
   setprop("/controls/lighting/strobe-lights",1);
   setprop("/instrumentation/comm[0]/power-btn",1);
@@ -350,9 +350,9 @@ var Shutdown = func{
   setprop("/engines/engine[0]/rpm",0);
   setprop("/engines/engine[0]/running",0);
   setprop("/controls/gear/brake-parking",1);
-  setprop("/controls/lighting/instruments-norm",0);
-  setprop("/controls/lighting/instruments-norm[1]",0);
-  setprop("/controls/lighting/instruments-norm[2]",0);
+  setprop("/controls/lighting/instrument-lights",0);
+  setprop("/controls/lighting/instrument-lights[1]",0);
+  setprop("/controls/lighting/instrument-lights[2]",0);
   setprop("/controls/lighting/nav-lights",0);
   setprop("/controls/lighting/strobe-lights",0);
   setprop("/instrumentation/comm[0]/power-btn",0);

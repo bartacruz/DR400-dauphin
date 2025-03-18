@@ -30,6 +30,8 @@ var main_bus = e.Bus.new("main-bus");
 var battery = e.Battery.new("battery",12,32.0,cc_amps=240.0,charge_amps=2.0);
 var battery_breaker = e.Breaker.new("battery",40.0);
 var battery_switch = e.Switch.new("battery-switch","/controls/electric/battery-switch");
+
+# System.connect support chaining.
 e_system.connect(battery,starter_bus,battery_breaker, battery_switch, main_bus);
 
 # Reverse connection for loading the battery...
@@ -92,12 +94,13 @@ e_system.connect(main_bus, e.Breaker.new("nav-lights",2.0), e.Light.new("nav-lig
 
 # Annunciators
 var annunciators_breaker = e_system.connect(main_bus, e.Breaker.new("annunciators",1.0));
-e_system.connect(annunciators_breaker,e.Load.new("annunciator-battery-charge",0.036,"/instrumentation/annunciators/systems/electric/battery-charge"));
-e_system.connect(annunciators_breaker,e.Load.new("annunciator-oil-pressure",0.036,"/instrumentation/annunciators/engines/oil-pressure-low"));
-e_system.connect(annunciators_breaker,e.Load.new("annunciator-fuel-pressure",0.036,"/instrumentation/annunciators/systems/fuel/pressure-low"));
-e_system.connect(annunciators_breaker,e.Load.new("annunciator-fuel-low",0.036,"/instrumentation/annunciators/systems/fuel/fuel-low"));
-e_system.connect(annunciators_breaker,e.Load.new("annunciator-starter",0.036,"/instrumentation/annunciators/engines/engine[0]/starter"));
-e_system.connect(annunciators_breaker,e.Load.new("annunciator-flaps",0.036,"/instrumentation/annunciators/flaps"));
+
+e_system.connect(annunciators_breaker,e.Annunciator.new("battery-charge");
+e_system.connect(annunciators_breaker,e.Annunciator.new("oil-pressure-low"));
+e_system.connect(annunciators_breaker,e.Annunciator.new("fuel-pressure-low"));
+e_system.connect(annunciators_breaker,e.Annunciator.new("fuel-low"));
+e_system.connect(annunciators_breaker,e.Annunciator.new("starter"));
+e_system.connect(annunciators_breaker,e.Annunciator.new("flaps"));
 
 # Instrument lights (led 3w each)
 e_system.connect(main_bus,e.Light.new("instrument-lights[0]",0.11));

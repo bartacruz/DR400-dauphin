@@ -99,7 +99,7 @@
     <type>select</type>
     <object-name>warning01.on</object-name>
     <condition>
-    <property>/instrumentation/annunciators/engines/oil-pressure-low</property>
+    <property>/instrumentation/annunciators/oil-pressure-low</property>
     </condition>
   </animation>
   
@@ -110,7 +110,7 @@
     <type>select</type>
     <object-name>warning02.on</object-name>
     <condition>
-      <property>/instrumentation/annunciators/systems/fuel/pressure-low</property>
+      <property>/instrumentation/annunciators/fuel-pressure-low</property>
     </condition>
   </animation>
   
@@ -121,7 +121,7 @@
     <type>select</type>
     <object-name>warning03.on</object-name>
     <condition>
-      <property>/instrumentation/annunciators/systems/fuel/fuel-low</property>
+      <property>/instrumentation/annunciators/fuel-low</property>
     </condition>
   </animation>
    
@@ -132,7 +132,7 @@
     <type>select</type>
     <object-name>warning04.on</object-name>
     <condition>
-    <property>/instrumentation/annunciators/systems/electric/battery-charge</property>
+    <property>/instrumentation/annunciators/battery-charge</property>
     </condition>
   </animation>
   
@@ -143,7 +143,7 @@
     <type>select</type>
     <object-name>warning05.on</object-name>
     <condition>
-    <property>/instrumentation/annunciators/engines/engine[0]/starter</property>
+    <property>/instrumentation/annunciators/starter</property>
     </condition>
   </animation>
   

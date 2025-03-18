@@ -18,7 +18,7 @@
             </and>
         </input>
         <output>
-            <property>/instrumentation/annunciators/systems/electric/battery-charge</property>
+            <property>/instrumentation/annunciators/battery-charge</property>
         </output>
     </logic>
     <logic>
@@ -36,7 +36,7 @@
             </and>
         </input>
         <output>
-            <property>/instrumentation/annunciators/engines/engine[0]/oil-pressure-low</property>
+            <property>/instrumentation/annunciators/oil-pressure-low</property>
         </output>
     </logic>
     <logic>
@@ -54,7 +54,7 @@
             </and>
         </input>
         <output>
-            <property>/instrumentation/annunciators/systems/fuel/system[0]/pressure-low</property>
+            <property>/instrumentation/annunciators/fuel-pressure-low</property>
         </output>
     </logic>
 
@@ -73,7 +73,7 @@
             </and>
         </input>
         <output>
-            <property>/instrumentation/annunciators/engines/engine[0]/starter</property>
+            <property>/instrumentation/annunciators/starter</property>
         </output>
     </logic>
 
@@ -107,7 +107,7 @@
             </and>
         </input>
         <output>
-            <property>/instrumentation/annunciators/systems/fuel/fuel-low</property>
+            <property>/instrumentation/annunciators/fuel-low</property>
         </output>
     </logic>
 

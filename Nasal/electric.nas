@@ -27,19 +27,19 @@ var Class= {
     class_name: "Class",
     
     new: func(name) {
-        var obj = {
-            parents:[Class],
-            name:name,
-            sources:[],
-            loads: [],
-            voltage:0,
-            current:0,
-            path: nil, # sublcasses must declare.
-            system:nil,
-        };
-        obj.publish();
+        var obj = {parents:[Class]};
+        obj.init(name);
+        me.publish();
         return obj;
-
+    },
+    init: func(name) {
+        me.name = name;
+        me.sources = [];
+        me.loads = [];
+        me.voltage = 0;
+        me.current = 0;
+        me.path = nil; # sublcasses must declare.
+        me.system = nil;
     },
     id: func {
         return me.class_name~":"~me.name;
@@ -57,23 +57,21 @@ var Class= {
         append(me.loads,load);
         return load;
     },
-    get_prop: func(prop, obj = nil) { 
-        obj = obj or me;
-        if (obj.path)
-            return getprop(obj.path ~ obj.name ~ "/" ~ prop);
+    get_prop: func(prop) { 
+        if (me.path)
+            return getprop(me.path ~ me.name ~ "/" ~ prop);
         return nil;
     },
-    set_prop: func(prop,val, obj=nil) { 
-        obj = obj or me;
-        if (obj.path)
-            setprop(obj.path ~ obj.name ~ "/" ~ prop,val);
+    set_prop: func(prop,val) { 
+        if (me.path)
+            setprop(me.path ~ me.name ~ "/" ~ prop,val);
     },
     is_instance: func(class) {
         var find_parent = func(o,class){                
             if (o.class_name == class.class_name) return true;
-            if (size(o.parents) > 1){
-                for (var i=1; i<size(o.parents) ; i+=1) {
-                    return find_parent(o.parents[i],class);
+            if (contains(o,'parents') and size(o.parents)){
+                foreach (var p; o.parents) {
+                    return find_parent(p,class);
                 }
             }
             return false;
@@ -121,29 +119,37 @@ Class.names_str = func(v) {
 
 var Source = {
     class_name: "Source",
+    parents: [Class],
     new: func(name) {
-        var obj= {
-            parents: [Source,Class.new(name)],
-            path: "/systems/electrical/sources/",
-        };
+        var obj= {parents:[Source]};
+        obj.init(name);
         return obj;
+    },
+    init: func(name) {
+        me.super(Class,"init",name);
+        me.path= "/systems/electrical/sources/";
     },
 };
 
 var Load = {
+    parents: [Class],
     class_name: "Load",
+    
     new: func (name, amps, switch) {
-        var obj = { 
-            parents : [Load, Class.new(name)],
-            switch: switch,
-            amps:amps,
-            path: "/systems/electrical/loads/",
-            output: "/systems/electrical/outputs/",
-        };
-        obj.path = "/systems/electrical/loads/";
+        var obj = {parents : [Load]};
+        obj.init(name,amps,switch);
         obj.publish();
         return obj;
     },
+
+    init:func (name, amps, switch) {
+        me.super(Class,"init",name);
+        me.switch = switch;
+        me.amps = amps;
+        me.output = "/systems/electrical/outputs/";
+        me.path = "/systems/electrical/loads/";
+    },
+
     publish: func{
         me.super(Class, "publish");
         if (me.output){
@@ -180,24 +186,32 @@ var Load = {
 };
 
 var Light = {
+    parents: [Load],
     class_name:"Light",
     new: func (name, amps, switch=nil) {
-        var obj = { 
-            parents : [Light, Load.new(name,amps,switch)],
-            switch : switch or "/controls/lighting/" ~ name,
-        };
+        var obj = {parents : [Light]};
+        obj.init(name,amps,switch);
+        obj.publish();
         return obj;
-    }
+    },
+    init: func(name,amps,switch=nil) {
+        switch = switch or "/controls/lighting/" ~ name;
+        me.super(Load,"init",name,amps,switch);
+    },
 };
 
 var Wire = {
+    parents: [Class],
     class_name: "Wire",
     new: func(name) {
-        var obj = { 
-            parents : [Wire, Class.new(name)],
-        };
+        var obj = { parents: [Wire]};
+        obj.init(name);
         return obj;
     },
+    # init: func(name){
+    #     me.super(Class,"init",name);
+    # },
+
     # Between 0-1
     get_factor: func(volts) {
         return 1;
@@ -233,30 +247,42 @@ var Wire = {
 
 # A special kind of wire that publishes it's output.
 var Bus = {
+    parents: [Wire],
     class_name: "Bus",
     new: func(name, output=nil){
-        var obj = { 
-            parents : [Bus, Wire.new(name)],
-            output: output or "/systems/electrical/outputs/",
-        };
+        var obj = {parents : [Bus]};
+        obj.init(name,output);
         obj.publish();
         return obj;
     },
+    init: func(name,output=nil) {
+        me.super(Wire,"init",name);
+        me.output = output or "/systems/electrical/outputs/";
+    },
     publish: func{
-        me.super(Class,"publish");
+        me.super(Wire,"publish");
         if (me.output){
             setpropr(5,me.output~me.name, me.voltage);
         }
     },
 };
+
+# A wire with conditional conductivity.
+# switch: path to a prop that can take values from 0 to 1.
+#         The value of switch will be used to factorize conductivity.
 var Switch = {
+    parents: [Wire],
     class_name: "Switch",
+
     new: func(name,switch=nil) {
-        var obj = { 
-            parents : [Switch, Wire.new(name)],
-            switch: switch or "/controls/switches/" ~ name,
-        };
+        var obj = {parents : [Switch]};
+        obj.init(name,switch);
+        obj.publish();
         return obj;
+    },
+    init: func(name,switch=nil){
+        me.super(Wire,"init",name);
+        me.switch= switch or "/controls/switches/" ~ name;
     },
     get_factor: func(volts) {
         var switch = me.switch ? getprop(me.switch) : 1;
@@ -264,16 +290,21 @@ var Switch = {
     },
     
 };
+# A Wire that can burn/pop if current exceed its rated amps.
 var Breaker = {
+    parents: [Wire],
     class_name: "Breaker",
     new: func(name,amps, control="/controls/circuit-breakers/") {
-        var obj = { 
-            parents : [Breaker, Wire.new(name)],
-            amps:amps,
-            state: control~name,
-        };
-        obj.set_state(1);
+        var obj = {parents: [Breaker]};
+        obj.init(name,amps, control);
+        obj.publish();
         return obj;
+    },
+    init: func(name,amps, control) {
+        me.super(Wire,"init",name);
+        me.amps = amps;
+        me.state = control~name;
+        me.set_state(1);
     },
     
     get_state: func return getprop(me.state),
@@ -304,17 +335,21 @@ var Breaker = {
 
 var Battery = {
     class_name: "Battery",
+    parents: [Source],
     new: func (name, volts,amps,cc_amps, charge_amps=nil, charge_percent=0) {
-        var obj = { parents : [Battery,Source.new(name)],
-            volts : volts,
-            amps : amps,
-            cc_amps: cc_amps,
-            charge_amps: charge_amps or amps*0.3,
-        };
-        obj.charge_percent= charge_percent or obj.get_prop("charge-percent") or 1.0;
-        # obj.set_prop("set-charge-percent",nil);
-        setlistener(obj.path ~ obj.name~"/set-charge-percent", charge_battery_cb ,0,0);
+        var obj = { parents : [Battery]};
+        obj.init(name, volts,amps,cc_amps, charge_amps, charge_percent);
+        obj.publish();
         return obj;
+    },
+    init: func(name, volts,amps,cc_amps, charge_amps=nil, charge_percent=0){
+        me.super(Source,"init",name);
+        me.volts = volts;
+        me.amps = amps;
+        me.cc_amps = cc_amps;
+        me.charge_amps = charge_amps or amps*0.3;
+        me.charge_percent = charge_percent or me.get_prop("charge-percent") or 1.0;
+        me.listener = setlistener(me.path ~ me.name~"/set-charge-percent", charge_battery_cb ,0,0);
     },
     publish: func() {
         me.super(Class,"publish");
@@ -379,19 +414,22 @@ var Battery = {
 #
 
 var Alternator = {
+    parents: [Source],
     class_name: "Alternator",
     new: func (name,source,volts,amps,rpm_threshold=800){    
-        var obj = { 
-            parents : [Alternator,Source.new(name)],
-                rpm_source : source,
-                rpm_threshold : rpm_threshold,
-                volts : volts,
-                amps : amps,
-        };      
-        if (obj.rpm_source) {
-            setprop( obj.rpm_source, 0.0 );
-        }
+        var obj = {parents : [Alternator]};
+        obj.init(name,source,volts,amps,rpm_threshold);
         return obj;
+    },
+    init: func(name,source,volts,amps,rpm_threshold=800) {
+        me.super(Source,"init",name);
+        me.rpm_source= source;
+        me.rpm_threshold= rpm_threshold;
+        me.volts= volts;
+        me.amps= amps;        
+        if (me.rpm_source) {
+            setprop( me.rpm_source, 0.0 );
+        }
     },
     ##
     # Scale alternator output for rpms < 800.  For rpms >= 800
@@ -434,16 +472,28 @@ var Alternator = {
 ##
 # Initializes a new electric system.
 var System = {
+    parents: [Class],
+    class_name: "System",
     new: func(name, update_period=0.1,path="/systems/electrical/") {
-        var obj = {
-            parents: [System,Class.new(name)],
-            path: path,
-            buses: [],
-            loads: {},
-        };
-        obj.loop = updateloop.UpdateLoop.new(components: [obj], update_period: update_period, enable: 0);
-        systems[name] = obj;
+        var obj = {parents: [System]};
+        obj.init(name, update_period,path);
+        obj.publish();
         return obj;
+    },
+    init: func(name, update_period,path) {
+        me.super(Class,"init",name);
+        me.path = path;
+        me.buses = [];
+        me.loads = {};
+        
+        me.loop = updateloop.UpdateLoop.new(components: [me], update_period: update_period, enable: 0);
+        systems[name] = me;
+    },
+    publish: func{
+        me.super(Class,"publish");
+        # Backwards compatibility
+        setprop(me.path~"volts", me.voltage);
+        setprop(me.path~"amps", me.current);
     },
     ###
     # Connects 2 or more elements
@@ -542,6 +592,13 @@ var System = {
         foreach(var source; me.sources){
             source.publish();
         }
+        me.voltage = 0;
+        me.current = 0;
+        foreach(var bus;load_buses){
+            me.current +=bus.current;
+            me.voltage = math.max(me.voltage,bus.voltage);
+        }
+        me.publish();
         var end = systime();
         #setprop(me.path~"/update",end-start);
     }

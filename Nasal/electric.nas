@@ -280,13 +280,13 @@ var Annunciator = {
     
     new: func (name, amps=nil, switch=nil) {
         var obj = {parents : [Light]};
-        amps = amps or Annunciator.DEFAULT_AMPS,
+        amps = amps or Annunciator.DEFAULT_AMPS;
         obj.init(name,amps,switch);
         obj.publish();
         return obj;
     },
     init: func(name,amps,switch=nil) {
-        switch = switch or "/instrumentation/annunciators/s" ~ name;
+        switch = switch or "/instrumentation/annunciators/" ~ name;
         me.super(Load,"init",name,amps,switch);
     },
 };
@@ -746,3 +746,5 @@ var System = {
         #setprop(me.path~"/update",end-start);
     }
 };
+
+

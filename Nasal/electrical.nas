@@ -95,7 +95,7 @@ e_system.connect(main_bus, e.Breaker.new("nav-lights",2.0), e.Light.new("nav-lig
 # Annunciators
 var annunciators_breaker = e_system.connect(main_bus, e.Breaker.new("annunciators",1.0));
 
-e_system.connect(annunciators_breaker,e.Annunciator.new("battery-charge");
+e_system.connect(annunciators_breaker,e.Annunciator.new("battery-charge"));
 e_system.connect(annunciators_breaker,e.Annunciator.new("oil-pressure-low"));
 e_system.connect(annunciators_breaker,e.Annunciator.new("fuel-pressure-low"));
 e_system.connect(annunciators_breaker,e.Annunciator.new("fuel-low"));

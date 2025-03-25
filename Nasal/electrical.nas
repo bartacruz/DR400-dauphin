@@ -79,7 +79,7 @@ e_system.connect(main_bus, e.Load.new("carb-heat",0.01,"/controls/anti-ice/engin
 # 4A Fuel pump with 5A breaker.
 e_system.connect(
     main_bus,
-    e.Breaker.new("fuel-pump",5.0.0),
+    e.Breaker.new("fuel-pump",5.0),
     e.Load.new("fuel-pump",4.0,"/controls/fuel/tank/boost-pump")
 );
 

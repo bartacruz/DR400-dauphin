@@ -325,7 +325,7 @@ var Wire = {
         me.voltage = volts;
         foreach(var load; me.loads) {
             # Apply current to load only if our voltage is greater.
-            if (load.voltage =< volts) 
+            if (load.voltage < volts) 
                 current += load.get_load(volts,dt);
             # else
             #     printf("Ignoring bigger load %s < %s",me.str(), load.str());

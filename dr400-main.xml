@@ -121,7 +121,8 @@
         <int n="14" alias="/fdm/jsbsim/gear/unit[0]/broken"/>
         <int n="15" alias="/fdm/jsbsim/gear/unit[1]/broken"/>
         <int n="16" alias="/fdm/jsbsim/gear/unit[2]/broken"/>
-
+        
+        
         <float n="0" alias="/position/gear-agl-m">       0 </float>
 
         <float n="4" alias="/systems/electrical/outputs/nav-lights">     0 </float>
@@ -129,6 +130,8 @@
         <float n="6" alias="/systems/electrical/outputs/taxi-lights">    0 </float>
         <float n="7" alias="/systems/electrical/outputs/strobe-lights">  0 </float>
         <float n="8" alias="/systems/electrical/volts">                  0 </float>
+        <!-- <float n="9" alias="/systems/electrical/outputs/flood-light-left">    0 </float>
+        <float n="10" alias="/sim/model/lights/flood-light-left/state">0</float> -->
       </generic>
     </multiplay>
 
@@ -320,6 +323,8 @@
       <instrument-lights n="0">0</instrument-lights>
       <instrument-lights n="1">0</instrument-lights>
       <instrument-lights n="2">0</instrument-lights>
+      <flood-light-left type="double">0</flood-light-left>
+      <flood-light-right type="double">0</flood-light-right>
     </lighting>
     <throttle-coupled type="bool">1</throttle-coupled>
     <mixture-coupled type="bool">1</mixture-coupled>

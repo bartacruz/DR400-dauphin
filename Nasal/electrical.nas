@@ -11,6 +11,7 @@
 # Shorthand
 var e = electric;
 
+# Create new electric system that updates 10 times a second.
 var e_system = e.System.new("dr400",0.1);
 
 
@@ -61,8 +62,9 @@ e_system.connect(external_source,e.Switch.new("external-power","/controls/electr
 # Starter engine draws 80A while cranking.
 e_system.connect(starter_bus,e.Load.new("starter",80.0,"/controls/engines/engine[0]/starter_cmd"));
 
-# The ignition coil draws a max average of 4A at full RPM
-# Override to adjust the load with the RPMs of the engine.
+# The ignition coil draws a max average of 4A at full RPM.
+# Override to adjust the load with the RPMs of the engine, and connect it to 
+# the main bus with a 10A breaker.
 var coil = e.Load.new("ignition-coil",5,"/controls/engines/engine[0]/faults/spark-plugs-serviceable");
 coil.get_amps = func(volts) {
     var rpms = getprop("/engines/engine[0]/rpm");
@@ -71,18 +73,19 @@ coil.get_amps = func(volts) {
 }
 e_system.connect(main_bus, e.Breaker.new("ignition-coil",10.0),coil);
 
-# carb heat is not electric, but somehow it needs an electric output set.
+# carb heat is not electric, but somehow it needs an electric output set...
 e_system.connect(main_bus, e.Load.new("carb-heat",0.01,"/controls/anti-ice/engine/carb-heat"));
 
-# Fuel pump with 10A breaker.
+# 4A Fuel pump with 5A breaker.
 e_system.connect(
     main_bus,
-    e.Breaker.new("fuel-pump",10.0),
-    e.Load.new("fuel-pump",5.0,"/controls/fuel/tank/boost-pump")
+    e.Breaker.new("fuel-pump",5.0.0),
+    e.Load.new("fuel-pump",4.0,"/controls/fuel/tank/boost-pump")
 );
 
 
-# Exterior lights
+### Exterior lights
+
 # landing light 250w @28v
 e_system.connect(main_bus, e.Breaker.new("landing-lights",10.0), e.Light.new("landing-lights",9.0));
 # Taxi light 100w @28v
@@ -92,7 +95,9 @@ e_system.connect(main_bus, e.Breaker.new("strobe-lights",1.0), e.Light.new("stro
 # 2x 15w led nav lights
 e_system.connect(main_bus, e.Breaker.new("nav-lights",2.0), e.Light.new("nav-lights",1.1));
 
-# Annunciators
+### Annunciators
+
+# All annunciator lights are connected to a single 1A breaker.
 var annunciators_breaker = e_system.connect(main_bus, e.Breaker.new("annunciators",1.0));
 
 e_system.connect(annunciators_breaker,e.Annunciator.new("battery-charge"));
@@ -107,7 +112,8 @@ e_system.connect(main_bus,e.Light.new("instrument-lights[0]",0.11));
 e_system.connect(main_bus,e.Light.new("instrument-lights[1]",0.11));
 e_system.connect(main_bus,e.Light.new("instrument-lights[2]",0.11));
 
-
+# Flood Light
+e_system.connect(main_bus,e.Light.new("flood-light-left",0.3));
 
 ### Avionics
 
@@ -116,6 +122,8 @@ var avionics_switch = e.Switch.new("master-avionics","controls/switches/master-a
 var avionics_bus = e.Bus.new("avionics-bus");
 e_system.connect(main_bus,avionics_switch,avionics_bus);
 
+# Manages different radio panel options.
+# Connects the avionics loads according to the sim/model/config/radio-setup prop.
 var check_radio_setup = func(n) {
     var radio_setup = n.getValue();
     # TODO: is this enough? maybe we need to disconnect the loads first.
@@ -140,13 +148,9 @@ var check_radio_setup = func(n) {
     } elsif (radio_setup == "gns530") {
         var gns530 = e.Load.new("gns530",3.0,"controls/switches/master-avionics");
         e_system.connect(avionics_bus, e.Breaker.new("gps",10.0),gns530);
-        #var aux_batt = e.Battery.new("gns530batt",12,7.0,10.0);
-        #var auxbattbus = e.Switch.new("auxbattbus","controls/switches/master-avionics");
-        #e_system.connect(aux_batt, auxbattbus, gns530);
-        
         
         # Comms are tricky b/c they use a lot only when transmitting.
-        # TODO: add a "peak use" to e.Load
+        # TODO: add a "peak use" to e.Load or create a Radio class that manages that.
         e_system.connect(radio_breaker, e.Load.new("comm[0]",0.5,"controls/switches/master-avionics"));
         e_system.connect(radio_breaker, e.Load.new("nav[0]",0.5,"controls/switches/master-avionics"));
         e_system.connect(avionics_bus,e.Breaker.new("transponder-breaker",10.0), e.Load.new("transponder",3.0,"/instrumentation/transponder/power-btn"));
@@ -166,14 +170,6 @@ if (panel == "traditional") {
     e_system.connect(avionics_bus, e.Load.new("fg1000",9.0,"controls/switches/master-avionics"));
     
 }
-    
-
-
-
-# # checking if battery should be automatically recharged
-# if (!getprop("/systems/electrical/save-battery-charge")) {
-#     battery.reset_to_full_charge();
-# };
 
 e_system.enable();
 print("DR400 electrical system started");

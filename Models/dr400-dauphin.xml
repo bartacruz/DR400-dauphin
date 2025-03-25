@@ -652,7 +652,17 @@
       <z-m>  0.07344 </z-m>
     </offsets>
   </model>
-
+  <model>
+    <name>FloodLightL-ALS</name>
+    <path>Aircraft/DR400-dauphin/Models/Lights/ALS/procedural_light_flood_left.xml</path>
+    <offsets>
+      <!-- <x-m> -0.9208  </x-m> -->
+      <x-m> -0.9 </x-m>
+			<y-m> -0.0218 </y-m>
+			<z-m>  0.758 </z-m>
+      </offsets>
+  </model>
+		
 
   <model>
     <name>NavLightR-rembrandt</name>
@@ -744,4 +754,3 @@
 
 
 </PropertyList>
-

@@ -137,6 +137,7 @@ var Class= {
         return sprintf("[%s %.4fV %.4fA]",me.id(),me.voltage,me.current);
     },
 };
+
 ##
 # Helper functions
 #
@@ -270,31 +271,31 @@ var Light = {
 };
 
 ##
-# Load specific implementation to represent a panel annunciator.
+# Light specific implementation to represent a 1W panel annunciator.
 # By default, it'll use the switch at "/instrumentation/annunciators/[name]"
 # 
 var Annunciator = {
-    parents: [Load],
-    class_name:"Light",
+    parents: [Light],
+    class_name:"Annunciator",
     DEFAULT_AMPS: 0.09, # Aprox 1w@12v
-    
+    DEFAULT_PATH: "/instrumentation/annunciators/",
     new: func (name, amps=nil, switch=nil) {
-        var obj = {parents : [Light]};
-        amps = amps or Annunciator.DEFAULT_AMPS;
+        var obj = {parents : [Annunciator]};
         obj.init(name,amps,switch);
         obj.publish();
         return obj;
     },
-    init: func(name,amps,switch=nil) {
-        switch = switch or "/instrumentation/annunciators/" ~ name;
-        me.super(Load,"init",name,amps,switch);
+    init: func (name, amps=nil, switch=nil) {
+        amps = amps or Annunciator.DEFAULT_AMPS;
+        switch = switch or Annunciator.DEFAULT_PATH ~ name;
+        me.super(Light,"init",name,amps,switch);
     },
 };
 
 
 ##
-# Base class for connecting elements, that draws no load from the system.
-# It will pass on the calls to get_load and apply_load to the loads and sources
+# Base class for connecting elements, that draws no (significant) load from the system.
+# It will pass on the calls to `get_load` and `apply_load` to the loads and sources
 # connected to it, returning the max voltage of its sources and the sum of the
 # currents of its loads, respectively.
 #
@@ -309,16 +310,22 @@ var Wire = {
  
     #
     # Between 0-1
+    #
     get_factor: func(volts) {
         return 1;
     },
+
+    ##
+    # Calls get_load to all it's loads and returns the sum of the current draw.
+    # Ignores the loads that have a voltage greater than us.
+    #
     get_load: func(volts,dt) {
         var current=0;
         volts = volts * me.get_factor(volts);
         me.voltage = volts;
         foreach(var load; me.loads) {
             # Apply current to load only if our voltage is greater.
-            if (load.voltage < volts) 
+            if (load.voltage =< volts) 
                 current += load.get_load(volts,dt);
             # else
             #     printf("Ignoring bigger load %s < %s",me.str(), load.str());
@@ -468,6 +475,8 @@ var Battery = {
         me.cc_amps = cc_amps;
         me.charge_amps = charge_amps or amps*0.3;
         me.charge_percent = charge_percent or me.get_prop("charge-percent") or 1.0;
+        # Listener to update the charge of the battery from outside the system.
+        # Useful for save/restore purposes or a reset option menu.
         me.listener = setlistener(me.path ~ me.name~"/set-charge-percent", charge_battery_cb ,0,0);
     },
     publish: func() {
@@ -487,9 +496,15 @@ var Battery = {
         var factor = (tmp*tmp*tmp*tmp*tmp + 32) / 32;
         return me.volts * factor;
     },
+    ##
+    # Get available amps/h
+    #
     get_amps: func {
         return me.amps * me.charge_percent;
     },
+    ##
+    # Get available CCA
+    #
     get_cc_amps: func {
         return me.cc_amps * me.charge_percent;
     },

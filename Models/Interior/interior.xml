@@ -10,7 +10,7 @@
 
 <PropertyList>
 
-  <path>interior.ac</path>
+  <path>interior2.ac</path>
 
   <animation>
     <object-name>aux-tank</object-name>
@@ -30,6 +30,10 @@
     <object-name>throttle</object-name>
     <object-name>trim-wheel</object-name>
     <object-name>warning-lights0</object-name>
+    <object-name>flood-left</object-name>
+    <!-- <object-name>flood-left-knob</object-name> -->
+    <object-name>flood-right</object-name>
+    <object-name>flood-right-knob</object-name>
   </animation>
 
   <animation>
@@ -85,6 +89,10 @@
     <object-name>right-audio-plug</object-name>
     <object-name>throttleDown</object-name>
     <object-name>throttleUp</object-name>
+    <object-name>flood-left</object-name>
+    <object-name>flood-left-knob</object-name>
+    <object-name>flood-right</object-name>
+    <object-name>flood-right-knob</object-name>
   </effect>
 
   <!-- All screws -->
@@ -116,6 +124,9 @@
     <object-name>throttle</object-name>
     <object-name>trim-wheel</object-name>
     <object-name>warning-lights0</object-name>
+    <object-name>flood-left</object-name>
+    <object-name>flood-right</object-name>
+    <object-name>flood-right-knob</object-name>
     <condition>
       <not>
         <property>sim/rendering/rembrandt/enabled</property>
@@ -677,6 +688,96 @@
       </binding>
     </hovered>
   </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>flood-left-knob</object-name>
+    <property>/controls/lighting/flood-light-left</property>
+    <factor>200.00</factor>
+    <!-- <offset-deg>50.00</offset-deg> --> -->
+    <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+    </axis>
+    <center>
+      <y-m>-0.0337</y-m>
+      <z-m>0.8077</z-m>
+    </center>
+    <visible>true</visible>
+    <action>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/lighting/flood-light-left</property>
+        <factor>0.1</factor>
+        <min>0</min>
+        <max>1.0</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+    
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>panel-brightness</tooltip-id>
+        <label>Flood Light Left: %3d%%</label>
+        <property>controls/lighting/flood-light-left</property>
+        <mapping>percent</mapping>
+      </binding>
+    </hovered>
+ </animation>
+<!-- <light>
+		<name>Overhead Light 1</name>
+		<type>spot</type>
+		<position>
+			<x-m> -0.9108  </x-m>
+			<y-m> -0.0217 </y-m>
+			<z-m>  0.7646 </z-m>
+		</position>
+		<direction>
+			<x>-1.0</x>
+			<y> 0.0</y>
+			<z>-1.0</z>
+		</direction>
+		<ambient>
+			<r>1.0</r>
+			<g>0.3</g>
+			<b>0.3</b>
+			<a>1</a>
+		</ambient>
+		<diffuse>
+			<r>1.0</r>
+			<g>0.3</g>
+			<b>0.3</b>
+			<a>1</a>
+		</diffuse>
+		<specular>
+			<r>1.0</r>
+			<g>0.3</g>
+			<b>0.3</b>
+			<a>1</a>
+		</specular>
+		<attenuation>
+			<c alias="/overhead-light/attenuation/c"/>
+			<l alias="/overhead-light/attenuation/l"/>
+			<q alias="/overhead-light/attenuation/q"/>
+		</attenuation>
+		<spot-exponent>10.0</spot-exponent>
+		<spot-cutoff>89.9</spot-cutoff>
+		<range-m>1.0</range-m>
+		<dim-factor>
+			<property>/controls/lighting/flood-light-left</property>
+		</dim-factor>
+	</light>
+  <animation>
+		<type>select</type>
+		<object-name>Overhead Light 1</object-name>
+		<condition>
+			<property>/sim/current-view/internal</property>
+      <property>/systems/electrical/outputs/flood-light-left</property>
+		</condition>
+	</animation> -->
 
   <!-- Panel -->
   <model>

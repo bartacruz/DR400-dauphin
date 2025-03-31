@@ -8,11 +8,11 @@ Level.new = func(x) {
 };
 
 var ElectricTree = {};
-ElectricTree.new = func(source,x,y){
+ElectricTree.new = func(system,x,y){
     
     var obj = {
         parents: [ElectricTree],
-        source:source,
+        system:system,
         x:x,
         y:y,
         template: nil,
@@ -30,9 +30,8 @@ ElectricTree.create_node = func(node,x,y) {
     var child = me.chart.createChild("group");
     props.copy(me.template._node,child._node);
     child.set("id",string.lc(node.class_name ~ "-" ~ node.name));
-    child.getElementById("name").setText(node.name);
     child.setTranslation([x,y]);
-    me.update_node(node,child);
+    me.upd_node(node,child);
     child.setVisible(1);
     append(me.nodes,node);
     return child;
@@ -48,31 +47,16 @@ ElectricTree.disable = func {
 ElectricTree.reset = func {};
 
 ElectricTree.update = func {
-    print("updating");
-    #me.source = dr400.system.sources["main"];
-    me.upd_node(me.source);
     foreach (var node; me.nodes) {
         me.upd_node(node);
     }
-    # foreach (var child;me.chart.getChildren("group")) {
-    #         me.update_child(child);
-    # }
 }
-ElectricTree.update_child = func(child) {
-    var node = child.get("_electric");
-    if (node) {
-        printf("updating node %s %.2f %.2f",node.name,node.voltage,node.current);
-        child.getElementById("volts").setText(sprintf("%.2f",child._electric.voltage));
-        child.getElementById("amps").setText(sprintf("%.2f",child._electric.current));
-    }
-}
-ElectricTree.upd_node = func(node) {
-    child = me.chart.getElementById(string.lc(node.class_name~"-"~ node.name));
-    printf("updating node %s %.2f %.2f to child %s",node.name,node.voltage,node.current,child.get("id"));
+
+ElectricTree.upd_node = func(node, child=nil) {
+    child = child or me.chart.getElementById(string.lc(node.class_name~"-"~ node.name));
     child.getElementById("name").setText(string.lc(node.class_name~"-"~ node.name));
     child.getElementById("volts").setText(sprintf("%.2f",node.voltage));
     child.getElementById("amps").setText(sprintf("%.2f",node.current));
-    
         
     if (node.current >0) {
         if(node.is_instance(electric.Source)) {
@@ -81,22 +65,12 @@ ElectricTree.upd_node = func(node) {
             child.getElementById("background").setColorFill("#beffbe");
         }
     } elsif( node.current < 0) {
-        child.getElementById("background").setColorFill("#ffbebe");
+        child.getElementById("background").setColorFill("#ff8e8e");
     } else {
         child.getElementById("background").setColorFill("#bebebe");
     }
-    # if (node.is_instance(electric.Source)){
-        # foreach (var n1; node.loads) {
-        #     me.upd_node(n1);
-        # }
-    # }
 }
-ElectricTree.update_node = func(node,child=nil) {
-    child = child or me.chart.getElementById(string.lc(node.class_name~"-"~ node.name));
-    #printf("updating node %s %.2f %.2f to child %s",node.name,node.get_volts(),node.get_amps(0),child.get("id"));
-    child.getElementById("volts").setText(sprintf("%.1f",node.voltage));
-    child.getElementById("amps").setText(sprintf("%.1f",node.current));
-}
+
 ElectricTree.get_level = func(node,x,y) {
     var bx = x+me.width;
     var by = math.max(1,y-(size(node.loads)-1)*me.height/2);
@@ -105,15 +79,13 @@ ElectricTree.get_level = func(node,x,y) {
     var my_level = false;
     # Loop each level looking for accomodation
     foreach(var level; me.levels) {
-        #print(sprintf("Source %s: bx=%d, levelx=%d",node.name,bx, level.x));
-        
         if (level.x < bx) continue; # level is below us, ignore it.
-        
+
         # check collision with other level's tenants.
         foreach(var tenant;level.nodes) {
             if (by < tenant[4] and cy  >tenant[2]  ) {
                 # Collision detected, go up
-                print(sprintf("Node %s collides with %s. %f<%f and %f > %f",node.name,tenant[0],by,tenant[4],cy,tenant[2]));
+                print(sprintf("Node %s collides with %s. %f<%f and %f > %f",node.id(),tenant[0],by,tenant[4],cy,tenant[2]));
                 my_level = false;
                 break;
             }
@@ -134,31 +106,49 @@ ElectricTree.get_level = func(node,x,y) {
     append(my_level.nodes,[node.name,bx,by,cx,cy]);
     return my_level;
 }
-ElectricTree.get_node = func(node) {
+ElectricTree.get_child = func(node) {
     return me.chart.getElementById(string.lc(node.class_name~"-"~ node.name));
 }
 
 ElectricTree.show_node = func(node,x,y){    
-    var child = me.get_node(node);
+    var child = me.get_child(node);
     if (child) {
         # Already shown.
         return;
     }
     child = me.create_node(node,x,y); 
     #print("node ",node.name,"[",node.class_name,"]"," ",x, ",", y, debug.string(child.getTightBoundingBox()));
-    if (size(node.loads)){
+    var loads = [];
+    foreach(var l; node.loads) {
+        if (!contains(me.nodes,l)) {
+            append(loads,l);
+        }
+    }
+    if (size(loads)){
         # Find accomodation avoiding collisions
         var my_level = me.get_level(node,x,y);
         var bx = my_level.x;
-        var by = math.max(1,y-(size(node.loads)-1)*me.height/2);
-        foreach (var l; node.loads) { 
-            var lnode = me.get_node(l);
-            if (!lnode) {
-                me.show_node(l,bx,by);
-                by +=me.height;
-            }
+        var by = math.max(1,y-(size(loads)-1)*me.height/2);
+        var sizes = child.getElementById("background").getSize();
+        var point = {x:x+sizes[0]-2,y:y+sizes[1]/2};
+        
+        printf("node %s: y=%s, loads=%s, by=%s", node.id(), y,node.ids(loads), by);
+        foreach (var l; loads) { 
+            var lchild = me.show_node(l,bx,by);
+            # draw line.
+            var point2 = {x:bx,y:by+sizes[1]/2};
+            var line = me.chart.createChild("path")
+                .moveTo(point.x,point.y)
+                .lineTo(bx-5, point.y)
+                .lineTo(bx-5, point2.y)
+                .lineTo(point2.x, point2.y)
+                .setColor("#1010ff")
+                ;
+            by +=me.height;
+        
         }
     }
+    return child;
 }
 ElectricTree.close = func {
     me.loop.disable();
@@ -166,7 +156,7 @@ ElectricTree.close = func {
 }
 ElectricTree.show = func {
     me.dlg = canvas.Window.new([1024,768], "dialog")
-        .set("title", "Electric Tree");
+        .set("title", "Electric Tree " ~ me.system.name);
     me.dlg._owner = me;
     me.dlg._del = me.dlg.del;
     me.dlg.del = func {    
@@ -180,9 +170,12 @@ ElectricTree.show = func {
     canvas.parsesvg(me.chart,"/home/julio/.fgfs/aircraft/DR400-dauphin/Nasal/electric.svg");
     me.template = me.chart.getElementById("node");
     me.template.setVisible(0);
-    me.show_node(me.source,me.x,me.y);
+    var y = me.y;
+    foreach(var source;me.system.sources) {
+        me.show_node(source,me.x,y);
+        y += me.height;
+    }
 }
-var source = dr400.e_system.loads["Bus:starter-bus"];
-var tree = ElectricTree.new(source,50,350);
+var tree = ElectricTree.new(dr400.e_system,20,350);
 tree.show();
 tree.enable();

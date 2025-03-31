@@ -14,15 +14,16 @@ var e = electric;
 # Create new electric system that updates 10 times a second.
 var e_system = e.System.new("dr400",0.1);
 
+#                                                                    |      |
+# Alternator -- [alternator breaker] -- (alternator-switch) -------- | Main |
+#                                                                    |      |
+# Battery -- | Starter | -- [battery breaker] -- (battery-switch) -- | Bus  |
+# Ext Pwr -- |   Bus   | -- {starter}                                |      |
+#                                                                    
 
-# Starter and Main Bus
-#
-# Battery -- | Starter | -- [battery breaker] -- (battery-switch) -- | Main |
-# Ext Pwr -- |   Bus   | -- {starter}                                | Bus  |
-#
+### Starter and Main Bus
 var starter_bus = e.Bus.new("starter-bus");
 var main_bus = e.Bus.new("main-bus");
-
 
 # Battery (12v 32a/h 240 CCA as per POH)
 # connected to the starter bus to feed the starter directly.
@@ -38,24 +39,18 @@ e_system.connect(battery,starter_bus,battery_breaker, battery_switch, main_bus);
 # Reverse connection for loading the battery...
 e_system.connect(main_bus,battery_switch,battery_breaker,starter_bus,battery);
 
-
-# Alternator (12v 50a/h as per POH)
-# Connected to the main bus via a 50A fuse and a switch
-#                                                              | Main|
-# Alternator -- [alternator breaker] -- (alternator-switch) -- | Bus |
-#
-
-var alternator = e.Alternator.new("alternator","/engines/engine[0]/rpm",14.0,50.0);
-var alternator_breaker = e.Breaker.new("alternator",50.0);
-var alternator_switch = e.Switch.new("alternator-switch","/controls/engines/engine[0]/master-alt");
-e_system.connect(alternator,alternator_breaker, alternator_switch,main_bus);
-
 # External source
 # Connected directly to the starter bus, but we add a switch to obey the
 var external_source = e.Alternator.new("external",false,14.0,100.0);
 e_system.connect(external_source,e.Switch.new("external-power","/controls/electric/external-power"),starter_bus);
 
+# Alternator (12v 50a/h as per POH)
+# Connected to the main bus via a 50A fuse and a switch
 
+var alternator = e.Alternator.new("alternator","/engines/engine[0]/rpm",14.0,50.0);
+var alternator_breaker = e.Breaker.new("alternator",50.0);
+var alternator_switch = e.Switch.new("alternator-switch","/controls/engines/engine[0]/master-alt");
+e_system.connect(alternator,alternator_breaker, alternator_switch,main_bus);
 
 ### Engine related loads
 

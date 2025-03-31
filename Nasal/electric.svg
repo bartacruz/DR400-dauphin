@@ -24,15 +24,15 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      showgrid="true"
-     inkscape:zoom="2.6618687"
-     inkscape:cx="379.24485"
-     inkscape:cy="248.50963"
+     inkscape:zoom="10.777778"
+     inkscape:cx="45"
+     inkscape:cy="18"
      inkscape:window-width="1680"
      inkscape:window-height="986"
      inkscape:window-x="1680"
      inkscape:window-y="36"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="node" />
   <defs
      id="defs1" />
   <g
@@ -42,7 +42,8 @@
     <g
        id="node"
        inkscape:label="node"
-       transform="matrix(0.97511975,0,0,0.94395785,-36.178537,-42.968207)">
+       transform="matrix(0.97511975,0,0,0.94395785,-36.178537,-42.968207)"
+       style="display:inline">
       <rect
          style="fill:#eaeaea;fill-opacity:1;stroke-width:1.1026"
          id="background"
@@ -62,57 +63,55 @@
            y="59.238388">print-test1-sasasa</tspan></text>
       <g
          id="values"
-         transform="translate(-1.0734806)">
+         transform="translate(-0.48787608)">
         <g
            id="gvolts"
-           transform="translate(-28.955087,-41.05132)">
+           transform="translate(-28.955087,-41.051307)">
           <text
              xml:space="preserve"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none"
-             x="70.395393"
-             y="103.07777"
-             id="volts"
-             transform="translate(7.96929,12.750864)"><tspan
+             x="73.60714"
+             y="116.1235"
+             id="volts"><tspan
                sodipodi:role="line"
-               x="70.395393"
-               y="103.07777"
-               id="tspan4">12.4</tspan></text>
+               x="73.60714"
+               y="116.1235"
+               id="tspan4">22.40</tspan></text>
           <text
              xml:space="preserve"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none"
-             x="91.329582"
-             y="103.21777"
+             x="99.298874"
+             y="116.1235"
              id="text3-2"
-             transform="translate(7.96929,12.750864)"
              inkscape:label="V"><tspan
                sodipodi:role="line"
-               x="91.329582"
-               y="103.21777"
+               x="99.298874"
+               y="116.1235"
                id="tspan4-3">V</tspan></text>
         </g>
         <g
            id="gamps"
-           transform="translate(-25.767371,-35.464538)">
+           transform="translate(-21.771034,-35.464538)">
           <text
              xml:space="preserve"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none"
-             x="116.08598"
-             y="110.24185"
+             x="111.61389"
+             y="110.53673"
              id="amps"><tspan
                sodipodi:role="line"
                id="tspan5"
-               x="116.08598"
-               y="110.24185">33.2</tspan></text>
+               x="111.61389"
+               y="110.53673">33.20</tspan></text>
           <text
              xml:space="preserve"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none"
              x="137.73436"
-             y="110.35612"
+             y="110.53673"
              id="text3-2-2"
              inkscape:label="A"><tspan
                sodipodi:role="line"
                x="137.73436"
-               y="110.35612"
+               y="110.53673"
                id="tspan4-3-2">A</tspan></text>
         </g>
       </g>

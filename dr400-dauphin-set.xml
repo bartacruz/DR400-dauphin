@@ -8,163 +8,24 @@
 
 ##########################################-->
 
-<PropertyList include="dr400-main.xml">
+<PropertyList include="dr400-dauphin-base.xml">
 
   <sim>
-    <description>Robin DR400-dauphin (JSBSim)</description>
-    <author>Bertrand AUGRAS (3D), Daniel DUBREUIL (FDM), Clement de l'Hamaide (3D, Systems, Adaptation), PAF team</author>
-
-    <status>production</status>
-    <rating>
-      <FDM type="int">4</FDM>
-      <systems type="int">4</systems>
-      <cockpit type="int">5</cockpit>
-      <model type="int">4</model>
-    </rating>
-
-    <tags>
-      <tag>1-engine</tag>
-      <tag>1970s</tag>      <!-- first flight in 1972 -->
-      <tag>1980s</tag>
-      <tag>1990s</tag>
-      <tag>2000s</tag>
-      <tag>2010s</tag>      <!-- still in production -->
-      <tag>fixed-gear</tag>
-      <tag>ga</tag>
-      <tag>piston</tag>
-      <tag>robin</tag>
-    </tags>
-
-    <previews>
-      <preview>
-        <type>panel</type>
-        <splash type="bool">true</splash>
-        <path>Pics/dauphin-interior.jpg</path>
-      </preview>
-      <preview>
-        <type>exterior</type>
-        <splash type="bool">true</splash>
-        <path>Pics/dauphin-exterior.jpg</path>
-      </preview>
-    </previews>
-
-    <startup>
-      <splash-texture>Aircraft/DR400-dauphin/splash.jpg</splash-texture>
-    </startup>
-
-    <sound>
-      <path archive="y">Aircraft/DR400-dauphin/Sounds/sound.xml</path>
-    </sound>
-
     <model>
       <config>
         <panel>traditional</panel>
-        <radio-setup>garmin</radio-setup>
+        <radio-setup>bendix</radio-setup>
       </config>
     </model>
-
-    <help>
-      <title>Robin DR400-dauphin</title>
-      <key>
-        <name>d</name>
-        <desc>Open/Close canopy</desc>
-      </key>
-      <key>
-        <name>s</name>
-        <desc>Starter</desc>
-      </key>
-      <key>
-        <name>=</name>
-        <desc>Open/Close options dialog</desc>
-      </key>
-      <key>
-        <name>Ctrl-c</name>
-        <desc>Toggle panel hotspots and labels</desc>
-      </key>
-      <line>============== Engines Autostart =============</line>
-      <line>1 - Open DR400-dauphin dialog (Robin DR400-dauphin > Options)</line>
-      <line>2 - Click on Autostart button</line>
-      <line>3 - Press "s" key</line>
-      <line/>
-      <line>================== Liveries ==================</line>
-      <line>1 - Open DR400-dauphin dialog (Robin DR400-dauphin > Options)</line>
-      <line>2 - Click on Liveries button</line>
-      <line>3 - Select your livery</line>
-      <line/>
-      <line>============== Quick Procedures ==============</line>
-      <line>=== Takeoff</line>
-      <line>.. 1 flaps</line>
-      <line>.. Full throttle</line>
-      <line>.. Rotate at 100 km/h</line>
-      <line>=== Climbout</line>
-      <line>.. 130 km/h then 150 km/h</line>
-      <line>=== Cruise</line>
-      <line>.. 2350 RPM to 2700 RPM (depending on altitude)</line>
-      <line>.. VNE = 308 km/h</line>
-      <line>=== Approach</line>
-      <line>.. 1 flaps at 150 km/h (max 170 km/h)</line>
-      <line>.. 2 flaps at 135 km/h (max 150 km/h) </line>
-      <line>.. Final at 125 km/h </line>
-      <line/>
-    </help>
   </sim>
-
   <instrumentation>
-    <attitude-indicator>
-      <config>
-        <tumble-flag archive="y" type="bool">true</tumble-flag>
-      </config>
-    </attitude-indicator>
     <garmin196>
       <texture-file>../../DR400-dauphin/Models/Interior/Instruments/garmin196/coque.png</texture-file>
     </garmin196>
-    <encoder>
-      <serviceable type="bool">true</serviceable>
-    </encoder>
-    <transponder>
-      <inputs>
-        <digit type="int" n="3">7</digit>
-        <digit type="int" n="2">0</digit>
-        <digit type="int" n="1">0</digit>
-        <digit type="int" n="0">0</digit>
-        <knob-mode type="int">0</knob-mode>
-      </inputs>
-      <id-code type="int">7000</id-code>
-    </transponder>
-    <elt>
-      <on type="bool">0</on>
-      <armed type="bool">1</armed>
-      <test type="bool">0</test>
-    </elt>
-    <comm n="0">
-      <power-btn type="bool">true</power-btn>
-      <volume type="double">0.6</volume>
-    </comm>
-    <nav n="0">
-      <power-btn type="bool">true</power-btn>
-      <volume type="double">0.0</volume>
-    </nav>
-    <comm n="1">
-      <power-btn type="bool">false</power-btn>
-      <volume type="double">0</volume>
-    </comm>
-    <nav n="1">
-      <power-btn type="bool">false</power-btn>
-      <volume type="double">0.6</volume>
-    </nav>
-    <adf n="0">
-      <power-btn type="bool">false</power-btn>
-      <volume-norm type="double">0</volume-norm>
-      <adf-btn type="bool">true</adf-btn>
-    </adf>
-    <gnc255a>
-      <comm-mode type="bool">1</comm-mode>
-      <serviceable type="bool">1</serviceable>
-    </gnc255a>
   </instrumentation>
 
   <nasal>
-    <!-- <garmin196>
+    <garmin196>
       <file>Aircraft/Instruments-3d/garmin196/garmin196.nas</file>
       <condition>
         <equals>
@@ -172,7 +33,7 @@
           <value>bendix</value>
         </equals>
       </condition>
-    </garmin196> -->
+    </garmin196>
     <!-- <canvas_tablet>
       <file>Models/Interior/Instruments/tablet/tablet.nas</file>
       <condition>
@@ -181,7 +42,7 @@
           <value>garmin</value>
         </equals>
       </condition>
-    </canvas_tablet> -->
+    </canvas_tablet>
     <canvas_gnc255a>
       <file>Models/Interior/Instruments/GNC255A/gnc255a.nas</file>
       <condition>
@@ -215,6 +76,7 @@
         </equals>
       </condition>
     </gns530>
+     -->
     
   </nasal>
 

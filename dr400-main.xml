@@ -86,7 +86,6 @@
         <enable-crash type="bool">0</enable-crash>
         <breakable-gears type="bool">0</breakable-gears>
         <simulate-g-force type="bool">0</simulate-g-force>
-        <radio-setup type="string">bendix</radio-setup>
       </config>
     </model>
 
@@ -432,14 +431,6 @@
       <volume-norm type="double">0</volume-norm>
       <adf-btn type="bool">true</adf-btn>
     </adf>
-    <fg1000>
-      <serviceable type="bool">false</serviceable>
-      <loaded type="bool">false</loaded>
-    </fg1000>
-    <gns530>
-      <serviceable type="bool">false</serviceable>
-      <loaded type="bool">false</loaded>
-    </gns530>
     
   </instrumentation>
   <systems>
@@ -455,7 +446,7 @@
       <file>Aircraft/Generic/updateloop.nas</file>
     </updateloop>
      <electric>
-        <file>Aircraft/DR400-dauphin/Nasal/electric.nas</file>
+        <file>Nasal/electric.nas</file>
     </electric>
     <dr400>
       <file>Aircraft/DR400-dauphin/Nasal/physics.nas</file>

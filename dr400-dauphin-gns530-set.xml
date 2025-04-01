@@ -13,13 +13,15 @@
         <variant-of>dr400-dauphin</variant-of>
         <description>Robin DR400-dauphin with GNS530 as Radio,Nav, and GPS</description>
         <author>Bertrand AUGRAS (3D), Daniel DUBREUIL (FDM), Clement de l'Hamaide (3D, Systems, Adaptation), PAF team, Julio Santa Cruz</author>
-        <model>
+        <model>      
             <config>
-                <panel>GNS530</panel>
+                <panel>traditional</panel>
+                <radio-setup>gns530</radio-setup>
             </config>
         </model>
     </sim>>
     <instrumentation>
+
         <gns530>
             <serviceable type="bool">true</serviceable>
             <loaded type="bool">false</loaded>
@@ -27,6 +29,12 @@
     </instrumentation>
 
     <nasal>
+        <canvas_gnc255a>
+            <file>Models/Interior/Instruments/GNC255A/gnc255a.nas</file>
+        </canvas_gnc255a>
+        <gtx328>
+            <file>Models/Interior/Instruments/GTX328/gtx328.nas</file>
+        </gtx328>
         <gns530>
             <file>Aircraft/DR400-dauphin/Models/Interior/Instruments/GNS530/gns530.nas</file>
         </gns530>

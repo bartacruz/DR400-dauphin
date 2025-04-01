@@ -116,55 +116,43 @@ e_system.connect(main_bus,e.Light.new("flood-light-left",0.3));
 var avionics_switch = e.Switch.new("master-avionics","controls/switches/master-avionics" );
 var avionics_bus = e.Bus.new("avionics-bus");
 e_system.connect(main_bus,avionics_switch,avionics_bus);
+e_system.connect(avionics_bus, e.Load.new("turn-coordinator",1.0,"controls/switches/master-avionics"));
 
 # Manages different radio panel options.
 # Connects the avionics loads according to the sim/model/config/radio-setup prop.
-var check_radio_setup = func(n) {
-    var radio_setup = n.getValue();
-    # TODO: is this enough? maybe we need to disconnect the loads first.
-    avionics_bus.loads = [];
-    
-    e_system.connect(avionics_bus, e.Load.new("turn-coordinator",1.0,"controls/switches/master-avionics"));
+var radio_setup = getprop("sim/model/config/radio-setup");
 
-    var radio_breaker = e_system.connect(avionics_bus, e.Breaker.new("radio",10.0));
-    if (radio_setup == "bendix") {
-        e_system.connect(avionics_bus,e.Breaker.new("transponder",10.0), e.Load.new("transponder",3.0,"/instrumentation/transponder/power-btn"));
-        e_system.connect(radio_breaker, e.Load.new("comm[0]",0.5,"/instrumentation/comm[0]/power-btn"));
-        e_system.connect(radio_breaker, e.Load.new("nav[0]",0.5,"/instrumentation/nav[0]/power-btn"));
-        e_system.connect(avionics_bus, e.Breaker.new("adf",2.0), e.Load.new("adf",1.0,"/instrumentation/adf/power-btn"));
-        e_system.connect(avionics_bus, e.Load.new("gps",0.5,"controls/switches/master-avionics"));
-        print("### Bendix avionics connected to bus");
-    } elsif (radio_setup == "garmin") {
-        e_system.connect(avionics_bus, e.Load.new("ipad",0.5,"controls/switches/master-avionics"));
-        e_system.connect(avionics_bus, e.Load.new("comm[0]",1.0,"controls/switches/master-avionics"));
-        e_system.connect(avionics_bus, e.Load.new("nav[0]",1.0,"controls/switches/master-avionics"));
-        e_system.connect(avionics_bus, e.Load.new("transponder",3.0,"controls/switches/master-avionics"));
-        print("### Garmin avionics connected to bus");
-    } elsif (radio_setup == "gns530") {
-        var gns530 = e.Load.new("gns530",3.0,"controls/switches/master-avionics");
-        e_system.connect(avionics_bus, e.Breaker.new("gps",10.0),gns530);
-        
-        # Comms are tricky b/c they use a lot only when transmitting.
-        # TODO: add a "peak use" to e.Load or create a Radio class that manages that.
-        e_system.connect(radio_breaker, e.Load.new("comm[0]",0.5,"controls/switches/master-avionics"));
-        e_system.connect(radio_breaker, e.Load.new("nav[0]",0.5,"controls/switches/master-avionics"));
-        e_system.connect(avionics_bus,e.Breaker.new("transponder-breaker",10.0), e.Load.new("transponder",3.0,"/instrumentation/transponder/power-btn"));
-        print("### GNS530 avionics connected to bus");
-    } else {
-        print("### WARNING: NO avionics connected to bus");
-    }
+var radio_breaker = e_system.connect(avionics_bus, e.Breaker.new("radio",10.0));
+if (radio_setup == "bendix") {
+    e_system.add_instrument(avionics_bus,"transponder",3.0,10.0);
+    e_system.add_instrument(avionics_bus,"adf",1.0,2.0);
+    e_system.add_instrument(avionics_bus,"gps",0.5);
+    e_system.connect(radio_breaker, e.Instrument.new("comm[0]",0.5));
+    e_system.connect(radio_breaker, e.Instrument.new("nav[0]",0.5));
+    print("### Bendix avionics connected to bus");
+} elsif (radio_setup == "garmin") {
+    e_system.connect(avionics_bus, e.Load.new("ipad",0.5,"controls/switches/master-avionics"));
+    e_system.connect(avionics_bus, e.Load.new("comm[0]",1.0,"controls/switches/master-avionics"));
+    e_system.connect(avionics_bus, e.Load.new("nav[0]",1.0,"controls/switches/master-avionics"));
+    e_system.connect(avionics_bus, e.Load.new("transponder",3.0,"controls/switches/master-avionics"));
+    print("### Garmin avionics connected to bus");
+} elsif (radio_setup == "gns530") {
+    e_system.add_instrument(avionics_bus,"transponder",3.0,10.0);
     
+    var gns530 = e.Load.new("gns530",3.0,"controls/switches/master-avionics");
+    e_system.connect(avionics_bus, e.Breaker.new("gps",10.0),gns530);
+    
+    # Comms are tricky b/c they use a lot only when transmitting.
+    # TODO: add a "peak use" to e.Load or create a Radio class that manages that.
+    e_system.connect(radio_breaker, e.Load.new("comm[0]",0.5,"controls/switches/master-avionics"));
+    e_system.connect(radio_breaker, e.Load.new("nav[0]",0.5,"controls/switches/master-avionics"));
+    print("### GNS530 avionics connected to bus");
+} else {
+    print("### WARNING: NO avionics connected to bus");
 }
 
-var panel = getprop("/sim/model/config/panel");
-if (panel == "traditional") {
-    setlistener("sim/model/config/radio-setup", check_radio_setup,1);
-    
-} elsif (panel == "fg1000") {
-    # separate this into MDF/PDF/Audio panel??
-    e_system.connect(avionics_bus, e.Load.new("fg1000",9.0,"controls/switches/master-avionics"));
-    
-}
+setlistener("sim/signals/fdm-initialized",func{
+    e_system.enable();
+    } );
 
-e_system.enable();
-print("DR400 electrical system started");
+print("DR400 electrical system loaded");

@@ -52,10 +52,10 @@
 		<object-name>GNS530.vnav</object-name>
 		<object-name>GNS530.proc</object-name>
 		<emission>
-			<red>0.25</red>
-			<green>0.25</green>
-			<blue>0.25</blue>
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>   0.07 </red>
+			<green> 0.04 </green>
+			<blue>  0.04 </blue>
+			<factor-prop>systems/electrical/outputs/instrument-lights[2]</factor-prop>
 		</emission>
 	</animation>
 

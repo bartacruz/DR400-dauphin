@@ -59,6 +59,29 @@ modified for Garmin GNC255A by D-ECHO, March 2016
 		<object-name>tf</object-name>
 		<object-name>gnc255a.screen</object-name>
 	</animation>
+	<animation>
+		<type>material</type>
+		<object-name>gnc255a.base</object-name>
+		<object-name>tune.kHz</object-name>
+		<object-name>tune.mHz</object-name>
+		<object-name>mon</object-name>
+		<object-name>nav</object-name>
+		<object-name>com.volume</object-name>
+		<object-name>nav.volume</object-name>
+		<object-name>cn</object-name>
+		<object-name>obs</object-name>
+		<object-name>swap</object-name>
+		<object-name>ent</object-name>
+		<object-name>clr</object-name>
+		<object-name>func</object-name>
+		<object-name>tf</object-name>
+		<emission>
+			<red>   0.07 </red>
+			<green> 0.04 </green>
+			<blue>  0.04 </blue>
+			<factor-prop>systems/electrical/outputs/instrument-lights[2]</factor-prop>
+		</emission>
+	</animation>
 	<!--Comm/Nav Button-->
 	<animation>
 		<type>pick</type>

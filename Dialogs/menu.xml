@@ -35,6 +35,16 @@
           <script>dr400.show_save_dialog()</script>
         </binding>
       </item>
+      <item >
+        <label>Pushback New</label>
+ 						<binding>
+ 							<command>nasal</command>
+ 							<script>
+ 							var autopush_dlg = gui.Dialog.new("sim/gui/dialogs/announce/dialog", "Aircraft/DR400-dauphin/Dialogs/autopush.xml");
+ 							autopush_dlg.open();
+ 							</script>
+ 						</binding>
+      </item>
       <item>
         <label>Electric</label>
         <binding>

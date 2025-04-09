@@ -87,6 +87,38 @@
         <breakable-gears type="bool">0</breakable-gears>
         <simulate-g-force type="bool">0</simulate-g-force>
       </config>
+      <autopush>
+ 				<!-- <steer-cmd-norm	alias="/systems/fcs/tiller/autopush-cmd"/>
+        <yaw alias="/systems/fcs/tiller/actuator"/> -->
+        <steer-cmd-norm	alias="/controls/flight/rudder"/>
+        <yaw alias="/controls/flight/rudder"/>
+        <yaw-mult type="float">10.0</yaw-mult>
+        <pitch-deg type="float">0.0</pitch-deg>
+        <min-turn-radius-m type="float">3</min-turn-radius-m>
+        <stopping-distance-m type="float">1.0</stopping-distance-m>
+        <chocks	alias="/services/chocks/enable"/>
+        <available type="int">1</available>
+        <enabled type="int"/>
+        <connected type="bool">false</connected>
+        <target-speed-km_h type="float">0.0</target-speed-km_h>
+        <K_p type="float">0.5</K_p>
+        <F_p type="float">0.15</F_p>
+        <K_i type="float">0.25</K_i>
+        <F_i type="float">0.1</F_i>
+        <K_d type="float">0.0</K_d>
+        <F_d type="float">0.0</F_d>
+        <driver>
+          <F_V type="float">5.5</F_V>
+          <K_psi type="float">0.03</K_psi>
+          <F_psi type="float">1.0</F_psi>
+          <K_psidot type="float">0.03</K_psidot>
+          <F_psidot type="float">1.0</F_psidot>
+        </driver>
+        <route>
+          <show type="bool"/>
+        </route>
+        <debug type="int">0</debug>
+      </autopush>
     </model>
 
     <mouse>
@@ -383,6 +415,13 @@
           <broken type="bool">0</broken>
         </unit>
       </gear>
+      <external_reactions>
+        <tractor>
+					<magnitude alias="/sim/model/autopush/force-lbf"/>
+					<x alias="/sim/model/autopush/force-x"/>
+					<y alias="/sim/model/autopush/force-y"/>
+				</tractor>
+ 			</external_reactions>
     </jsbsim>
   </fdm>
 
@@ -454,6 +493,7 @@
       <file>Aircraft/DR400-dauphin/Nasal/liveries.nas</file>
       <file>Aircraft/DR400-dauphin/Nasal/dr400.nas</file>
       <file>Aircraft/DR400-dauphin/Nasal/electrical.nas</file>
+      <file>Aircraft/DR400-dauphin/Nasal/engine.nas</file>
       <file>Aircraft/DR400-dauphin/Nasal/interpolate.nas</file>
       <file>Aircraft/Generic/limits.nas</file>
       <file>Aircraft/DR400-dauphin/Nasal/rain.nas</file>
@@ -463,6 +503,17 @@
     <kr87>
       <file>Aircraft/DR400-dauphin/Models/Interior/Instruments/kr87-adf/kr87.nas</file>
     </kr87>
+    <autopush>
+			<file>Aircraft/DR400-dauphin/Nasal/Autopush/autopush.nas</file>
+		</autopush>
+		<autopush_driver>
+			<file>Aircraft/DR400-dauphin/Nasal/Autopush/driver.nas</file>
+		</autopush_driver>
+		<dynarr>
+			<file>Aircraft/DR400-dauphin/Nasal/Autopush/dynarr.nas</file>
+		</dynarr>
+		<autopush_route>
+			<file>Aircraft/DR400-dauphin/Nasal/Autopush/route.nas</file>
+		</autopush_route>
   </nasal>
-  
 </PropertyList>

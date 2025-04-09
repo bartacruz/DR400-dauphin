@@ -196,6 +196,22 @@
     </contact>
 
   </ground_reactions>
+  <external_reactions>
+  
+    <force name="tractor" frame="BODY">
+    <location unit="M">
+        <x> -2.57 </x>
+        <y>  0.00 </y>
+        <z> -1.11 </z>
+    </location>
+    <direction>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </direction>
+    </force>
+  
+  </external_reactions>
 
   <propulsion>
 
@@ -261,7 +277,7 @@
     </tank>
 
   </propulsion>
-
+  
   <flight_control name="FCS: DR400-dauphin">
 
     <channel name="Pitch">
@@ -898,8 +914,7 @@
     </axis>
 
   </aerodynamics>
-  
   <system file="shadow-tweak"/>
   <system file="crash-detect"/>
-
+  <system file="engine"/>
 </fdm_config>
